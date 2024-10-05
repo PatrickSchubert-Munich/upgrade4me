@@ -215,15 +215,6 @@
   background-size: 100% 5rem;
 }
 
-/* 
-#location {
-  background-image: url("../images/02.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-} 
-*/
-
 /* -- Animations -- */
 .grid-item {
   opacity: 0; /* Anfangszustand für die Animation */

@@ -73,7 +73,28 @@
   max-width: 80%;
 }
 
-/* Form Button */
+/* Form and form Button */
+#form form {
+  border: 2px solid #826080;
+  background-color: #eff1ee;
+  min-width: 30%;
+}
+
+#form button {
+  outline: 1px solid white;
+  background-image: linear-gradient(
+    to top,
+    rgba(107, 69, 105, 1),
+    rgba(158, 134, 157, 1)
+  );
+  color: white;
+  border: none;
+  padding: 7.5px 30px;
+  border-radius: 50px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
 .btn-primary {
   outline: 2px solid white;
   background-image: linear-gradient(
