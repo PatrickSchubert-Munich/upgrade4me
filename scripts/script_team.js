@@ -16,6 +16,10 @@ const thirdFromRight = document.querySelector("#team > div:nth-child(3) div");
 const fourthFromLeft = document.querySelector("#team > div:nth-child(4) div");
 const fourthFromRight = document.querySelector("#team > div:nth-child(4) img");
 
+// company section
+const companySection = document.getElementById("scrolling-background-third");
+const companySectionDiv = document.querySelector("#scrolling-background-third > article > div");
+
 const options = {
   rootMargin: "-200px",
   treshold: 1,
@@ -45,6 +49,10 @@ const observer = new IntersectionObserver((entries) => {
         fourthFromRight.classList.add("fade-in-right");
       }
 
+      if (entry.target.id === 'scrolling-background-third') {
+        companySectionDiv.classList.add("animate__fadeInDownBig");
+      }
+
       observer.unobserve(entry.target);
     }
   });
@@ -55,3 +63,4 @@ observer.observe(firstContainer);
 observer.observe(secondContainer);
 observer.observe(thirdContainer);
 observer.observe(fourthContainer);
+observer.observe(companySection);

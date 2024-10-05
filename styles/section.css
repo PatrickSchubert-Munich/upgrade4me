@@ -204,6 +204,10 @@
   column-rule: 0.125em solid rgba(255, 255, 255, 0.5);
 }
 
+.animate__animated.animate__fadeInDownBig {
+  --animate-duration: 1.25s;
+}
+
 /* Section fourth Scrolling Background */
 #scrolling-background-fourth {
   position: relative;
