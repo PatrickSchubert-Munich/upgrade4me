@@ -1,7 +1,6 @@
-/* Components */
+/* Video Buttons */
 #btn-video-large,
 #btn-video-small {
-  /* background-color: rgba(107, 69, 105, 0.8); */
   background: linear-gradient(
     to bottom,
     rgba(107, 69, 105, 0.9),
@@ -13,7 +12,6 @@
 
 #btn-video-large:hover,
 #btn-video-small:hover {
-  /* background-color: rgba(107, 69, 105, 0.8); */
   background: linear-gradient(
     to bottom,
     rgba(107, 69, 105, 0.7),
@@ -23,6 +21,56 @@
 
 #btn-video-small {
   display: none;
+}
+
+#btn-video-close {
+  position: absolute;
+  top: 0.75em;
+  right: 0.75em;
+  color: white;
+  background-image: linear-gradient(
+    35deg,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.4)
+  );
+  margin: 0;
+  padding: 0.25em 0.75em 0.3em 0.76em;
+  font-size: 1.2em;
+  border-radius: 5px;
+  outline: 1px solid white;
+}
+
+#btn-video-close:hover {
+  background-image: linear-gradient(
+    -30deg,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.85)
+  );
+  outline: 1px solid #e1e1e1;
+}
+
+/* Video Popup */
+#aboutUs .aboutUs-video-popup {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#aboutUs .aboutUs-video-popup div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#aboutUs .aboutUs-video-popup video {
+  object-fit: contain;
+  max-width: 80%;
 }
 
 /* 3-D Card */
@@ -101,12 +149,12 @@
 
 .form-check-input {
   appearance: none; /* Entfernt das Standard-Checkbox-Design */
-  border: 2px solid #6B4569; /* Rahmenfarbe */
+  border: 2px solid #6b4569; /* Rahmenfarbe */
   outline: none; /* Keine Umrandung */
   cursor: pointer; /* Zeigt, dass die Checkbox anklickbar ist */
 }
 
 .form-check-input:checked {
-  background-color: #6B4569 !important; /* Hintergrundfarbe, wenn die Checkbox ausgewählt ist */
+  background-color: #6b4569 !important; /* Hintergrundfarbe, wenn die Checkbox ausgewählt ist */
   border: none; /* Rahmen entfernen, wenn ausgewählt */
 }

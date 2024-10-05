@@ -15,6 +15,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
+    <script src="./scripts/script_video.js" defer></script>
     <script src="./scripts/script_team.js" defer></script>
     <script async
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7wPZ1v-OoOay_0ImAlda8S3Tm9GtFmi4&callback=console.debug&libraries=maps,marker&v=beta">
@@ -45,10 +46,10 @@
             <div class="d-flex align-items-center">
                 <a class="navbar-brand m-0" href="#">Upgrade <span id="brand-number-4">4</span>me</a>
             </div>
-            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+            <button class="navbar-toggler border-0 shadow-none z-1" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></i></span>
+                <span class="navbar-toggler-icon z-0"></i></span>
             </button>
             <div class="collapse navbar-collapse fs-6 fw-bold justify-content-end" id="navbarNav">
                 <ul class="navbar-nav d-flex align-items-end">
@@ -82,14 +83,16 @@
                 </video>
                 <div class="container-btn-video text-center z-2">
                     <button id="btn-video-large"
-                        class="btn btn-light gap-2 ps-4 pe-4 fs-5 rounded-5 d-inline-flex align-items-center text-white">
-                        <span class="material-symbols-outlined mt-1">
+                        class="btn btn-light gap-2 ps-4 pe-4 fs-5 rounded-5 d-inline-flex align-items-center text-white aboutUs-btn--video aboutUs--play-video">
+                        <i class="fa-solid fa-play aboutUs--play-video"></i>
+                        <!-- <span class="material-symbols-outlined mt-1">
                             play_arrow
-                        </span>
+                        </span> -->
                         Play
                     </button>
-                    <button id="btn-video-small" class="btn btn-light text-white">
-                        <img src="./assets/img/play-arrow.png" alt="Play Button Icon">
+                    <button id="btn-video-small"
+                        class="btn btn-light text-white aboutUs-btn--video aboutUs--play-video">
+                        <img src="./assets/img/play-arrow.png" alt="Play Button Icon" class="aboutUs--play-video">
                     </button>
                 </div>
                 <article class="z-2 w-50 text-white p-3 rounded-1">
@@ -107,8 +110,19 @@
                         Unser Anliegen ist es, Dich auf deinem Weg zu persönlichem Wachstum zu begleiten.
                     </p>
                 </article>
+                <div class="aboutUs-video-popup z-2">
+                    <div class="aboutUs-video">
+                        <video class="rounded-1" controls="true">
+                            <source type="video/mp4" src="./assets/video/intro.mp4">
+                            Upps...your Browser doesn't support video!
+                        </video>
+                        <button id="btn-video-close">X</button>
+                    </div>
+                </div>
             </div>
-            <div class="bg-fixed-scroll--divider-first"></div>
+            <!-- Video PopUp -->
+
+            <div class="bg-fixed-scroll--divider-first z-2"></div>
         </section>
 
         <!-- Section Scroll Background 1 Concept -->
