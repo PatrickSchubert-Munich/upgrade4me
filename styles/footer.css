@@ -1,0 +1,50 @@
+/* -- Footer -- */
+.footer {
+  /* background-color: #262626; */
+  background-color: #441A42;
+}
+
+.footer-ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* -- Footer-Icons -- */
+.icon {
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  text-transform: none !important;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  color: white;
+}
+
+.icon > .label {
+  display: none;
+}
+
+.icon.solid {
+  font-weight: 900;
+}
+
+.icon.brands {
+  font-family: "Font Awesome 5 Brands";
+}
+
+.footer-ul {
+  list-style-type: none;
+  color: white;
+}
+
+.footer-li--icon {
+  display: inline-block;
+}
+
+.footer-li--icon a {
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+}

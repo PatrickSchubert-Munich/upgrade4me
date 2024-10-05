@@ -1,0 +1,132 @@
+/* Section AboutUs */
+@media screen and (max-width: 900px) {
+  #aboutUs article header h1 {
+    font-size: 1.5em;
+  }
+
+  #aboutUs article p {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (max-width: 645px) {
+  #aboutUs article header h1 {
+    font-size: 1.25em;
+  }
+
+  #aboutUs article p {
+    font-size: 0.85em;
+  }
+
+  #btn-video-large {
+    display: none !important;
+  }
+
+  #btn-video-small {
+    display: inline-block;
+    margin: 0;
+    height: 52.5px;
+    width: auto;
+    border-radius: 50%;
+  }
+
+  #btn-video-small > img {
+    height: 30px;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 495px) {
+  #aboutUs article {
+    padding: 10px !important;
+  }
+
+  #aboutUs article hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  #aboutUs article header h1 {
+    font-size: 1em;
+  }
+
+  #aboutUs article p {
+    font-size: 0.75em;
+  }
+}
+
+/* Section Concept */
+@media screen and (max-width: 590px) {
+  #concept {
+    width: 20em !important;
+    padding: 0 !important;
+  }
+
+  #concept .header {
+    padding: 0 !important;
+  }
+
+  #concept .row div {
+    padding: 0 !important;
+  }
+
+  #concept .header-h2 {
+    padding: 0.55em inherit !important;
+    font-size: 1.5em;
+  }
+
+  #concept .header p {
+    padding-top: 1em !important;
+  }
+}
+
+/* Section Team */
+@media screen and (max-width: 745px) {
+  #team #first-container,
+  #second-container,
+  #third-container,
+  #fourth-container div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    font-size: 0.9em;
+    width: 100%;
+    /* text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5); */
+  }
+}
+
+/* @media screen and (max-width: 690px) {
+
+  #team .first-child,
+  .second-child {
+    width: 350px !important;
+  }
+} */
+
+/* Section Geschäftskunden */
+@media screen and (max-width: 850px) {
+  #scrolling-background-third article h2 {
+    padding: 0.65em 0 !important;
+    font-size: 1.5em;
+  }
+
+  #scrolling-background-third article p {
+    padding-left: 0.75em !important;
+    padding-right: 0.75em !important;
+    padding-bottom: 0.75em !important;
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  #scrolling-background-third article h2 {
+    font-size: 1.2em;
+  }
+
+  #scrolling-background-third article p {
+    column-count: 1;
+    font-size: 0.85em;
+    text-align: left;
+  }
+}

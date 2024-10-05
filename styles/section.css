@@ -1,0 +1,297 @@
+/* global */
+.bg-fixed-scroll--divider {
+  height: 10px;
+  width: 100%;
+}
+
+/* -- Section About Us -- */
+#aboutUs {
+  position: relative;
+}
+
+#aboutUs > div {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  margin-top: 55px;
+  overflow: hidden;
+  text-shadow: 0.5px 0.5px 1px black;
+}
+
+.aboutUs-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  object-fit: cover;
+  object-position: center center;
+  filter: brightness(90%);
+}
+
+#aboutUs header h1 {
+  letter-spacing: 0.025em;
+}
+
+#aboutUs article p {
+  font-size: 1.7em;
+}
+
+#aboutUs article {
+  backdrop-filter: contrast(0.5) blur(5px) !important;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.text-aboutUs--color-a:hover {
+  color: #9e86;
+}
+
+/* Section first Scrolling Background */
+#scrolling-background-first {
+  position: relative;
+  height: 75vh;
+  width: 100%;
+  background-image: url("../assets/img/banner_concept.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  filter: grayscale(75%);
+}
+
+#aboutUs .bg-fixed-scroll--divider-first {
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+  height: 10px;
+  width: 100%;
+}
+
+/* -- Section Concept -- */
+#concept {
+  width: 60em;
+  height: 100%;
+  top: -10em;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+#concept > div {
+  background-color: #fcfcfc;
+}
+
+#concept p {
+  font-size: 1.2em;
+  text-align: justify;
+}
+
+#concept .header h2 {
+  text-shadow: 0.5px 0.5px 2px #888;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.text-concept--color {
+  text-shadow: 0.5px 0.5px 0.5px #999;
+  color: #826080;
+}
+
+.text-concept--color-a {
+  text-shadow: 0.5px 0.5px 0.5px #999;
+  color: #826080;
+  text-decoration-line: underline !important;
+  text-underline-offset: 2.5px !important;
+}
+
+.text-concept--color-a:hover {
+  color: #9e869d;
+}
+
+/* Section second Scrolling Background */
+#scrolling-background-second {
+  position: relative;
+  height: 75vh;
+  width: 100%;
+  background-image: url("../assets/img/workbench_team.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  filter: grayscale(75%);
+}
+
+/* Section Team */
+#team {
+  font-size: 1.2em;
+}
+
+#team #first-container,
+#third-container {
+  background-image: linear-gradient(
+    to right,
+    rgba(107, 69, 106, 0.85),
+    rgba(255, 0, 0, 0)
+  );
+}
+
+#team #second-container,
+#fourth-container {
+  background-image: linear-gradient(
+    325deg,
+    rgba(214, 214, 214, 1),
+    rgba(255, 255, 255, 1)
+  );
+}
+
+/* Section third Scrolling Background */
+#scrolling-background-third {
+  position: relative;
+  height: 75vh;
+  width: 100%;
+  background-image: url("../assets/img/company.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  filter: grayscale(25%);
+}
+
+#scrolling-background-third article {
+  text-align: justify;
+  text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.6);
+}
+
+#scrolling-background-third article div {
+  backdrop-filter: contrast(0.5) blur(5px);
+}
+
+#scrolling-background-third article h2 {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+#scrolling-background-third article p {
+  font-size: 1.25em;
+  column-count: 2;
+  column-gap: 4em;
+  column-rule: 0.125em solid rgba(255, 255, 255, 0.5);
+}
+
+/* Section fourth Scrolling Background */
+#scrolling-background-fourth {
+  position: relative;
+  height: 75vh;
+  width: 100%;
+  background-image: url("../assets/img/anmeldung.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  filter: grayscale(75%);
+}
+
+/* Section Shop */
+#shop {
+  position: relative;
+  background-color: #eff1ee;
+  text-align: justify;
+}
+
+.shop-image-container {
+  position: relative;
+}
+
+.shop-image-container::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 8.25em;
+  bottom: 0;
+  background-image: linear-gradient(-5.71deg, white 49.8%, transparent 50.2%);
+  background-repeat: no-repeat;
+  background-size: 100% 5rem;
+}
+
+/* 
+#location {
+  background-image: url("../images/02.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+} 
+*/
+
+/* -- Animations -- */
+.grid-item {
+  opacity: 0; /* Anfangszustand für die Animation */
+  animation-duration: 1.15s; /* Dauer der Animation */
+  animation-fill-mode: forwards; /* Bewahrt den Endzustand */
+}
+
+.flex-item {
+  opacity: 0; /* Anfangszustand für die Animation */
+  animation-fill-mode: forwards; /* Bewahrt den Endzustand */
+}
+
+.flex-item.duration1 {
+  animation-duration: 1.25s; /* Dauer der Animation */
+}
+
+.flex-item.duration2 {
+  animation-duration: 1.75s; /* Dauer der Animation */
+}
+
+.flex-item.duration3 {
+  animation-duration: 2.25s; /* Dauer der Animation */
+}
+
+/* Fade-In von links */
+.fade-in-left {
+  animation-name: fadeInLeft;
+}
+
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/*  Fade-In von rechts */
+.fade-in-right {
+  animation-name: fadeInRight;
+}
+
+@keyframes fadeInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/*  Fade-In von oben */
+.fade-in-top {
+  animation-name: fadeInTop;
+}
+
+@keyframes fadeInTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
