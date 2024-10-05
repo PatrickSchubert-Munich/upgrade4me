@@ -676,24 +676,34 @@
 
 
     <!-- Google Maps -->
-    <gmp-map center="48.12519836425781,11.588981628417969" zoom="14" map-id="DEMO_MAP_ID" id="location">
+    <!-- <gmp-map center="48.12519836425781,11.588981628417969" zoom="14" map-id="DEMO_MAP_ID" id="location">
         <gmp-advanced-marker position="48.12519836425781,11.588981628417969" title="My location"></gmp-advanced-marker>
-    </gmp-map>
+    </gmp-map> -->
 
-    <!-- Footer -->
-    <footer class="d-flex flex-row justify-content-between align-items-center p-3 footer text-white">
-        <!-- Icons -->
-        <ul class="footer-ul m-0">
-            <li><a href="#" class="icon brands fa-facebook"></a></li>
-            <li><a href="#" class="icon brands fa-instagram"></a></li>
-            <li><a href="#" class="icon brands fa-linkedin"></a></li>
-        </ul>
+    <footer id="footer" class="d-flex justify-content-between p-4 z-1">
+        <div class="footer-left">
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <!-- Weitere Social Media Icons... -->
+            </div>
 
-        <!-- Menu -->
-        <ul class="footer-ul m-0">
-            <li>&copy; Untitled</li>
-            <li><a href="#impressum">Impressum</a></li>
-        </ul>
+            <!-- Impressum und Copyright -->
+            <div class="footer-info mt-3">
+                <a href="#" class="impressum">Impressum</a>
+                <span class="copyright">© 2024 Upgrade4me</span>
+            </div>
+        </div>
+
+        <!-- Google Maps -->
+        <div class="footer-right">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509676!2d144.9630578153184!3d-37.8141079797517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577a9d7d5d8ffb5!2sFlinders%20St%20Station!5e0!3m2!1sen!2sau!4v1601967232481!5m2!1sen!2sau"
+                width="450" height="320" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+            </iframe>
+        </div>
     </footer>
 
     <!-- Bootstrap -->

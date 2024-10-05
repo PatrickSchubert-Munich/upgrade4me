@@ -76,12 +76,13 @@
 /* Form and form Button */
 @media (prefers-reduced-motion: no-preference) {
   #form {
+    overflow-y: hidden;
     max-height: 0;
     visibility: hidden;
     opacity: 0;
-    animation: fade-in linear forwards;
+    animation: fade-in 1.5s linear forwards;
     animation-timeline: view();
-    animation-range-start: 50px;
+    animation-range-start: 100px;
     animation-range-end: contain;
   }
 

@@ -6,6 +6,7 @@
 
 /* -- Section About Us -- */
 #aboutUs {
+  scroll-behavior: smooth;
   position: relative;
 }
 
@@ -50,6 +51,7 @@
 
 /* Section first Scrolling Background */
 #scrolling-background-first {
+  scroll-behavior: smooth;
   position: relative;
   height: 75vh;
   width: 100%;
@@ -71,6 +73,7 @@
 
 /* -- Section Concept -- */
 #concept {
+  scroll-behavior: smooth;
   width: 60em;
   height: 100%;
   top: -10em;
@@ -111,6 +114,7 @@
 
 /* Section second Scrolling Background */
 #scrolling-background-second {
+  scroll-behavior: smooth;
   position: relative;
   height: 75vh;
   width: 100%;
@@ -167,6 +171,7 @@
 
 /* Section third Scrolling Background */
 #scrolling-background-third {
+  scroll-behavior: smooth;
   position: relative;
   height: 75vh;
   width: 100%;
@@ -235,6 +240,7 @@
 
 /* Section Shop */
 #shop {
+  scroll-behavior: smooth;
   position: relative;
   background-color: #eff1ee;
   text-align: justify;
