@@ -73,56 +73,6 @@
   max-width: 80%;
 }
 
-/* 3-D Card */
-.card-container {
-  perspective: 800px;
-  margin: 0 auto;
-  min-width: 17.5em; /* Breite der Karte nur hier einstellen! */
-  margin: 20px;
-}
-
-.custom-card {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 0.5em;
-  box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.5);
-  color: black;
-  text-align: center;
-  transition: transform 1s ease-in-out;
-  transform-style: preserve-3d;
-  transform: rotateY(0deg);
-}
-
-.card-container .custom-card:hover {
-  transform: rotateY(180deg);
-}
-
-.custom-card--front {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-radius: inherit;
-  backface-visibility: hidden;
-}
-
-.custom-card--back {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-radius: inherit;
-  transform: rotateY(180deg);
-  backface-visibility: hidden;
-}
-
-.shop-image {
-  width: 100%;
-}
-
 /* Form Button */
 .btn-primary {
   outline: 2px solid white;
@@ -157,4 +107,87 @@
 .form-check-input:checked {
   background-color: #6b4569 !important; /* Hintergrundfarbe, wenn die Checkbox ausgewählt ist */
   border: none; /* Rahmen entfernen, wenn ausgewählt */
+}
+
+/* 3-D Card */
+.card-main-container {
+  position: relative;
+  perspective: 800px;
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+
+.card-sub-container {
+  position: relative;
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 25rem;
+  box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.5);
+  color: black;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+}
+
+.card-sub-container:hover {
+  transform: rotateY(180deg);
+}
+
+.card-front {
+  position: absolute;
+  border-radius: 0.5rem;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-back {
+  position: absolute;
+  border-radius: 0.5rem;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(
+    45deg,
+    rgb(158, 134, 157, 1),
+    rgb(255, 255, 255, 1)
+  );
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  text-align: center;
+}
+
+.card-back-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.card-back-btn {
+  outline: 1px solid white;
+  background-image: linear-gradient(
+    to top,
+    rgba(107, 69, 105, 1),
+    rgba(158, 134, 157, 1)
+  );
+  color: white;
+  border: none;
+  padding: 15px 85px;
+  border-radius: 50px;
+  font-size: 1.25em;
+  cursor: pointer;
+}
+
+.card-back-btn:hover {
+  outline: 1px solid #e3e3e3;
+  background-image: linear-gradient(
+    to top,
+    rgba(158, 134, 157, 1),
+    rgba(107, 69, 105, 1)
+  );
 }
