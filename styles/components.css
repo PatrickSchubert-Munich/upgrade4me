@@ -112,7 +112,7 @@
 /* 3-D Card */
 .card-main-container {
   position: relative;
-  perspective: 800px;
+  perspective: 400px;
   margin: 0 auto;
   margin-bottom: 2em;
 }

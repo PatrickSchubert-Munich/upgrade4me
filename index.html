@@ -624,50 +624,50 @@
     </main>
 
     <!-- Form Element -->
-    <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-        <form
-            style="width: 90vw; max-width: 500px; border: 2px solid #826080; padding: 20px; border-radius: 10px; background-color: #eff1ee; font-size: 18px;">
+    <div id="form" class="d-flex flex-wrap justify-content-center align-items-center p-5">
+        <form class="p-4 rounded-2" style="border: 2px solid #826080; background-color: #eff1ee; min-width: 30%">
             <!-- Surname input -->
-            <div class="form-outline mb-4">
+            <div class="mb-2">
                 <input type="text" id="surname" class="form-control" />
-                <label class="form-label" for="surname">Surname</label>
+                <label class="form-label mt-1" for="surname">Surname</label>
             </div>
 
             <!-- Name input -->
-            <div class="form-outline mb-4">
+            <div class="form-outline mb-2">
                 <input type="text" id="name" class="form-control" />
-                <label class="form-label" for="name">Name</label>
+                <label class="form-label mt-1" for="name">Name</label>
             </div>
 
             <!-- Email input -->
-            <div class="form-outline mb-4">
+            <div class=" form-outline mb-2">
                 <input type="email" id="email" class="form-control" />
-                <label class="form-label" for="email">Email address</label>
+                <label class="form-label mt-1" for="email">Email address</label>
             </div>
 
             <!-- Telephone input -->
-            <div class="form-outline mb-4">
+            <div class="form-outline mb-2">
                 <input type="tel" id="telephone" class="form-control" />
-                <label class="form-label" for="telephone">Phone</label>
+                <label class="form-label mt-1" for="telephone">Phone</label>
             </div>
 
             <!-- Message input -->
-            <div class="form-outline mb-4">
-                <textarea class="form-control" id="message" rows="4"></textarea>
-                <label class="form-label" for="message">Message</label>
+            <div class="form-outline mb-2">
+                <textarea class="form-control" id="message" rows="4" maxlength="500"></textarea>
+                <label class="form-label mt-1" for="message">Message</label>
             </div>
 
             <!-- Checkbox -->
-            <div class="form-check d-flex justify-content-center mb-4">
+            <div class="form-check d-flex justify-content-center mb-2">
                 <input class="form-check-input me-2" type="checkbox" value="null" id="copy-of-message" unchecked />
                 <label class="form-check-label" for="copy-of-message">Send me a copy of this message</label>
             </div>
 
             <!-- Submit button -->
             <div style="display: flex; justify-content: center;">
-                <button type="submit" class="btn btn-primary mb-4"
-                    style="background-image: linear-gradient(to bottom, #6B4569, #eff1ee); border: none; border-radius: 50px; padding: 10px 20px; color: white; font-size: 18px; transition: background-image 0.3s;">
-                    Send
+                <button type="submit"
+                    style="outline: 1px solid white; background-image: linear-gradient(to top, rgba(107, 69, 105, 1), rgba(158, 134, 157, 1));
+                    color: white; border: none; padding: 7.5px 30px; border-radius: 50px; font-size: 1em; cursor: pointer;">
+                    Submit
                 </button>
             </div>
         </form>
