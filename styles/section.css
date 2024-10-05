@@ -122,6 +122,26 @@
   filter: grayscale(75%);
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  #scrolling-background-second div h2 {
+    margin: 0;
+    scale: 0.25;
+    opacity: 0;
+    animation: test linear forwards;
+    animation-timeline: view();
+    animation-range-start: entry -50px;
+    animation-range-end: 390px;
+  }
+
+  @keyframes test {
+    to {
+      scale: 2;
+      opacity: 1;
+      letter-spacing: .1em;
+    }
+  }
+}
+
 /* Section Team */
 #team {
   font-size: 1.2em;
@@ -190,6 +210,27 @@
   background-size: cover;
   background-attachment: fixed;
   filter: grayscale(75%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #scrolling-background-fourth div h2 {
+    margin: 0;
+    border-radius: 5px;
+    scale: 0.25;
+    opacity: 0;
+    animation: test linear forwards;
+    animation-timeline: view();
+    animation-range-start: entry -50px;
+    animation-range-end: 390px;
+  }
+
+  @keyframes test {
+    to {
+      scale: 2;
+      opacity: 1;
+      letter-spacing: .1em;
+    }
+  }
 }
 
 /* Section Shop */

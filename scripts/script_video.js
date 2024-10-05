@@ -5,17 +5,14 @@ const video = document.querySelector(".aboutUs-video");
 const videoPopup = document.querySelector(".aboutUs-video-popup");
 
 function checkScroll(popupActive) {
-  console.log(popupActive);
   const boundingRect = video.getBoundingClientRect();
   const visible =
     boundingRect.top + boundingRect.height > 0 &&
     boundingRect.top < window.innerHeight;
   if (visible && !popupActive) {
     video.play();
-    console.log("video played");
   } else {
     video.pause();
-    console.log("video paused");
   }
 }
 

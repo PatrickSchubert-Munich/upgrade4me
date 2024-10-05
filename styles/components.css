@@ -74,9 +74,33 @@
 }
 
 /* Form and form Button */
+@media (prefers-reduced-motion: no-preference) {
+  #form {
+    max-height: 0;
+    visibility: hidden;
+    opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range-start: 50px;
+    animation-range-end: contain;
+  }
+
+  @keyframes fade-in {
+    to {
+      margin-top: 5em;
+      margin-bottom: 0;
+      max-height: 100%;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
 #form form {
-  border: 2px solid #826080;
+  border: 3px solid #826080;
+  border-bottom: none !important;
   background-color: #eff1ee;
+  border-style: groove;
   min-width: 30%;
 }
 
@@ -133,7 +157,7 @@
 /* 3-D Card */
 .card-main-container {
   position: relative;
-  perspective: 400px;
+  perspective: 1000px;
   margin: 0 auto;
   margin-bottom: 2em;
 }

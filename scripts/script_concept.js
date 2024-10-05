@@ -19,8 +19,6 @@ const options = {
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      console.log(entry.target.id);
-
       if (entry.target.id === "first-child-left") {
         entry.target.classList.add("fade-in-left");
       }
