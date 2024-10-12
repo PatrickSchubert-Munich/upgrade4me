@@ -1,20 +1,20 @@
 "use strict";
 
 // Catch intersection elements
-const firstContainer = document.querySelector("#team > #first-container");
-const secondContainer = document.querySelector("#team > #second-container");
-const thirdContainer = document.querySelector("#team > #third-container");
-const fourthContainer = document.querySelector("#team > #fourth-container");
+const firstContainer = document.querySelector(".team-container--item:first-child");
+const secondContainer = document.querySelector(".team-container--item:nth-child(2)");
+const thirdContainer = document.querySelector(".team-container--item:nth-child(3)");
+const fourthContainer = document.querySelector(".team-container--item:last-child");
 
 // Catch "to fade in" elements
-const firstFromLeft = document.querySelector("#team > div:first-child img");
-const firstFromRight = document.querySelector("#team > div:first-child div");
-const secondFromLeft = document.querySelector("#team > div:nth-child(2) div");
-const secondFromRight = document.querySelector("#team > div:nth-child(2) img");
-const thirdFromLeft = document.querySelector("#team > div:nth-child(3) img");
-const thirdFromRight = document.querySelector("#team > div:nth-child(3) div");
-const fourthFromLeft = document.querySelector("#team > div:nth-child(4) div");
-const fourthFromRight = document.querySelector("#team > div:nth-child(4) img");
+const firstFromLeft = document.querySelector(".team-container--item:first-child img");
+const firstFromRight = document.querySelector(".team-container--item:first-child p");
+const secondFromLeft = document.querySelector(".team-container--item:nth-child(2) p");
+const secondFromRight = document.querySelector(".team-container--item:nth-child(2) img");
+const thirdFromLeft = document.querySelector(".team-container--item:nth-child(3) img");
+const thirdFromRight = document.querySelector(".team-container--item:nth-child(3) p");
+const fourthFromLeft = document.querySelector(".team-container--item:nth-child(4) p");
+const fourthFromRight = document.querySelector(".team-container--item:nth-child(4) img");
 
 // company section
 const companySection = document.getElementById("scrolling-background-third");
