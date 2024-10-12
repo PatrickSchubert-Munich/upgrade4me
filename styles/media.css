@@ -55,7 +55,6 @@
   }
 }
 
-/* Section Concept */
 /* SECTION CONCEPT */
 @media screen and (max-width: 1070px) {
   .concept-container {
@@ -152,19 +151,22 @@
   .team-container--item:nth-child(odd) {
     flex-wrap: wrap;
     font-size: 1.1em;
+    padding-right: 0;
   }
 
   .team-container--item:nth-child(even) {
     flex-wrap: wrap-reverse;
+    padding-left: 0;
   }
 
   .team-container--item p {
     max-width: 350px;
     text-align: justify;
+    padding: 0 0.5em 1.2em 0.5em;
   }
 }
 
-/* Section Geschäftskunden */
+/* SECTION GESCHÄFTSKUNDEN */
 @media screen and (max-width: 850px) {
   #scrolling-background-third article h2 {
     padding: 0.65em 0 !important;

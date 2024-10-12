@@ -1,6 +1,7 @@
 /* global */
 .bg-fixed-scroll--divider {
-  height: 10px;
+  background-color: white;
+  height: 1em;
   width: 100%;
 }
 
@@ -55,11 +56,16 @@
 }
 
 /* Section first Scrolling Background */
-#scrolling-background-first {
-  scroll-behavior: smooth;
+#scrolling-bg-first {
   position: relative;
+}
+.scrolling-bg-first--container {
+  display: flex;
+  flex-direction: column;
   height: 75vh;
-  width: 100%;
+  color: white;
+  justify-content: center;
+  align-items: center;
   background-image: url("../assets/img/banner_concept.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -68,12 +74,30 @@
   filter: grayscale(75%);
 }
 
-#aboutUs .bg-fixed-scroll--divider-first {
+.bg-fixed-scroll--divider.first {
   position: absolute;
-  bottom: 0;
-  background-color: white;
-  height: 10px;
-  width: 100%;
+  top: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .scrolling-bg-first--container h2 {
+    margin: 0;
+    border-radius: 5px;
+    scale: 0.25;
+    opacity: 0;
+    animation: test linear forwards;
+    animation-timeline: view();
+    animation-range-start: entry -50px;
+    animation-range-end: 390px;
+  }
+
+  @keyframes test {
+    to {
+      scale: 2;
+      opacity: 1;
+      letter-spacing: 0.1em;
+    }
+  }
 }
 
 /* SECTION CONCEPT */
@@ -100,8 +124,6 @@
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
-
-/* Rest des CSS bleibt unverändert */
 
 .concept-container header h2 {
   text-shadow: 0.5px 0.5px 2px #888;
@@ -154,13 +176,15 @@
   color: #9e869d;
 }
 
-/* Section second Scrolling Background */
-#scrolling-background-second {
-  scroll-behavior: smooth;
-  position: relative;
+/* SCROLLING BACKGROUND TEAM*/
+.scrolling-bg-second--container {
+  display: flex;
+  flex-direction: column;
   height: 75vh;
-  width: 100%;
-  background-image: url("../assets/img/workbench_team.jpg");
+  color: white;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/img/banner_concept.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -168,8 +192,13 @@
   filter: grayscale(75%);
 }
 
+.bg-fixed-scroll--divider.second {
+  position: absolute;
+  bottom: 0;
+}
+
 @media (prefers-reduced-motion: no-preference) {
-  #scrolling-background-second div h2 {
+  .scrolling-bg-second--container h2 {
     margin: 0;
     scale: 0.25;
     opacity: 0;
@@ -199,7 +228,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 20px;
+  gap: 1.2em;
 }
 
 .team-container--item:nth-child(odd) {
@@ -208,6 +237,7 @@
     rgba(107, 69, 106, 0.85),
     rgba(255, 0, 0, 0)
   );
+  padding-right: 1em;
 }
 
 .team-container--item:nth-child(even) {
@@ -216,11 +246,13 @@
     rgba(214, 214, 214, 1),
     rgba(255, 255, 255, 1)
   );
+  padding-left: 1em;
 }
 
 .team-container--item p {
   max-width: 50%;
   margin: 0;
+  padding: 0;
   font-size: 1.2em;
 }
 
@@ -268,11 +300,14 @@
   --animate-duration: 1.25s;
 }
 
-/* Section fourth Scrolling Background */
-#scrolling-background-fourth {
-  position: relative;
+/* SCROLLING BACKGROUND ANMELDUNG*/
+.scrolling-bg-fourth--container {
+  display: flex;
+  flex-direction: column;
   height: 75vh;
-  width: 100%;
+  color: white;
+  justify-content: center;
+  align-items: center;
   background-image: url("../assets/img/anmeldung.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -281,8 +316,13 @@
   filter: grayscale(75%);
 }
 
+.bg-fixed-scroll--divider.fourth {
+  position: absolute;
+  top: 0;
+}
+
 @media (prefers-reduced-motion: no-preference) {
-  #scrolling-background-fourth div h2 {
+  .scrolling-bg-fourth--container h2 {
     margin: 0;
     border-radius: 5px;
     scale: 0.25;
@@ -302,7 +342,7 @@
   }
 }
 
-/* Section Shop */
+/* SECTION SHOP */
 #shop {
   scroll-behavior: smooth;
   position: relative;
