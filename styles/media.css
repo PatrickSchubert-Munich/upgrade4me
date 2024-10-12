@@ -80,29 +80,29 @@
   }
 }
 
-/* Section Team */
-@media screen and (max-width: 745px) {
-  #team #first-container,
-  #second-container,
-  #third-container,
-  #fourth-container div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
-    font-size: 0.9em;
-    width: 100%;
-    /* text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5); */
+/* SECTION TEAM */
+@media (max-width: 780px) {
+  .team-container--item p {
+    font-size: 1.1em;
   }
 }
 
-/* @media screen and (max-width: 690px) {
-
-  #team .first-child,
-  .second-child {
-    width: 350px !important;
+@media (max-width: 705px) {
+  .team-container--item:nth-child(odd) {
+    flex-wrap: wrap;
+    font-size: 1.1em;
   }
-} */
+
+  .team-container--item:nth-child(even) {
+    flex-wrap: wrap-reverse;
+  }
+
+  .team-container--item p {
+    max-width: 350px;
+    text-align: justify;
+  }
+
+}
 
 /* Section Geschäftskunden */
 @media screen and (max-width: 850px) {

@@ -141,18 +141,26 @@
     to {
       scale: 2;
       opacity: 1;
-      letter-spacing: .1em;
+      letter-spacing: 0.1em;
     }
   }
 }
 
-/* Section Team */
-#team {
-  font-size: 1.2em;
+/* SECTION TEAM */
+.team-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
 }
 
-#team #first-container,
-#third-container {
+.team-container--item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.team-container--item:nth-child(odd) {
   background-image: linear-gradient(
     to right,
     rgba(107, 69, 106, 0.85),
@@ -160,13 +168,23 @@
   );
 }
 
-#team #second-container,
-#fourth-container {
+.team-container--item:nth-child(even) {
   background-image: linear-gradient(
     325deg,
     rgba(214, 214, 214, 1),
     rgba(255, 255, 255, 1)
   );
+}
+
+.team-container--item p {
+  max-width: 50%;
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.team-container--item img {
+  height: 350px;
+  width: auto;
 }
 
 /* Section third Scrolling Background */
@@ -237,7 +255,7 @@
     to {
       scale: 2;
       opacity: 1;
-      letter-spacing: .1em;
+      letter-spacing: 0.1em;
     }
   }
 }
@@ -273,21 +291,10 @@
   animation-fill-mode: forwards; /* Bewahrt den Endzustand */
 }
 
-.flex-item {
+.flex-item--animated {
   opacity: 0; /* Anfangszustand für die Animation */
   animation-fill-mode: forwards; /* Bewahrt den Endzustand */
-}
-
-.flex-item.duration1 {
-  animation-duration: 1.25s; /* Dauer der Animation */
-}
-
-.flex-item.duration2 {
-  animation-duration: 1.75s; /* Dauer der Animation */
-}
-
-.flex-item.duration3 {
-  animation-duration: 2.25s; /* Dauer der Animation */
+  animation-duration: 1.75s;
 }
 
 /* Fade-In von links */
