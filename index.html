@@ -15,6 +15,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="./scripts/script_nav.js" defer></script>
     <script src="./scripts/script_video.js" defer></script>
     <script src="./scripts/script_team.js" defer></script>
     <script async
@@ -39,37 +40,34 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-md navbar-dark navbar-custom text-white">
-        <img class="position-fixed rounded-bottom-1 z-1" src="./assets/logo/Logo.jpg" alt="company logo"
-            style="left: 22px; top: 47.5px;height: 110px; width: auto; box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;">
-        <div class="container-fluid">
-            <div class="d-flex align-items-center">
-                <a class="navbar-brand m-0" href="#">Upgrade <span id="brand-number-4">4</span>me</a>
-            </div>
-            <button class="navbar-toggler border-0 shadow-none z-1" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon z-0"></i></span>
-            </button>
-            <div class="collapse navbar-collapse fs-6 fw-bold justify-content-end" id="navbarNav">
-                <ul class="navbar-nav d-flex align-items-end">
-                    <li class="nav-item me-4">
-                        <a class="nav-link text-white" href="#aboutUs">ÜberUns</a>
-                    </li>
-                    <li class="nav-item me-4">
-                        <a class="nav-link text-white" href="#concept">Concept</a>
-                    </li>
-                    <li class="nav-item me-4">
-                        <a class="nav-link text-white" href="#team" name="team">Team</a>
-                    </li>
-                    <li class="nav-item me-4">
-                        <a class="nav-link text-white" href="#shop">Shop</a>
-                    </li>
-                    <li class="nav-item me-4">
-                        <a class="nav-link text-white" href="#location">Location</a>
-                    </li>
-                </ul>
-            </div>
+    <nav id="nav" style="position: fixed;">
+        <img id="upgrade4me-logo" src="./assets/logo/Logo.jpg" alt="Upgrade4me Firmenlogo">
+        <ul class="main-nav">
+            <a class="push-left" href="#">Upgrade <span id="brand-number-4">4</span>me</a>
+            <li> <a href="#aboutUs">ÜberUns</a></li>
+            <li> <a href="#concept">Konzept</a></li>
+            <li> <a href="#team" name="team">Team</a></li>
+            <li> <a href="#shop">Shop</a></li>
+            <li> <a href="#location">Location</a></li>
+            <span class="side-nav--icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="40" height="40" fill="white">
+                    <path
+                        d="M16 132h416c8.837 0 16-7.163 16-16v-24c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v24c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-24c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v24c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-24c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v24c0 8.837 7.163 16 16 16z" />
+                </svg>
+            </span>
+        </ul>
+        <div class="side-nav">
+            <a class="closebtn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="25" height="25" fill="white">
+                    <path
+                        d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+                </svg>
+            </a>
+            <a href="#aboutUs">ÜberUns</a>
+            <a href="#concept">Konzept</a>
+            <a href="#team">Team</a>
+            <a href="#shop">Shop</a>
+            <a href="#location">Location</a>
         </div>
     </nav>
 
