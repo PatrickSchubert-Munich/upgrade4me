@@ -49,6 +49,11 @@
   color: #9e86;
 }
 
+#aboutUs .aboutUs-video-popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* Section first Scrolling Background */
 #scrolling-background-first {
   scroll-behavior: smooth;
@@ -71,29 +76,65 @@
   width: 100%;
 }
 
-/* -- Section Concept -- */
+/* SECTION CONCEPT */
 #concept {
   scroll-behavior: smooth;
+  position: relative;
+  min-height: 100vh; /* Mindesthöhe auf 100% der Viewport-Höhe setzen */
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertikale Zentrierung des Inhalts */
+}
+
+.concept-container {
+  position: relative; /* Änderung von absolute zu relative */
+  display: flex;
+  flex-direction: column;
   width: 60em;
-  height: 100%;
-  top: -10em;
+  max-width: 90%; /* Maximale Breite für Responsivität */
+  margin: -10em auto 2em; /* Zentrieren und Abstand nach unten hinzufügen */
+  border-radius: 7.5px;
+  padding: 1.5em 2em;
+  background-color: #fcfcfc;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
-#concept > div {
-  background-color: #fcfcfc;
-}
+/* Rest des CSS bleibt unverändert */
 
-#concept p {
-  font-size: 1.2em;
-  text-align: justify;
-}
-
-#concept .header h2 {
+.concept-container header h2 {
   text-shadow: 0.5px 0.5px 2px #888;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  text-align: center;
+  margin: 1em auto;
+}
+
+.concept-container article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.concept-container p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  text-align: justify;
+  margin: 1em auto;
+}
+
+.concept-container--svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 50%;
+  height: 85px;
+  width: 85px;
 }
 
 .text-concept--color {
@@ -104,8 +145,9 @@
 .text-concept--color-a {
   text-shadow: 0.5px 0.5px 0.5px #999;
   color: #826080;
-  text-decoration-line: underline !important;
-  text-underline-offset: 2.5px !important;
+  text-decoration-line: underline;
+  text-underline-offset: 2.5px;
+  text-wrap: nowrap;
 }
 
 .text-concept--color-a:hover {
