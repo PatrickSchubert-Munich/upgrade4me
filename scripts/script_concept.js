@@ -16,41 +16,43 @@ const options = {
   treshold: 1,
 };
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      if (entry.target.id === "first-child-left") {
-        entry.target.classList.add("fade-in-left");
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        if (entry.target.id === "first-child-left") {
+          entry.target.classList.add("fade-in-left");
+        }
+
+        if (entry.target.id === "second-child-right") {
+          entry.target.classList.add("fade-in-right");
+        }
+
+        if (entry.target.id === "third-child-left") {
+          entry.target.classList.add("fade-in-left");
+        }
+
+        if (entry.target.id === "fifth-child-right") {
+          entry.target.classList.add("fade-in-right");
+        }
+
+        if (entry.target.id === "sixth-child-left") {
+          entry.target.classList.add("fade-in-left");
+        }
+
+        if (entry.target.id === "seventh-child-right") {
+          entry.target.classList.add("fade-in-right");
+        }
+
+        observer.unobserve(entry.target);
       }
+    });
+  }, options);
 
-      if (entry.target.id === "second-child-right") {
-        entry.target.classList.add("fade-in-right");
-      }
-
-      if (entry.target.id === "third-child-left") {
-        entry.target.classList.add("fade-in-left");
-      }
-
-      if (entry.target.id === "fifth-child-right") {
-        entry.target.classList.add("fade-in-right");
-      }
-
-      if (entry.target.id === "sixth-child-left") {
-        entry.target.classList.add("fade-in-left");
-      }
-
-      if (entry.target.id === "seventh-child-right") {
-        entry.target.classList.add("fade-in-right");
-      }
-
-      observer.unobserve(entry.target);
-    }
-  });
-}, options);
-
-observer.observe(paragraphfirstChildLeft);
-observer.observe(paragraphSecondChildRight);
-observer.observe(paragraphThirdChildLeft);
-observer.observe(paragraphFifthChildRight);
-observer.observe(paragraphSixthChildLeft);
-observer.observe(paragraphSeventhChildRight);
+  observer.observe(paragraphfirstChildLeft);
+  observer.observe(paragraphSecondChildRight);
+  observer.observe(paragraphThirdChildLeft);
+  observer.observe(paragraphFifthChildRight);
+  observer.observe(paragraphSixthChildLeft);
+  observer.observe(paragraphSeventhChildRight);
+});

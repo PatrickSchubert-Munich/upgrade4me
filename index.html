@@ -18,6 +18,7 @@
     <script src="./scripts/script_nav.js" defer></script>
     <script src="./scripts/script_video.js" defer></script>
     <script src="./scripts/script_team.js" defer></script>
+    <script src="./scripts/script_bg_company.js" defer></script>
     <script async
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7wPZ1v-OoOay_0ImAlda8S3Tm9GtFmi4&callback=console.debug&libraries=maps,marker&v=beta">
         </script>
@@ -43,7 +44,7 @@
     <nav id="nav" style="position: fixed;">
         <img id="upgrade4me-logo" src="./assets/logo/Logo.jpg" alt="Upgrade4me Firmenlogo">
         <ul class="main-nav">
-            <a class="push-left" href="#">Upgrade <span id="brand-number-4">4</span>me</a>
+            <li></li><a class="push-left" href="#">Upgrade <span id="brand-number-4">4</span>me</a>
             <li> <a href="#aboutUs">ÜberUns</a></li>
             <li> <a href="#concept">Konzept</a></li>
             <li> <a href="#team" name="team">Team</a></li>
@@ -76,30 +77,29 @@
     <main>
         <!-- SECTION AboutUs -->
         <section id="aboutUs">
-            <div class="d-flex justify-content-around align-items-center">
-                <video class="aboutUs-video z-0" autoplay muted loop>
+            <div class="aboutUs-container">
+                <video class="aboutUs-video" autoplay muted loop>
                     <source type="video/mp4" src="./assets/video/intro.mp4">
                     Upps...your Browser dosen´t support video!
                 </video>
-                <div class="container-btn-video text-center z-2">
-                    <button id="btn-video-large"
-                        class="btn btn-light gap-2 ps-4 pe-4 fs-5 rounded-5 d-inline-flex align-items-center text-white aboutUs-btn--video aboutUs--play-video">
+                <div class="container-btn-video">
+                    <button id="btn-video-large" class="aboutUs-btn--video aboutUs--play-video">
                         <i class="fa-solid fa-play aboutUs--play-video"></i>
                         Play
                     </button>
-                    <button id="btn-video-small"
-                        class="btn btn-light text-white aboutUs-btn--video aboutUs--play-video">
-                        <img src="./assets/img/play-arrow.png" alt="Play Button Icon" class="aboutUs--play-video">
+                    <button id="btn-video-small" class="aboutUs-btn--video aboutUs--play-video">
+                        <img src="./assets/img/play-arrow.png" alt="Play Button Icon" class="aboutUs--play-video"
+                            height="25px" width="25px">
                     </button>
                 </div>
-                <article class="z-2 w-50 text-white p-3 rounded-1">
+                <article>
                     <header>
-                        <h1 class="m-0">
+                        <h1>
                             Hallo und Herzlich Willkommen bei Upgrade4me!
                         </h1>
                     </header>
-                    <hr class="bg-white" style="height: 2px;">
-                    <p class="m-0">Wir sind ein <strong><a class="text-white text-aboutUs--color-a" href="#team">Team
+                    <hr>
+                    <p>Wir sind ein <strong><a class="text-aboutUs--color-a" href="#team">Team
                                 von
                                 Spezialisten
                                 für äußere und innere
@@ -107,9 +107,10 @@
                         Unser Anliegen ist es, Dich auf deinem Weg zu persönlichem Wachstum zu begleiten.
                     </p>
                 </article>
-                <div class="aboutUs-video-popup z-2">
+                <!-- Video PopUp -->
+                <div class="aboutUs-video-popup">
                     <div class="aboutUs-video">
-                        <video class="rounded-1" controls="true">
+                        <video controls="true">
                             <source type="video/mp4" src="./assets/video/intro.mp4">
                             Upps...your Browser doesn't support video!
                         </video>
@@ -117,15 +118,11 @@
                     </div>
                 </div>
             </div>
-            <!-- Video PopUp -->
-            <!-- <div class="bg-fixed-scroll--divider first z-2"></div> -->
         </section>
 
         <!-- SECTION SCROLLING BACKGROUND CONCEPT -->
         <section id="scrolling-bg-first">
-            <div class="scrolling-bg-first--container">
-                <h2>Konzept</h2>
-            </div>
+            <div class="scrolling-bg-first--container"></div>
             <div class="bg-fixed-scroll--divider first z-2"></div>
         </section>
 
@@ -284,8 +281,8 @@
 
         <!-- SECTION SCROLLING BACKGROUND TEAM -->
         <section id="scrolling-bg-third">
-            <div class="scrolling-bg-third--container animate__animated">
-                <article>
+            <div class="scrolling-bg-third--container">
+                <article class="animate__animated">
                     <h2>Für Geschäftskunden</h2>
                     <p>
                         Mitarbeiter verkörpern das Unternehmen und fungieren als dessen Aushängeschild. Um ein

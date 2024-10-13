@@ -10,17 +10,19 @@
 
 /* -- Section About Us -- */
 #aboutUs {
-  scroll-behavior: smooth;
   position: relative;
 }
 
-#aboutUs > div {
+.aboutUs-container {
   position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   height: 100vh;
   width: 100%;
   margin-top: 55px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   overflow: hidden;
-  text-shadow: 0.5px 0.5px 1px black;
 }
 
 .aboutUs-video {
@@ -34,18 +36,45 @@
   object-fit: cover;
   object-position: center center;
   filter: brightness(90%);
+  z-index: 1;
 }
 
-#aboutUs header h1 {
+.aboutUs-video video {
+  border-radius: 5px;
+}
+
+.container-btn-video {
+  position: relative;
+  text-align: center;
+  z-index: 5;
+}
+
+.aboutUs-container header h1 {
+  margin: 0;
   letter-spacing: 0.025em;
 }
 
-#aboutUs article p {
+.aboutUs-container article p {
+  margin: 0;
   font-size: 1.7em;
 }
 
-#aboutUs article {
-  backdrop-filter: contrast(0.5) blur(5px) !important;
+.aboutUs-container article p a {
+  color: white;
+}
+
+.aboutUs-container article hr {
+  background-color: white;
+  height: 2px;
+}
+
+.aboutUs-container article {
+  padding: 1em;
+  border-radius: 4px;
+  color: white;
+  width: 50%;
+  z-index: 2;
+  backdrop-filter: contrast(0.5) blur(5px);
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
@@ -53,7 +82,22 @@
   color: #9e86;
 }
 
-#aboutUs .aboutUs-video-popup.active {
+.aboutUs-video-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.aboutUs-video-popup.active {
   opacity: 1;
   visibility: visible;
 }
@@ -61,6 +105,7 @@
 /* Section first Scrolling Background */
 #scrolling-bg-first {
   position: relative;
+  overflow: hidden;
 }
 .scrolling-bg-first--container {
   display: flex;
@@ -80,27 +125,6 @@
 .bg-fixed-scroll--divider.first {
   position: absolute;
   top: 0;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .scrolling-bg-first--container h2 {
-    margin: 0;
-    border-radius: 5px;
-    scale: 0.25;
-    opacity: 0;
-    animation: test linear forwards;
-    animation-timeline: view();
-    animation-range-start: entry -50px;
-    animation-range-end: 390px;
-  }
-
-  @keyframes test {
-    to {
-      scale: 2;
-      opacity: 1;
-      letter-spacing: 0.1em;
-    }
-  }
 }
 
 /* SECTION CONCEPT */
@@ -163,12 +187,12 @@
 }
 
 .text-concept--color {
-  text-shadow: 0.5px 0.5px 0.5px #999;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
   color: #826080;
 }
 
 .text-concept--color-a {
-  text-shadow: 0.5px 0.5px 0.5px #999;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
   color: #826080;
   text-decoration-line: underline;
   text-underline-offset: 2.5px;
@@ -193,6 +217,7 @@
   background-size: cover;
   background-attachment: fixed;
   filter: grayscale(75%);
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
 
 .bg-fixed-scroll--divider.second {
@@ -205,13 +230,14 @@
     margin: 0;
     scale: 0.25;
     opacity: 0;
-    animation: test linear forwards;
+    animation: Team linear forwards;
     animation-timeline: view();
     animation-range-start: entry -50px;
     animation-range-end: 390px;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
   }
 
-  @keyframes test {
+  @keyframes Team {
     to {
       scale: 2;
       opacity: 1;
@@ -289,7 +315,7 @@
 .scrolling-bg-third--container article {
   color: white;
   text-align: justify;
-  text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.6);
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   backdrop-filter: contrast(0.5) blur(5px);
   width: 85%;
@@ -348,13 +374,14 @@
     border-radius: 5px;
     scale: 0.25;
     opacity: 0;
-    animation: test linear forwards;
+    animation: Anmeldung linear forwards;
     animation-timeline: view();
     animation-range-start: entry -50px;
     animation-range-end: 390px;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
   }
 
-  @keyframes test {
+  @keyframes Anmeldung {
     to {
       scale: 2;
       opacity: 1;

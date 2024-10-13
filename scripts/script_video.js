@@ -18,15 +18,16 @@ function checkScroll(popupActive) {
 
 function checkPlayVideo() {
   const videoBtn = document.querySelectorAll(".aboutUs-btn--video");
-  // Set default volume to 75%
   const videoElement = document.querySelector(".aboutUs-video-popup video");
   videoElement.volume = 0.75;
   videoBtn.forEach((playBtn) => {
     playBtn.addEventListener("click", (event) => {
-      if (event.target.classList.contains("aboutUs--play-video")) {
+      console.log("Button clicked"); // Debugging-Ausgabe
+      const target = event.target.closest(".aboutUs--play-video");
+      if (target) {
+        console.log("Target found"); // Debugging-Ausgabe
         popupActive = true;
-        videoPopup.classList.add('active');
-        // Stop playing video in background
+        videoPopup.classList.add("active");
         checkScroll(popupActive);
       }
     });
@@ -37,7 +38,7 @@ function checkCloseVideo() {
   const closeBtn = document.querySelector("#btn-video-close");
   closeBtn.addEventListener("click", (event) => {
     if (event.target.id === "btn-video-close") {
-      videoPopup.classList.remove('active');
+      videoPopup.classList.remove("active");
       popupActive = false;
       checkScroll(popupActive);
     }
