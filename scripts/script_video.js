@@ -25,8 +25,7 @@ function checkPlayVideo() {
     playBtn.addEventListener("click", (event) => {
       if (event.target.classList.contains("aboutUs--play-video")) {
         popupActive = true;
-        videoPopup.style.opacity = "1";
-        videoPopup.style.visibility = "visible";
+        videoPopup.classList.add('active');
         // Stop playing video in background
         checkScroll(popupActive);
       }
@@ -38,8 +37,7 @@ function checkCloseVideo() {
   const closeBtn = document.querySelector("#btn-video-close");
   closeBtn.addEventListener("click", (event) => {
     if (event.target.id === "btn-video-close") {
-      videoPopup.style.opacity = "0";
-      videoPopup.style.visibility = "hidden";
+      videoPopup.classList.remove('active');
       popupActive = false;
       checkScroll(popupActive);
     }
