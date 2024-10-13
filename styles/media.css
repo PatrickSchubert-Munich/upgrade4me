@@ -167,29 +167,39 @@
 }
 
 /* SECTION GESCHÄFTSKUNDEN */
-@media screen and (max-width: 850px) {
-  #scrolling-background-third article h2 {
-    padding: 0.65em 0 !important;
-    font-size: 1.5em;
+@media screen and (max-width: 1072px) {
+  .scrolling-bg-third--container article h2 {
+    font-size: 1.7em;
+    padding: 1.1em;
   }
 
-  #scrolling-background-third article p {
-    padding-left: 0.75em !important;
-    padding-right: 0.75em !important;
-    padding-bottom: 0.75em !important;
-    font-size: 1em;
+  .scrolling-bg-third--container article p {
+    font-size: 1.1em;
+    padding: 0 1.1em 1.1em 1.1em;
   }
 }
 
-@media screen and (max-width: 1335px) {
-  #scrolling-background-third article h2 {
+@media screen and (max-width: 850px) {
+  .scrolling-bg-third--container article h2 {
+    padding: 0.65em 0;
+    font-size: 1.5em;
+  }
+
+  .scrolling-bg-third--container article p {
+    column-count: 1;
+    padding: 0 1em 1em 1em;
+  }
+}
+
+@media screen and (max-width: 672px) {
+  .scrolling-bg-third--container article h2 {
+    padding: 0.65em 0;
     font-size: 1.2em;
   }
 
-  #scrolling-background-third article p {
-    column-count: 1;
-    font-size: 0.85em;
+  .scrolling-bg-third--container article p {
     text-align: left;
+    font-size: 0.85em;
   }
 }
 

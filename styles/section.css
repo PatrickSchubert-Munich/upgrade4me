@@ -1,6 +1,9 @@
 /* global */
 .bg-fixed-scroll--divider {
+  overflow-x: hidden;
   background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   height: 1em;
   width: 100%;
 }
@@ -261,8 +264,8 @@
   width: auto;
 }
 
-/* Section third Scrolling Background */
-#scrolling-background-third {
+/* SCROLLING BACKGROUND Geschäftskunden */
+#scrolling-bg-third {
   scroll-behavior: smooth;
   position: relative;
   height: 75vh;
@@ -275,25 +278,43 @@
   filter: grayscale(25%);
 }
 
-#scrolling-background-third article {
+.scrolling-bg-third--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.scrolling-bg-third--container article {
+  color: white;
   text-align: justify;
   text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.6);
-}
-
-#scrolling-background-third article div {
+  border-radius: 5px;
   backdrop-filter: contrast(0.5) blur(5px);
+  width: 85%;
 }
 
-#scrolling-background-third article h2 {
+.scrolling-bg-third--container article h2 {
+  text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  padding: 1.5em 0;
+  margin: 0;
 }
 
-#scrolling-background-third article p {
+.scrolling-bg-third--container article p {
+  margin: 0;
+  padding: 0 2em 2em 2em;
   font-size: 1.25em;
   column-count: 2;
   column-gap: 4em;
   column-rule: 0.125em solid rgba(255, 255, 255, 0.5);
+}
+
+.bg-fixed-scroll--divider.third {
+  position: absolute;
+  top: 0;
 }
 
 .animate__animated.animate__fadeInDownBig {
