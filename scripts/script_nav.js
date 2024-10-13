@@ -1,27 +1,38 @@
 "use strict";
 
-// Sidenav icon (open sidenav)
-const iconOpenSidenav = document.querySelector(".side-nav--icon");
-iconOpenSidenav.classList.toggle("visible");
+const CLOSE_SIDENAV = 768;
 
-// Sidenav icon (close sidenav)
-const iconCloseSidenav = document.querySelector(".closebtn");
-iconCloseSidenav.classList.toggle("visible");
+document.addEventListener("DOMContentLoaded", () => {
+  // Sidenav icon (open sidenav)
+  const iconOpenSidenav = document.querySelector(".side-nav--icon");
+  iconOpenSidenav.classList.toggle("visible");
 
-/* Set the width of the side navigation to 250px */
-function openNav() {
-  document.querySelector(".side-nav").style.width = "250px";
-}
+  // Sidenav icon (close sidenav)
+  const iconCloseSidenav = document.querySelector(".closebtn");
+  iconCloseSidenav.classList.toggle("visible");
 
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-  document.querySelector(".side-nav").style.width = "0";
-}
+  /* Set the width of the side navigation to 250px */
+  function openNav() {
+    document.querySelector(".side-nav").style.width = "200px";
+  }
 
-iconOpenSidenav.addEventListener("click", () => {
-  openNav();
-});
+  /* Set the width of the side navigation to 0 */
+  function closeNav() {
+    document.querySelector(".side-nav").style.width = "0";
+  }
 
-iconCloseSidenav.addEventListener("click", () => {
-  closeNav();
+  iconOpenSidenav.addEventListener("click", () => {
+    openNav();
+  });
+
+  iconCloseSidenav.addEventListener("click", () => {
+    closeNav();
+  });
+
+  window.addEventListener("resize", () => {
+    let resize = window.innerWidth;
+    if (resize === CLOSE_SIDENAV) {
+      document.querySelector(".side-nav").style.width = "0";
+    }
+  });
 });
