@@ -81,19 +81,18 @@ nav {
 
 /* SIDE - NAV */
 .side-nav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  top: 0; /* Stay at the top */
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
   right: 0;
   background-color: #4f2e4e;
   opacity: 0.85;
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
 }
 
-/* The navigation menu links */
 .side-nav a {
   padding: 12px 8px 12px 32px;
   text-decoration: none;
@@ -103,7 +102,6 @@ nav {
   color: white;
 }
 
-/* When you mouse over the navigation links, change their color */
 .side-nav a:hover:not(.closebtn) {
   color: #441a42;
   cursor: pointer;
@@ -113,12 +111,9 @@ nav {
 
 .side-nav a:focus:not(.closebtn) {
   color: #e3e3e3;
-  text-decoration: underline;
-  text-underline-offset: 0.35em;
-  transform: scale(2);
+  transform: scale(1.2);
 }
 
-/* Position and style the close button (top right corner) */
 .side-nav .closebtn {
   position: absolute;
   top: 0;
@@ -130,20 +125,7 @@ nav {
   padding-top: 0;
 }
 
-/* SIDENAV ICON */
-.side-nav--icon {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s linear 0.3s, opacity 0.3s;
-}
-
-.side-nav--icon.visible {
-  visibility: visible;
-  opacity: 1;
-  transition: visibility 0s linear 0s, opacity 0.3s;
-}
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .main-nav li:not(.push-left) {
     display: none;
   }

@@ -1,6 +1,6 @@
 "use strict";
 
-const CLOSE_SIDENAV = 768;
+const CLOSE_SIDENAV = 992;
 
 document.addEventListener("DOMContentLoaded", () => {
   // Sidenav icon (open sidenav)
