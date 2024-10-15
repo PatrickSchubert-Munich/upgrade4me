@@ -27,6 +27,7 @@
   margin: 0;
   border-radius: 50%;
   padding: 12.5px;
+  display: none;
 }
 
 #btn-video-large:hover,
@@ -38,74 +39,27 @@
   );
 }
 
-#btn-video-small {
-  display: none;
-}
-
 #btn-video-close {
   position: absolute;
-  top: 0.75em;
-  right: 0.75em;
+  top: -40px;
+  right: 0;
   color: white;
-  background-image: linear-gradient(
-    35deg,
-    rgba(0, 0, 0, 0.85),
-    rgba(0, 0, 0, 0.4)
-  );
-  margin: 0;
-  padding: 0.25em 0.75em 0.3em 0.76em;
-  font-size: 1.2em;
-  border-radius: 5px;
-  outline: 1px solid white;
-  z-index: 10;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
 }
 
 #btn-video-close:hover {
-  background-image: linear-gradient(
-    -30deg,
-    rgba(0, 0, 0, 0.4),
-    rgba(0, 0, 0, 0.85)
-  );
-  outline: 1px solid #e1e1e1;
+  color: #e1e1e1;
 }
 
-#aboutUs .aboutUs-video-popup.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-#aboutUs .aboutUs-video-popup div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#aboutUs .aboutUs-video-popup video {
-  object-fit: contain;
-  max-width: 80%;
-}
-
-/* Form and form Button */
-@media (prefers-reduced-motion: no-preference) {
-  #form {
-    overflow-y: hidden;
-    max-height: 0;
-    visibility: hidden;
-    /* opacity: 0; */
-    animation: fade-in 1.5s linear forwards;
-    animation-timeline: view();
-    animation-range-start: 100px;
-    animation-range-end: 200px;
+@media (max-width: 768px) {
+  #btn-video-large {
+    display: none;
   }
-
-  @keyframes fade-in {
-    to {
-      margin-top: 5em;
-      margin-bottom: 0;
-      max-height: 100%;
-      /* opacity: 1; */
-      visibility: visible;
-    }
+  #btn-video-small {
+    display: flex;
   }
 }
 
@@ -165,6 +119,30 @@
 .form-check-input:checked {
   background-color: #6b4569 !important; /* Hintergrundfarbe, wenn die Checkbox ausgewählt ist */
   border: none; /* Rahmen entfernen, wenn ausgewählt */
+}
+
+/* Form and form Button */
+@media (prefers-reduced-motion: no-preference) {
+  #form {
+    overflow-y: hidden;
+    max-height: 0;
+    visibility: hidden;
+    /* opacity: 0; */
+    animation: fade-in 1.5s linear forwards;
+    animation-timeline: view();
+    animation-range-start: 100px;
+    animation-range-end: 200px;
+  }
+
+  @keyframes fade-in {
+    to {
+      margin-top: 5em;
+      margin-bottom: 0;
+      max-height: 100%;
+      /* opacity: 1; */
+      visibility: visible;
+    }
+  }
 }
 
 /* 3-D Card */
