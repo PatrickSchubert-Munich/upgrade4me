@@ -137,7 +137,6 @@
 
 /* SECTION CONCEPT */
 #concept {
-  scroll-behavior: smooth;
   position: relative;
   min-height: 100vh; /* Mindesthöhe auf 100% der Viewport-Höhe setzen */
   margin-bottom: 2.5rem;
@@ -300,7 +299,6 @@
 
 /* SCROLLING BACKGROUND GESCHÄFTSKUNDEN */
 #scrolling-bg-third {
-  scroll-behavior: smooth;
   position: relative;
   height: 75vh;
   width: 100%;
@@ -353,7 +351,6 @@
 
 /* SCROLLING BACKGROUND LOCATION*/
 #scrolling-bg-fourth {
-  scroll-behavior: smooth;
   position: relative;
   height: 75vh;
   width: 100%;
@@ -403,26 +400,21 @@
 
 /* SECTION SHOP */
 #shop {
-  scroll-behavior: smooth;
   position: relative;
   background-color: #eff1ee;
+  min-height: 100%;
+  padding-bottom: 3em;
   text-align: justify;
 }
 
-.shop-image-container {
-  position: relative;
-}
-
-.shop-image-container::after {
-  position: absolute;
-  content: "";
-  left: 0;
-  right: 0;
-  top: 8.25em;
-  bottom: 0;
-  background-image: linear-gradient(-5.71deg, white 49.8%, transparent 50.2%);
-  background-repeat: no-repeat;
-  background-size: 100% 5rem;
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4em;
+  width: auto;
+  margin: 2.5em 0;
 }
 
 /********************************************************************** TEST START ***********************************************************************/

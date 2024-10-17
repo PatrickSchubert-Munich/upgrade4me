@@ -146,77 +146,199 @@
 }
 
 /* 3-D Card */
-.card-main-container {
-  position: relative;
-  perspective: 1000px;
-  margin: 0 auto;
-  margin-bottom: 2em;
+.flip-card {
+  border-radius: 0.5em;
+  width: 25em;
+  height: 750px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
-.card-sub-container {
+/* This container is needed to position the front and back side */
+.flip-card-inner {
   position: relative;
-  border-radius: 0.5rem;
+  background-color: white;
+  width: 100%;
   height: 100%;
-  width: 25rem;
-  box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.5);
-  color: black;
-  transition: transform 1s ease-in-out;
   transform-style: preserve-3d;
-  transform: rotateY(0deg);
+  transition: transform 1s ease-in-out;
 }
 
-.card-sub-container:hover {
+.card-body--footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 0.6em;
+}
+
+.card-body--footer.bronze {
+  background-color: #cc8e34;
+}
+
+.card-body--footer.silver {
+  background-color: #8a9597;
+}
+
+.card-body--footer.gold {
+  background-color: #ffd700;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
-.card-front {
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
   position: absolute;
-  border-radius: 0.5rem;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  min-height: 100%;
+  border-radius: 0.5em;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
+  transition: transform 1s ease-in-out;
+  box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 }
 
-.card-back {
-  position: absolute;
-  border-radius: 0.5rem;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+/* Style the back side */
+.flip-card-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: linear-gradient(
     45deg,
     rgb(158, 134, 157, 1),
     rgb(255, 255, 255, 1)
   );
   transform: rotateY(180deg);
-  backface-visibility: hidden;
-  text-align: center;
 }
 
-.card-back-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.shop-image-container {
+  height: 200px;
+  position: relative;
+  background-color: #ffd700;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
+
+.shop-image-container img {
+  width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(100%);
+  mix-blend-mode: multiply;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
 }
 
+.shop-image-container::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(-5.71deg, white 49.8%, transparent 50.2%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 3.5em;
+}
+
+.shop-image-container.bronze {
+  background-color: #cc8e34;
+}
+
+.shop-image-container.silver {
+  background-color: #8a9597;
+}
+
+.shop-image-container.gold {
+  background-color: #ffd700;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.card-body header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 1em 1em 1em;
+}
+
+.card-category {
+  margin: 0;
+  text-shadow: 1px 1px 1.5px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.1em;
+}
+
+.card-category.bronze {
+  color: #cc8e34;
+}
+
+.card-category.silver {
+  color: #8a9597;
+}
+
+.card-category.gold {
+  color: #ffd700;
+}
+
+.card-price {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.card-price span {
+  margin-left: 2.5px;
+}
+
+.card-body hr {
+  margin: 0;
+}
+
+.card-text {
+  margin: 0;
+  padding: 1.25em;
+}
+
+.list-group {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.list-group-item {
+  padding: 0.75rem 1.25rem;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.list-group-item:last-child {
+  border: none;
+}
+
+/* Rückseite-Button */
 .card-back-btn {
-  outline: 1px solid white;
+  padding: 15px 85px;
+  border: none;
+  border-radius: 50px;
   background-image: linear-gradient(
     to top,
     rgba(107, 69, 105, 1),
     rgba(158, 134, 157, 1)
   );
   color: white;
-  border: none;
-  padding: 15px 85px;
-  border-radius: 50px;
   font-size: 1.25em;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .card-back-btn:hover {
@@ -226,4 +348,5 @@
     rgba(158, 134, 157, 1),
     rgba(107, 69, 105, 1)
   );
+  transform: scale(1.025);
 }
