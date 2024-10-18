@@ -107,7 +107,7 @@
 }
 
 .side-nav a:focus:not(.closebtn) {
-  color: #e3e3e3;
+  color: #f2f4ef;
   transform: scale(1.2);
 }
 
