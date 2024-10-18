@@ -233,3 +233,18 @@
     padding: 0 !important;
   }
 }
+
+/* BUGFIXING BACKGROUND FOR SMALL DEVICES */
+@media screen and (max-width: 1024px) {
+  .bg--phone-devices {
+    background-attachment: scroll;
+  }
+
+  #scrolling-bg-third.bg--phone-devices {
+    background-attachment: scroll;
+  }
+
+  #scrolling-bg-fourth.bg--phone-devices {
+    background-attachment: scroll;
+  }
+}
