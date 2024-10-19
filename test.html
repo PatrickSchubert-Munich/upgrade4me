@@ -6,90 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D-Karte ohne Bootstrap</title>
     <link rel="stylesheet" href="./test.css">
+    <script src="./scripts/script_gallery.js" defer></script>
 </head>
 
 <body>
 
     <!-- SECTION LOCATION -->
     <section id="location">
-        <div class="location-container">
-            <div class="location-container--item1">
-                <img src="./assets/img/location_3.jpg" alt="Location Bild 3">
-            </div>
-            <div class="location-container--item2">
-                <img src="./assets/img/location_4.jpg" alt="Location Bild 4">
-            </div>
-            <div class="location-container--item3">
-                <img src="./assets/img/location_9.jpg" alt="Location Bild 9">
-            </div>
-            <div class="location-container--item4">
-                <img src="./assets/img/location_10.jpg" alt="Location Bild 10">
-            </div>
-            <div class="location-container--item5">
-                <img src="./assets/img/location_2.jpg" alt="Location Bild 2">
-            </div>
-            <div class="location-container--item6">
-                <img src="./assets/img/location_5.jpg" alt="Location Bild 5">
-            </div>
-        </div>
-    </section>
-
-    <section id="kontakt">
-        <div class="form_and_maps">
-
-            <!-- Google Maps -->
-            <div class="maps">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509676!2d144.9630578153184!3d-37.8141079797517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577a9d7d5d8ffb5!2sFlinders%20St%20Station!5e0!3m2!1sen!2sau!4v1601967232481!5m2!1sen!2sau"
-                    allowfullscreen="" aria-hidden="false" tabindex="0">
-                </iframe>
+        <div class="wrapper">
+            <!-- BACKGROUND -->
+            <div class="gallery-background">
+                <!-- FOREGROUND -->
+                <div class="gallery-foreground">
+                    <h3>Hallo hallo</h3>
+                    <p>Tauche ein in die besondere Welt von Upgrade4me und lass Dich von ihrer einzigartigen Atmosphäre
+                        überzeugen – wir freuen uns auf Dich.</p>
+                </div>
             </div>
 
-            <!-- Form Element -->
-            <div class="form">
-                <form class="p-4 rounded-top-2">
-                    <!-- Surname input -->
-                    <div class="mb-2">
-                        <input type="text" id="surname" class="form-control" />
-                        <label class="form-label mt-1" for="surname">Surname</label>
-                    </div>
+            <!-- GALLERIE -->
+            <div class="gallery-container gc-first" data-direction="right" data-speed="slow">
+                <div class="gallery-container--rows">
+                    <img src="./assets/img/location_3.jpg" alt="Location Bild 3">
+                    <img src="./assets/img/location_4.jpg" alt="Location Bild 4">
+                    <img src="./assets/img/location_9.jpg" alt="Location Bild 9">
+                    <img src="./assets/img/location_10.jpg" alt="Location Bild 10">
+                    <img src="./assets/img/location_2.jpg" alt="Location Bild 2">
+                    <img src="./assets/img/location_5.jpg" alt="Location Bild 5">
+                    <img src="./assets/img/location_5.jpg" alt="Location Bild 5">
+                </div>
+            </div>
 
-                    <!-- Name input -->
-                    <div class="form-outline mb-2">
-                        <input type="text" id="name" class="form-control" />
-                        <label class="form-label mt-1" for="name">Name</label>
-                    </div>
-
-                    <!-- Email input -->
-                    <div class=" form-outline mb-2">
-                        <input type="email" id="email" class="form-control" />
-                        <label class="form-label mt-1" for="email">Email address</label>
-                    </div>
-
-                    <!-- Telephone input -->
-                    <div class="form-outline mb-2">
-                        <input type="tel" id="telephone" class="form-control" />
-                        <label class="form-label mt-1" for="telephone">Phone</label>
-                    </div>
-
-                    <!-- Message input -->
-                    <div class="form-outline mb-2">
-                        <textarea class="form-control" id="message" rows="4" maxlength="500"></textarea>
-                        <label class="form-label mt-1" for="message">Message</label>
-                    </div>
-
-                    <!-- Checkbox -->
-                    <div class="form-check d-flex justify-content-center mb-2">
-                        <input class="form-check-input me-2" type="checkbox" value="null" id="copy-of-message"
-                            unchecked />
-                        <label class="form-check-label" for="copy-of-message">Send me a copy of this message</label>
-                    </div>
-
-                    <!-- Submit button -->
-                    <div class="d-flex justify-content-center">
-                        <button type="submit">Submit</button>
-                    </div>
-                </form>
+            <div class="gallery-container gc-second" data-direction="left" data-speed="slow">
+                <div class="gallery-container--rows">
+                    <img src="./assets/img/location_3.jpg" alt="Location Bild 3">
+                    <img src="./assets/img/location_4.jpg" alt="Location Bild 4">
+                    <img src="./assets/img/location_9.jpg" alt="Location Bild 9">
+                    <img src="./assets/img/location_10.jpg" alt="Location Bild 10">
+                    <img src="./assets/img/location_2.jpg" alt="Location Bild 2">
+                    <img src="./assets/img/location_5.jpg" alt="Location Bild 5">
+                    <img src="./assets/img/location_5.jpg" alt="Location Bild 5">
+                </div>
             </div>
         </div>
     </section>
