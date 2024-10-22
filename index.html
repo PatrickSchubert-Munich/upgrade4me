@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/preload.css">
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/nav.css">
     <link rel="stylesheet" href="./styles/section.css">
@@ -58,7 +59,7 @@
         <!-- SECTION AboutUs -->
         <section id="aboutUs">
             <div class="aboutUs-container">
-                <video class="aboutUs-video" autoplay muted loop>
+                <video class="aboutUs-video" preload="auto" autoplay muted loop>
                     <source type="video/mp4" src="./assets/video/intro.mp4">
                     Upps...your Browser doesn't support video!
                 </video>
@@ -75,7 +76,7 @@
                 <article>
                     <header>
                         <h1>
-                            Hallo und Herzlich Willkommen bei Upgrade4me!
+                            Herzlich Willkommen bei Upgrade4me!
                         </h1>
                     </header>
                     <hr>
@@ -86,7 +87,7 @@
                 </article>
             </div>
             <!-- Video PopUp -->
-            <div id="videoPopup" class="aboutUs-video-popup">
+            <div id="videoPopup" class="aboutUs-video-popup" preload="metadata">
                 <div class="aboutUs-video-container">
                     <video controls>
                         <source type="video/mp4" src="./assets/video/intro.mp4">
@@ -460,25 +461,16 @@
                 <!-- GALLERIE -->
                 <div class="gallery-container gc-first" data-direction="right" data-speed="slow">
                     <div class="gallery-container--rows">
-                        <img src="./assets/img/location_3.jpg" alt="Location Bild 3" loading="lazy">
-                        <img src="./assets/img/location_4.jpg" alt="Location Bild 4" loading="lazy">
-                        <img src="./assets/img/location_9.jpg" alt="Location Bild 9" loading="lazy">
-                        <img src="./assets/img/location_10.jpg" alt="Location Bild 10" loading="lazy">
-                        <img src="./assets/img/location_2.jpg" alt="Location Bild 2" loading="lazy">
-                        <img src="./assets/img/location_5.jpg" alt="Location Bild 5" loading="lazy">
-                        <img src="./assets/img/location_5.jpg" alt="Location Bild 5" loading="lazy">
-                    </div>
-                </div>
-
-                <div class="gallery-container gc-second" data-direction="left" data-speed="slow">
-                    <div class="gallery-container--rows">
-                        <img src="./assets/img/location_3.jpg" alt="Location Bild 3" loading="lazy">
-                        <img src="./assets/img/location_4.jpg" alt="Location Bild 4" loading="lazy">
-                        <img src="./assets/img/location_9.jpg" alt="Location Bild 9" loading="lazy">
-                        <img src="./assets/img/location_10.jpg" alt="Location Bild 10" loading="lazy">
-                        <img src="./assets/img/location_2.jpg" alt="Location Bild 2" loading="lazy">
-                        <img src="./assets/img/location_5.jpg" alt="Location Bild 5" loading="lazy">
-                        <img src="./assets/img/location_5.jpg" alt="Location Bild 5" loading="lazy">
+                        <img src="./assets/img/location_1.jpg" alt="Location Bild 3" loading="lazy">
+                        <img src="./assets/img/location_2.jpg" alt="Location Bild 4" loading="lazy">
+                        <img src="./assets/img/location_3.jpg" alt="Location Bild 9" loading="lazy">
+                        <img src="./assets/img/location_4.jpg" alt="Location Bild 10" loading="lazy">
+                        <img src="./assets/img/location_5.jpg" alt="Location Bild 2" loading="lazy">
+                        <img src="./assets/img/location_6.jpg" alt="Location Bild 5" loading="lazy">
+                        <img src="./assets/img/location_7.jpg" alt="Location Bild 5" loading="lazy">
+                        <img src="./assets/img/location_8.jpg" alt="Location Bild 5" loading="lazy">
+                        <img src="./assets/img/location_9.jpg" alt="Location Bild 5" loading="lazy">
+                        <img src="./assets/img/location_10.jpg" alt="Location Bild 5" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -568,6 +560,7 @@
         </div>
     </footer>
 
+    <!-- LOADING JAVASCRIPT -->
     <script src="./scripts/script_nav.js" defer></script>
     <script src="./scripts/script_video.js" defer></script>
     <script src="./scripts/script_team.js" defer></script>

@@ -1,0 +1,63 @@
+body::before {
+  content: url("../assets/img/banner_concept.jpg");
+  position: absolute;
+  top: -9999rem;
+  left: -9999rem;
+  opacity: 0;
+}
+
+body::before {
+  content: url("../assets/img/workbench_team.jpg");
+  position: absolute;
+  top: -9999rem;
+  left: -9999rem;
+  opacity: 0;
+}
+
+body::before {
+  content: url("../assets/img/company.jpg");
+  position: absolute;
+  top: -9999rem;
+  left: -9999rem;
+  opacity: 0;
+}
+
+body::before {
+  content: url("../assets/img/location_background.jpg");
+  position: absolute;
+  top: -9999rem;
+  left: -9999rem;
+  opacity: 0;
+}
+
+body::before {
+  content: url("../assets/img/kontakt_background.jpg");
+  position: absolute;
+  top: -9999rem;
+  left: -9999rem;
+  opacity: 0;
+}
+
+body::before {
+  content: url("../assets/img/shopping_card_gold.");
+  position: absolute;
+  top: -9999rem;
+  left: -9999rem;
+  opacity: 0;
+}
+
+body::before {
+  content: url("../assets/img/shopping_card_silber.jpg");
+  position: absolute;
+  top: -9999rem;
+  left: -9999rem;
+  opacity: 0;
+}
+
+body::before {
+  content: url("../assets/img/shopping_card_bronze.jpg");
+  position: absolute;
+  top: -9999rem;
+  left: -9999rem;
+  opacity: 0;
+}
