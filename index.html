@@ -4,34 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/preload.css">
-    <link rel="stylesheet" href="./styles/global.css">
-    <link rel="stylesheet" href="./styles/nav.css">
-    <link rel="stylesheet" href="./styles/section.css">
-    <link rel="stylesheet" href="./styles/footer.css">
-    <link rel="stylesheet" href="./styles/components.css">
-    <link rel="stylesheet" href="./styles/media.css">
+
+    <!-- Kritische Ressourcen vorladen -->
+    <link rel="preload" href="./assets/logo/Logo.jpg" as="image" fetchpriority="high" type="image/jpeg">
+    <link rel="preload" href="./assets/img/banner_concept.jpg" as="image" fetchpriority="high" type="image/jpeg">
+    <link rel="preload" href="./assets/video/intro.mp4" as="video" type="video/mp4" fetchpriority="low">
+</head>
+
+<!-- Kritische Schriftarten vorladen -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" as="style">
+
+<!-- Eigene Stylesheets -->
+<link rel="stylesheet" href="./styles/global.css">
+<link rel="stylesheet" href="./styles/nav.css">
+<link rel="stylesheet" href="./styles/section.css">
+<link rel="stylesheet" href="./styles/components.css">
+<link rel="stylesheet" href="./styles/footer.css">
+<link rel="stylesheet" href="./styles/media.css">
+
+<!-- Externe Ressourcen -->
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,300,0,0"
+    media="print" onload="this.media='all'">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"
+    media="print" onload="this.media='all'">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="print"
+    onload="this.media='all'">
+
+<!-- Fallback für JavaScript-deaktiviert -->
+<noscript>
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,300,0,0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <title>Upgrade4me</title>
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,300,0,0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</noscript>
+
+<title>Upgrade4me</title>
 </head>
 
 <body>
 
     <!-- Navbar -->
-    <nav id="navbar">
-        <img id="upgrade4me-logo" src="./assets/logo/Logo.jpg" alt="Upgrade4me Firmenlogo">
-        <ul class="main-nav">
-            <a class="push-left" href="#">Upgrade <span id="brand-number-4">4</span>me</a>
-            <li> <a href="#aboutUs">ÜberUns</a></li>
-            <li> <a href="#concept">Konzept</a></li>
-            <li> <a href="#team" name="team">Team</a></li>
-            <li> <a href="#shop">Shop</a></li>
-            <li> <a href="#location">Location</a></li>
-            <span class="side-nav--icon">
+    <nav id="navbar" role="navigation" aria-label="Hauptnavigation">
+        <img id="upgrade4me-logo" src="./assets/logo/Logo.jpg" alt="Upgrade4me Firmenlogo" width="auto" height="110">
+        <ul class="main-nav" role="menubar">
+            <a class="push-left" href="#">Upgrade4me</a>
+            <li role="none">
+                <a href="#aboutUs" role="menuitem">Über Uns</a>
+            </li>
+            <li> <a href="#concept" role="menuitem">Konzept</a></li>
+            <li> <a href="#team" name="team" role="menuitem">Team</a></li>
+            <li> <a href="#shop" role="menuitem">Shop</a></li>
+            <li> <a href="#location" role="menuitem">Location</a></li>
+            <span class="side-nav--icon" aria-label="Menü öffnen">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" fill="none"
                     stroke="white" stroke-width="2" stroke-linecap="round">
                     <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -40,8 +68,9 @@
                 </svg>
             </span>
         </ul>
-        <div class="side-nav">
-            <a class="closebtn">
+        <!-- Side Navigation -->
+        <div class="side-nav" role="navigation" aria-label="Mobile Navigation">
+            <a class="closebtn" aria-label="Menü schließen">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="25" height="25" fill="white">
                     <path
                         d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
@@ -55,22 +84,27 @@
         </div>
     </nav>
 
-    <main>
+    <main role="main">
         <!-- SECTION AboutUs -->
-        <section id="aboutUs">
+        <section id="aboutUs" aria-labelledby="aboutus-title">
             <div class="aboutUs-container">
-                <video class="aboutUs-video" preload="auto" autoplay muted loop>
-                    <source type="video/mp4" src="./assets/video/intro.mp4">
+                <video class="aboutUs-video" preload="metadata" playsinline muted loop
+                    poster="./assets/video/intro-poster.jpg" aria-hidden="true">
+                    <source type="video/mp4" src="./assets/video/intro.mp4" media="all and (min-width: 768px)">
+                    <!-- Fallback für mobile Geräte -->
+                    <source type="video/mp4" src="./assets/video/intro-mobile.mp4" media="all and (max-width: 767px)">
                     Upps...your Browser doesn't support video!
                 </video>
                 <div class="container-btn-video">
-                    <button id="btn-video-large" class="aboutUs-btn--video aboutUs--play-video">
-                        <i class="fa-solid fa-play aboutUs--play-video"></i>
+                    <button id="btn-video-large" class="aboutUs-btn--video aboutUs--play-video"
+                        aria-label="Video in Großansicht abspielen">
+                        <i class="fa-solid fa-play aboutUs--play-video" aria-hidden="true"></i>
                         Play
                     </button>
-                    <button id="btn-video-small" class="aboutUs-btn--video aboutUs--play-video">
-                        <img src="./assets/img/play-arrow.png" alt="Play Button Icon" class="aboutUs--play-video"
-                            height="25px" width="25px">
+                    <button id="btn-video-small" class="aboutUs-btn--video aboutUs--play-video"
+                        aria-label="Video in Großansicht abspielen">
+                        <img src="./assets/img/play-arrow.png" alt="" class="aboutUs--play-video" height="25" width="25"
+                            aria-hidden="true">
                     </button>
                 </div>
                 <article>
@@ -87,13 +121,14 @@
                 </article>
             </div>
             <!-- Video PopUp -->
-            <div id="videoPopup" class="aboutUs-video-popup" preload="metadata">
+            <div id="videoPopup" class="aboutUs-video-popup" role="dialog" aria-modal="true" aria-label="Video Player">
                 <div class="aboutUs-video-container">
-                    <video controls>
+                    <video id="popupVideo" controls preload="metadata" playsinline
+                        poster="./assets/video/intro-poster.jpg">
                         <source type="video/mp4" src="./assets/video/intro.mp4">
                         Upps...your Browser doesn't support video!
                     </video>
-                    <button id="btn-video-close">X</button>
+                    <button id="btn-video-close" aria-label="Video schließen">X</button>
                 </div>
             </div>
         </section>
@@ -127,7 +162,7 @@
                 <article>
                     <div class="concept-container--svg">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="50px" height="50px"
-                            fill="#826080">
+                            fill="#0047ab">
                             <path
                                 d="m240-522-40 22q-14 8-30 4t-24-18L66-654q-8-14-4-30t18-24l230-132h70q9 0 14.5 5.5T400-820v20q0 33 23.5 56.5T480-720q33 0 56.5-23.5T560-800v-20q0-9 5.5-14.5T580-840h70l230 132q14 8 18 24t-4 30l-80 140q-8 14-23.5 17.5T760-501l-40-20v361q0 17-11.5 28.5T680-120H280q-17 0-28.5-11.5T240-160v-362Z" />
                         </svg>
@@ -145,7 +180,7 @@
                 <article>
                     <div class="concept-container--svg">
                         <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px"
-                            fill="#826080">
+                            fill="#0047ab">
                             <path
                                 d="M782-114 481-415 364-298q11 17 13.5 33t2.5 35q0 64-43 107T230-80q-64 0-107-43T80-230q0-64 43-107t107-43q18 0 35.5 5t36.5 15l116-116-118-118q-17 8-34.5 11t-35.5 3q-64 0-107-43T80-730q0-64 43-107t107-43q64 0 107 43t43 107q0 19-2.5 36T367-662l514 514v34h-99ZM599-527l-66-66 249-249h99v33L599-527ZM230-640q38 0 64-26t26-64q0-38-26-64t-64-26q-38 0-64 26t-26 64q0 38 26 64t64 26Zm253 183q8 0 13.5-5.5T502-476q0-8-5.5-13.5T483-495q-8 0-13.5 5.5T464-476q0 8 5.5 13.5T483-457ZM230-140q38 0 64-26t26-64q0-38-26-64t-64-26q-38 0-64 26t-26 64q0 38 26 64t64 26Z" />
                         </svg>
@@ -165,7 +200,7 @@
                 <article>
                     <div class="concept-container--svg">
                         <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px"
-                            fill="#826080">
+                            fill="#0047ab">
                             <path
                                 d="m550-84-42-42 142-142-382-382-142 142-42-42 56-58-56-56 85-85-42-42 42-42 43 41 84-84 56 56 58-56 42 42-142 142 382 382 142-142 42 42-56 58 56 56-86 86 42 42-42 42-42-42-84 84-56-56-58 56Z" />
                         </svg>
@@ -185,7 +220,7 @@
                 <article>
                     <div class="concept-container--svg">
                         <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px"
-                            fill="#826080">
+                            fill="#0047ab">
                             <path
                                 d="m316-700 164-220 164 220H316Zm-76 160v-74q-50-12-83.5-48.5T120-749h61q3 33 28.5 56t59.5 23h422q34 0 59.5-23t28.5-56h61q-3 50-36 86.5T720-614v74H240ZM160-80v-374q-50-12-83.5-48.5T40-589h61q3 33 28.5 56t59.5 23h582q34 0 59.5-23t28.5-56h61q-3 50-36 86.5T800-454v374H530v-160q0-21-14.5-35.5T480-290q-21 0-35.5 14.5T430-240v160H160Z" />
                         </svg>
@@ -291,7 +326,7 @@
                     style="display: flex; align-items: center; justify-content: center; text-transform: uppercase; text-shadow: 1px 1px 2px #999; letter-spacing: .1em; text-decoration: underline;">
                     <span style="display: flex; align-items: center; margin-right: 10px;">
                         <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px">
-                            <path fill="#826080"
+                            <path fill="#0047ab"
                                 d="M205-801h589.07q22.97 0 34.95 21 11.98 21-.02 42L694-495q-11 19-28.56 30.5T627-453H324l-56 104h491v60H277q-42 0-60.5-28t.5-63l64-118-152-322H51v-60h117l37 79Z" />
                             <path fill="black"
                                 d="M286.79-81Q257-81 236-102.21t-21-51Q215-183 236.21-204t51-21Q317-225 338-203.79t21 51Q359-123 337.79-102t-51 21Z" />
@@ -307,7 +342,7 @@
             <div class="card-wrapper">
 
                 <!-- CARD BRONZE -->
-                <div class="flip-card">
+                <div class="flip-card" role="article" aria-labelledby="bronze-title">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
                             <div class="shop-image-container bronze">
@@ -316,7 +351,7 @@
                             </div>
                             <div class="card-body">
                                 <header>
-                                    <h2 class="card-category bronze">Bronze</h2>
+                                    <h2 id="bronze-title" class="card-category bronze">Bronze</h2>
                                     <p class="card-price">249<span>€</span></p>
                                 </header>
                                 <hr>
@@ -339,13 +374,13 @@
                             </div>
                         </div>
                         <div class="flip-card-back">
-                            <button class="card-back-btn">Tickets</button>
+                            <button class="card-back-btn" aria-label="Bronze Paket buchen">Tickets</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- CARD SILBER -->
-                <div class="flip-card">
+                <div class="flip-card" role="article" aria-labelledby="silver-title">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
                             <div class="shop-image-container silver">
@@ -354,7 +389,7 @@
                             </div>
                             <div class="card-body">
                                 <header>
-                                    <h2 class="card-category silver">Silber</h2>
+                                    <h2 id="silver-title" class="card-category silver">Silber</h2>
                                     <p class="card-price">539<span>€</span></p>
                                 </header>
                                 <hr>
@@ -379,13 +414,13 @@
                             </div>
                         </div>
                         <div class="flip-card-back">
-                            <button class="card-back-btn">Tickets</button>
+                            <button class="card-back-btn" aria-label="Silber Paket buchen">Tickets</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- CARD GOLD -->
-                <div class="flip-card">
+                <div class="flip-card" role="article" aria-labelledby="gold-title">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
                             <div class="shop-image-container gold">
@@ -394,7 +429,7 @@
                             </div>
                             <div class="card-body">
                                 <header>
-                                    <h2 class="card-category gold">Gold</h2>
+                                    <h2 id="bronze-title" class="card-category gold">Gold</h2>
                                     <p class="card-price">939<span>€</span></p>
                                 </header>
                                 <hr>
@@ -422,7 +457,7 @@
                             </div>
                         </div>
                         <div class="flip-card-back">
-                            <button class="card-back-btn">Tickets</button>
+                            <button class="card-back-btn" aria-label="Gold Paket buchen">Tickets</button>
                         </div>
                     </div>
                 </div>
@@ -459,18 +494,30 @@
                 </div>
 
                 <!-- GALLERIE -->
-                <div class="gallery-container gc-first" data-direction="right" data-speed="slow">
+                <div class="gallery-container gc-first" data-direction="right" data-speed="slow" role="region"
+                    aria-label="Location Bildergalerie">
                     <div class="gallery-container--rows">
-                        <img src="./assets/img/location_1.jpg" alt="Location Bild 3" loading="lazy">
-                        <img src="./assets/img/location_2.jpg" alt="Location Bild 4" loading="lazy">
-                        <img src="./assets/img/location_3.jpg" alt="Location Bild 9" loading="lazy">
-                        <img src="./assets/img/location_4.jpg" alt="Location Bild 10" loading="lazy">
-                        <img src="./assets/img/location_5.jpg" alt="Location Bild 2" loading="lazy">
-                        <img src="./assets/img/location_6.jpg" alt="Location Bild 5" loading="lazy">
-                        <img src="./assets/img/location_7.jpg" alt="Location Bild 5" loading="lazy">
-                        <img src="./assets/img/location_8.jpg" alt="Location Bild 5" loading="lazy">
-                        <img src="./assets/img/location_9.jpg" alt="Location Bild 5" loading="lazy">
-                        <img src="./assets/img/location_10.jpg" alt="Location Bild 5" loading="lazy">
+                        <img src="./assets/img/location_1.jpg"
+                            alt="Empfangsbereich mit modernem Design und hellem Ambiente" loading="lazy" width="250"
+                            height="250" decoding="async">
+                        <img src="./assets/img/location_2.jpg" alt="Behandlungsraum mit hochwertiger Ausstattung"
+                            loading="lazy" width="250" height="250" decoding="async">
+                        <img src="./assets/img/location_3.jpg" alt="Entspannungsbereich mit bequemen Sitzgelegenheiten"
+                            loading="lazy" width="250" height="250" decoding="async">
+                        <img src="./assets/img/location_4.jpg" alt="Location Bild 10" loading="lazy" width="250"
+                            height="250" decoding="async" class="gallery-image">
+                        <img src="./assets/img/location_5.jpg" alt="Location Bild 2" loading="lazy" width="250"
+                            height="250" decoding="async" class="gallery-image">
+                        <img src="./assets/img/location_6.jpg" alt="Location Bild 5" loading="lazy" width="250"
+                            height="250" decoding="async" class="gallery-image">
+                        <img src="./assets/img/location_7.jpg" alt="Location Bild 5" loading="lazy" width="250"
+                            height="250" decoding="async" class="gallery-image">
+                        <img src="./assets/img/location_8.jpg" alt="Location Bild 5" loading="lazy" width="250"
+                            height="250" decoding="async" class="gallery-image">
+                        <img src="./assets/img/location_9.jpg" alt="Location Bild 5" loading="lazy" width="250"
+                            height="250" decoding="async" class="gallery-image">
+                        <img src="./assets/img/location_10.jpg" alt="Location Bild 5" loading="lazy" width="250"
+                            height="250" decoding="async" class="gallery-image">
                     </div>
                 </div>
             </div>
@@ -498,42 +545,63 @@
                 </div>
                 <!-- Form Element -->
                 <div class="form-container">
-                    <form class="form">
+                    <form class="form" role="form" aria-label="Kontaktformular">
                         <!-- Surname input -->
                         <div>
-                            <input type="text" id="surname" />
-                            <label for="surname">Surname</label>
+                            <label for="surname">Nachname</label>
+                            <input type="text" id="surname" name="surname" required aria-required="true"
+                                aria-describedby="surname-help" />
+                            <span id="surname-help" class="help-text" hidden>Bitte geben Sie Ihren Nachnamen ein</span>
                         </div>
+
                         <!-- Name input -->
                         <div>
-                            <input type="text" id="name" />
-                            <label for="name">Name</label>
+                            <label for="name">Vorname</label>
+                            <input type="text" id="name" name="name" required aria-required="true"
+                                aria-describedby="name-help" />
+                            <span id="name-help" class="help-text" hidden>Bitte geben Sie Ihren Vornamen ein</span>
                         </div>
+
                         <!-- Email input -->
                         <div>
-                            <input type="email" id="email" />
-                            <label for="email">Email address</label>
+                            <label for="email">E-Mail-Adresse</label>
+                            <input type="email" id="email" name="email" required aria-required="true"
+                                aria-describedby="email-help" />
+                            <span id="email-help" class="help-text" hidden>Bitte geben Sie eine gültige E-Mail-Adresse
+                                ein</span>
                         </div>
+
                         <!-- Telephone input -->
                         <div>
-                            <input type="tel" id="telephone" />
-                            <label for="telephone">Phone</label>
+                            <label for="telephone">Telefon</label>
+                            <input type="tel" id="telephone" name="telephone" aria-describedby="tel-help" />
+                            <span id="tel-help" class="help-text" hidden>Optional: Ihre Telefonnummer für schnellere
+                                Kontaktaufnahme</span>
                         </div>
+
                         <!-- Message input -->
                         <div class="textarea-label">
-                            <textarea id="message" rows="5" maxlength="500"></textarea>
-                            <label for="message">Message</label>
+                            <label for="message">Nachricht</label>
+                            <textarea id="message" name="message" rows="5" maxlength="500" required aria-required="true"
+                                aria-describedby="message-help"></textarea>
+                            <span id="message-help" class="help-text" hidden>Bitte beschreiben Sie Ihr Anliegen</span>
                         </div>
-                        <!-- Checkbox -->
+
+                        <!-- Checkbox mit verbesserter Zugänglichkeit -->
                         <div class="checkbox-container">
+                            <input type="checkbox" id="copy-of-message" name="copy" aria-describedby="copy-help" />
                             <label for="copy-of-message">
-                                <input type="checkbox" id="copy-of-message" unchecked />
-                                Send me a copy of this message
+                                Kopie der Nachricht an mich senden
                             </label>
+                            <span id="copy-help" class="help-text" hidden>Sie erhalten eine Kopie dieser Nachricht per
+                                E-Mail</span>
                         </div>
+
                         <!-- Submit button -->
                         <div>
-                            <button class="button-submit" type="submit">Submit</button>
+                            <button class="button-submit" type="submit" aria-label="Formular absenden">
+                                Absenden
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -546,15 +614,38 @@
         <gmp-advanced-marker position="48.12519836425781,11.588981628417969" title="My location"></gmp-advanced-marker>
     </gmp-map> -->
 
-    <footer id="footer">
-        <!-- Social Media Icons -->
-        <div class="social-icons">
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Linkedin"><i class="fab fa-linkedin"></i></a>
+    <footer id="footer" role="contentinfo">
+        <div class="social-icons" aria-label="Social Media Links">
+            <!-- Instagram -->
+            <a href="#" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="1em" height="1em"
+                    fill="currentColor">
+                    <path
+                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                </svg>
+            </a>
+
+            <!-- Facebook -->
+            <a href="#" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="1em" height="1em"
+                    fill="currentColor">
+                    <path
+                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+                </svg>
+            </a>
+
+            <!-- LinkedIn (korrigierte Version) -->
+            <a href="#" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em"
+                    fill="currentColor">
+                    <path
+                        d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z" />
+                </svg>
+            </a>
         </div>
+
         <!-- Impressum und Copyright -->
-        <div class="footer-info">
+        <div class="footer-info" aria-label="Rechtliche Informationen">
             <a href="#" class="impressum">Impressum</a>
             <span class="copyright">© 2024 Upgrade4me</span>
         </div>

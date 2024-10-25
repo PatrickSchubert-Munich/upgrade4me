@@ -1,8 +1,8 @@
 :root {
-  --gallery-with: 80%;
+  --gallery-width: 80%;
   --gallery-gap: 2em;
-  --gallery-spce-top: 6em;
-  --gallery-image-height: 15.625em; /* sind 250px */
+  --gallery-space-top: 6em;
+  --gallery-image-height: 250px;
   --gallery-animation-duration--slow: 100s;
   --gallery-animation-duration--fast: 60s;
 }
@@ -78,6 +78,8 @@
   z-index: 2;
   backdrop-filter: contrast(0.5) blur(5px);
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  /* Performance Optimierungen */
+  transform: translateZ(0);
 }
 
 .text-aboutUs--color-a:hover {
@@ -97,6 +99,10 @@
   visibility: hidden;
   transition: opacity 0.3s, visibility 0.3s;
   z-index: 1000;
+  /* Performance Optimierungen */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 .aboutUs-video-popup.active {
@@ -175,6 +181,7 @@
   letter-spacing: 0.1em;
   text-align: center;
   margin: 1em auto;
+  color: #000c1c;
 }
 
 .concept-container article {
@@ -205,19 +212,19 @@
 
 .text-concept--color {
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
-  color: #826080;
+  color: #1678ff;
 }
 
 .text-concept--color-a {
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
-  color: #826080;
+  color: #1678ff;
   text-decoration-line: underline;
   text-underline-offset: 2.5px;
   text-wrap: nowrap;
 }
 
 .text-concept--color-a:hover {
-  color: #9e869d;
+  color: #4694ff;
 }
 
 /* SCROLLING BACKGROUND TEAM*/
@@ -281,7 +288,7 @@
 .team-container--item:nth-child(odd) {
   background-image: linear-gradient(
     to right,
-    rgba(107, 69, 106, 0.85),
+    rgb(0, 71, 171, 0.75),
     rgba(255, 0, 0, 0)
   );
   padding-right: 1em;
@@ -443,7 +450,7 @@
 
 .wrapper {
   position: relative;
-  height: 90%;
+  height: 80%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -457,22 +464,26 @@
   position: relative;
   height: 100%;
   width: 600px;
-  background-color: #826080;
+  background-color: rgba(0, 72, 171, 0.85);
   border-radius: 0.55em;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   z-index: 0;
 }
 
 .gallery-foreground {
   position: absolute;
-  background-color: #441a42;
-  border: 0.3em solid #f2f4ef;
-  border-radius: 0.55em;
-  border-top-left-radius: 0;
+  background-color: rgba(0, 30, 70, 1);
+  border-top: 0.3em solid #f2f4ef;
+  border-left: 0.3em solid #f2f4ef;
+  border-bottom-right-radius: 0.55em;
   color: white;
   max-width: 19.2em;
   height: 17em;
   bottom: -3em;
   right: -2em;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.16) 2.8px 2.8px 5px,
+    rgba(45, 45, 45, 0.45) 3px 3px 6px 0px inset;
   z-index: 1;
 }
 
@@ -489,19 +500,13 @@
 }
 
 .gallery-container {
-  /* border: 2px solid lime; */
   position: absolute;
-  top: var(--gallery-spce-top);
-  max-width: var(--gallery-with);
+  top: var(--gallery-space-top);
+  max-width: var(--gallery-width); /* Korrigierter Variablenname */
   z-index: 1;
   overflow: hidden;
-  -webkit-mask: linear-gradient(
-    90deg,
-    transparent,
-    white 20%,
-    white 80%,
-    transparent
-  );
+  transform: translateZ(0);
+  will-change: transform;
   mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
 
@@ -513,10 +518,14 @@
 
 .gallery-container--rows img {
   display: block;
-  width: var(--gallery-image-height);
-  height: auto;
+  width: var(--gallery-image-height); /* Breite festlegen */
+  height: var(
+    --gallery-image-height
+  ); /* Gleiche Höhe wie Breite für quadratische Form */
+  object-fit: cover; /* Wichtig: Verhindert Verzerrung */
   border: 0.15em solid #f2f4ef;
   border-radius: 0.25em;
+  box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px rgba(60, 64, 67, 0.15);
 }
 
 .gallery-container[data-animated="true"] .gallery-container--rows {
@@ -524,28 +533,30 @@
   flex-wrap: nowrap;
 }
 
-.gallery-container[data-direction="right"] .gallery-container--rows {
-  animation-direction: reverse;
-  animation-timing-function: linear;
-  animation-name: scroll;
-  animation-duration: var(--gallery-animation-duration--slow, 50s);
-  animation-iteration-count: infinite;
-}
+@media (prefers-reduced-motion: no-preference) {
+  .gallery-container[data-animated="true"] .gallery-container--rows {
+    width: max-content;
+    animation: scroll var(--gallery-animation-duration--slow) linear infinite;
+    animation-play-state: paused; /* Initial pausiert */
+  }
 
-.gallery-container[data-direction="left"] .gallery-container--rows {
-  animation-direction: forwards;
-  animation-timing-function: linear;
-  animation-name: scroll;
-  animation-duration: var(--gallery-animation-duration--slow, 50s);
-  animation-iteration-count: infinite;
-}
+  /* Richtungssteuerung */
+  .gallery-container[data-direction="right"] .gallery-container--rows {
+    animation-direction: reverse;
+  }
 
-.gallery-container[data-speed="fast"] .gallery-container--rows {
-  animation-duration: var(--gallery-animation-duration--fast);
-}
+  .gallery-container[data-direction="left"] .gallery-container--rows {
+    animation-direction: normal;
+  }
 
-.gallery-container[data-speed="slow"] .gallery-container--rows {
-  animation-duration: var(--gallery-animation-duration--slow);
+  /* Geschwindigkeitssteuerung */
+  .gallery-container[data-speed="fast"] .gallery-container--rows {
+    animation-duration: var(--gallery-animation-duration--fast);
+  }
+
+  .gallery-container[data-speed="slow"] .gallery-container--rows {
+    animation-duration: var(--gallery-animation-duration--slow);
+  }
 }
 
 @keyframes scroll {

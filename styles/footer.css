@@ -1,5 +1,5 @@
 #footer {
-  background-color: #441a42; /* Dunkler Hintergrund */
+  background-color: #000c1c; /* Dunkler Hintergrund */
   color: white;
   display: flex;
   justify-content: space-between;
@@ -14,11 +14,18 @@
   margin-right: 15px;
   font-size: 24px; /* Icons etwas größer machen */
   text-decoration: none;
-  transition: color 0.3s ease; /* sanfte Farbänderung bei Hover */
+  display: inline-block; /* Wichtig für transform */
+  transition: color 0.3s ease, transform 0.3s ease; /* Transition für beide Effekte */
+}
+
+.social-icons svg {
+  width: 24px;
+  height: 24px;
 }
 
 .social-icons a:hover {
-  color: #aaa; /* Farbe für Hover-Effekt */
+  color: rgba(70, 148, 255, 1);
+  transform: scale(1.1);
 }
 
 .footer-info {
@@ -27,11 +34,11 @@
 
 .footer-info .impressum {
   color: #fff; /* Weiß beim Hover */
-  text-decoration: underline !important;
+  text-decoration: underline;
 }
 
 .footer-info .impressum:hover {
-  color: #aaa; /* Weiß beim Hover */
+  color: rgba(70, 148, 255, 1);
 }
 
 @media (max-width: 562px) {

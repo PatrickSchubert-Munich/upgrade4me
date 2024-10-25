@@ -19,7 +19,7 @@
   }
 
   #btn-video-large {
-    display: none !important;
+    display: none;
   }
 
   #btn-video-small {
@@ -38,7 +38,7 @@
 
 @media screen and (max-width: 495px) {
   #aboutUs article {
-    padding: 10px !important;
+    padding: 10px;
   }
 
   #aboutUs article hr {
@@ -52,6 +52,14 @@
 
   #aboutUs article p {
     font-size: 0.75em;
+  }
+}
+
+/* Mobil-Optimierung für Video */
+@media (max-width: 767px) {
+  .aboutUs-video {
+    background: var(--video-poster, none) center/cover no-repeat;
+    transform: none; /* Entfernt 3D-Beschleunigung auf Mobile */
   }
 }
 
@@ -205,7 +213,7 @@
 
 @media screen and (max-width: 1250px) {
   #form form {
-    padding: 15px !important;
+    padding: 15px;
   }
 
   #form input {
@@ -213,7 +221,7 @@
   }
 
   #form label {
-    margin: 0 !important;
+    margin: 0;
   }
 }
 
@@ -221,16 +229,16 @@
   #form label,
   input {
     font-size: 0.85em;
-    margin: 0 !important;
-    padding: 0 1px !important;
+    margin: 0;
+    padding: 0 1px;
   }
 
   #form button {
-    padding: 5px 25px !important;
+    padding: 5px 25px;
   }
 
   #form .form-check {
-    padding: 0 !important;
+    padding: 0;
   }
 }
 
@@ -246,6 +254,20 @@
 
   #scrolling-bg-fourth.bg--phone-devices {
     background-attachment: scroll;
+  }
+}
+
+/* LOCATION */
+@media (max-width: 768px) {
+  :root {
+    --gallery-image-height: 200px; /* Kleinere Bilder auf mobilen Geräten */
+    --gallery-gap: 1em; /* Kleinerer Abstand */
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --gallery-image-height: 150px; /* Noch kleinere Bilder auf sehr kleinen Geräten */
   }
 }
 
