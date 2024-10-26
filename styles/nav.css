@@ -79,9 +79,10 @@
   top: 0;
   right: 0;
   background-color: rgba(0, 71, 171, 0.65);
-  overflow-x: hidden;
   padding-top: 60px;
   transition: 0.5s;
+  transition: width .5s ease-in-out;
+  overflow-x: hidden;
 }
 
 .side-nav a {
@@ -94,7 +95,7 @@
 }
 
 .side-nav a:hover:not(.closebtn) {
-  color: #000E46;
+  color: #000e46;
   cursor: pointer;
   background-color: rgba(242, 242, 242, 0.25);
   text-shadow: 0.5px 0.5px 1px white;

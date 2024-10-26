@@ -1,84 +1,77 @@
-/* Video Buttons */
+/* Video Buttons - Gemeinsame Basis-Styles */
 #btn-video-large,
 #btn-video-small {
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 1.25em;
   outline: none;
   color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-
-  /* Radial Gradient Background */
   background: radial-gradient(
     circle,
     rgba(0, 72, 171, 0.9),
     rgba(22, 120, 255, 0.7)
   );
-
-  /* Border und Transition */
-  border: 1px solid rgba(255, 255, 255, 0.5); /* Initial weißer, halbtransparenter Border */
-  transition: border 0.2s ease, transform 0.2s ease;
+  transition: border 0.2s ease, transform 0.2s ease, background 0.2s ease;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 
+/* Hover-Effekte für beide Buttons */
 #btn-video-large:hover,
 #btn-video-small:hover {
-  /* Umgedrehter Radial Gradient */
   background: radial-gradient(
     circle,
     rgba(22, 120, 255, 0.7),
     rgba(0, 72, 171, 0.9)
   );
-
-  /* Hellerer weißer Border beim Hover */
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.9);
   transform: scale(1.02);
 }
 
+/* Active-Effekte für beide Buttons */
 #btn-video-large:active,
 #btn-video-small:active {
-  transform: scale(0.98); /* Leichtes Drücken beim Klicken */
+  transform: scale(0.98);
 }
 
+/* Spezifische Styles für großen Button */
 #btn-video-large {
   border-radius: 50px;
-  padding: 7.5px 24px;
+  padding: 10px 20px;
   gap: 10px;
 }
 
+/* Spezifische Styles für kleinen Button */
 #btn-video-small {
   margin: 0;
   border-radius: 50%;
-  padding: 12.5px;
+  padding: 15px;
   display: none;
 }
 
+/* Close Button */
 #btn-video-close {
   position: absolute;
-  top: -40px;
+  top: 0;
   right: 0;
-  color: white;
+  width: 40px;
+  height: 40px;
   background-color: transparent;
   border: none;
-  font-size: 1.5em;
+  border-radius: 4px;
+  color: white;
+  font-size: 24px;
   cursor: pointer;
+  z-index: 10;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 #btn-video-close:hover {
+  transform: scale(1.05);
   color: #e3e3e3;
-}
-
-@media (max-width: 768px) {
-  #btn-video-large {
-    display: none;
-  }
-  #btn-video-small {
-    display: flex;
-  }
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 /* 3-D Card */

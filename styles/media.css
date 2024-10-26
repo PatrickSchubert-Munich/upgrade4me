@@ -9,6 +9,22 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  #btn-video-large {
+    display: none;
+  }
+
+  #btn-video-small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px; /* Feste Breite für rundes Design */
+    height: 45px; /* Gleiche Höhe wie Breite für perfekten Kreis */
+    padding: 10px;
+    border-radius: 50%;
+  }
+}
+
 @media screen and (max-width: 645px) {
   #aboutUs article header h1 {
     font-size: 1.25em;
@@ -20,19 +36,6 @@
 
   #btn-video-large {
     display: none;
-  }
-
-  #btn-video-small {
-    display: inline-block;
-    margin: 0;
-    height: 52.5px;
-    width: auto;
-    border-radius: 50%;
-  }
-
-  #btn-video-small > img {
-    height: 30px;
-    width: auto;
   }
 }
 
@@ -55,11 +58,16 @@
   }
 }
 
-/* Mobil-Optimierung für Video */
-@media (max-width: 767px) {
-  .aboutUs-video {
-    background: var(--video-poster, none) center/cover no-repeat;
-    transform: none; /* Entfernt 3D-Beschleunigung auf Mobile */
+/* Media Queries für Responsive Design */
+@media screen and (max-width: 768px) {
+  .aboutUs-video-container {
+    width: 95%;
+    margin: 0 10px;
+  }
+
+  #btn-video-close {
+    top: -30px;
+    right: 10px;
   }
 }
 
@@ -95,6 +103,10 @@
     width: 40em;
   }
 
+  .concept-container header h2 {
+    margin: 0.25em auto;
+  }
+
   .concept-container p {
     margin-bottom: 0;
   }
@@ -104,6 +116,11 @@
   .concept-container {
     width: 30em;
     padding: 1em 1.5em;
+  }
+
+  .concept-container header h2 {
+    margin: 0.25em auto;
+    font-size: 1.5em;
   }
 
   .concept-container p {
@@ -149,13 +166,13 @@
 }
 
 /* SECTION TEAM */
-@media (max-width: 780px) {
+@media screen and (max-width: 780px) {
   .team-container--item p {
     font-size: 1.1em;
   }
 }
 
-@media (max-width: 705px) {
+@media screen and (max-width: 705px) {
   .team-container--item:nth-child(odd) {
     flex-wrap: wrap;
     font-size: 1.1em;
@@ -242,6 +259,53 @@
   }
 }
 
+/* SHOP */
+@media screen and (max-width: 628px) {
+  .shop-header {
+    padding: 2em 1.5em;
+  }
+
+  .shop-header h2 {
+    font-size: 1.5em;
+  }
+
+  .shop-header p {
+    font-size: 1em;
+  }
+
+  .shop-header--sub-header h3 {
+    font-size: 1.25em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .shop-header h2 {
+    font-size: 1.25em;
+  }
+
+  .shop-header p {
+    font-size: 0.85em;
+  }
+
+  .shop-header--sub-header h3 {
+    font-size: 1em;
+  }
+
+  .card-text,
+  .list-group-item {
+    font-size: 0.85em;
+    text-align: left;
+  }
+
+  .card-body header h2 {
+    font-size: 1.5em;
+  }
+
+  .flip-card-inner {
+    height: 87%;
+  }
+}
+
 /* BUGFIXING BACKGROUND FOR SMALL DEVICES */
 @media screen and (max-width: 1024px) {
   .bg--phone-devices {
@@ -257,28 +321,28 @@
   }
 }
 
-/* LOCATION */
-@media (max-width: 768px) {
+/* SECTION LOCATION */
+@media screen and (max-width: 768px) {
   :root {
     --gallery-image-height: 200px; /* Kleinere Bilder auf mobilen Geräten */
     --gallery-gap: 1em; /* Kleinerer Abstand */
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   :root {
     --gallery-image-height: 150px; /* Noch kleinere Bilder auf sehr kleinen Geräten */
   }
 }
 
-/* SECTION KONTAKT */
-@media (max-width: 1200px) {
-  .kontakt-container {
-    width: 80%;
+/* SECTION GALLERY */
+@media screen and (max-width: 768px) {
+  .gallery-foreground {
+    height: 12.5em;
   }
 }
 
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
   .kontakt-container {
     width: 90%;
     height: 90%;
@@ -290,7 +354,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #kontakt {
     width: 100%;
   }
@@ -333,7 +397,7 @@
   }
 }
 
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   .kontakt-container {
     width: 90%;
     height: 90%;

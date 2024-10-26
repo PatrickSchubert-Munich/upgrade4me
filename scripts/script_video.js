@@ -3,17 +3,26 @@
 document.addEventListener("DOMContentLoaded", () => {
   const backgroundVideo = document.querySelector(".aboutUs-video");
   const videoPopup = document.getElementById("videoPopup");
-  const popupVideo = document.getElementById("popupVideo");
+  const popupVideo = videoPopup.querySelector("video");
   const playButtons = document.querySelectorAll(".aboutUs-btn--video");
   const closeButton = document.getElementById("btn-video-close");
 
   let popupActive = false;
 
+  // Video vorausladen, wenn der Browser es unterstützt
+  if (backgroundVideo) {
+    backgroundVideo.preload = "metadata";
+  }
+
   // IntersectionObserver für das Hintergrundvideo
   const videoObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (!entry.isIntersecting || entry.intersectionRatio < 0.3) {
+        if (
+          !entry.isIntersecting ||
+          entry.intersectionRatio < 0.3 ||
+          popupActive
+        ) {
           backgroundVideo.pause();
         } else if (!popupActive) {
           backgroundVideo.play().catch(() => {
@@ -34,36 +43,48 @@ document.addEventListener("DOMContentLoaded", () => {
     popupActive = true;
     videoPopup.classList.add("active");
 
-    // Hintergrundvideo pausieren
+    // Hintergrundvideo stoppen und zurücksetzen
     backgroundVideo.pause();
+    backgroundVideo.currentTime = 0;
 
-    // Popup Video nur vorbereiten, aber nicht automatisch starten
-    popupVideo.currentTime = backgroundVideo.currentTime;
-    popupVideo.volume = 0.75;
-    // popupVideo.play() wurde entfernt - kein Autostart mehr
+    // Popup Video nur vorbereiten, aber nicht starten
+    if (popupVideo) {
+      popupVideo.currentTime = 0;
+      popupVideo.volume = 0.75;
+      // Kein automatischer Start mehr
+    }
   }
 
   function closeVideoPopup() {
     popupActive = false;
     videoPopup.classList.remove("active");
 
-    // Popup Video stoppen
-    popupVideo.pause();
-    popupVideo.currentTime = 0;
+    // Popup Video stoppen und zurücksetzen
+    if (popupVideo) {
+      popupVideo.pause();
+      popupVideo.currentTime = 0;
+    }
 
     // Prüfen ob Hintergrundvideo im Viewport ist
     const videoRect = backgroundVideo.getBoundingClientRect();
     const isVisible =
       videoRect.top < window.innerHeight && videoRect.bottom > 0;
 
-    if (isVisible) {
+    if (isVisible && !popupActive) {
       backgroundVideo.play().catch(() => {
         console.log("Autoplay wurde verhindert");
       });
     }
   }
 
-  // Event Listeners bleiben gleich
+  // Fehlerbehandlung für Video-Ereignisse
+  if (popupVideo) {
+    popupVideo.addEventListener("error", (e) => {
+      console.error("Fehler beim Laden des Videos:", e);
+    });
+  }
+
+  // Event Listeners
   playButtons.forEach((button) => {
     button.addEventListener("click", openVideoPopup);
   });

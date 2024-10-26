@@ -1,51 +1,63 @@
 "use strict";
 
-// window size
+// Konstanten für Breiten und Navigation
 const DEFAULT_CLOSE_SIDENAV = 992;
 const LESS_WITH_FADE_IN = 576;
-let resize;
-
-// side-nav with
 const SIDE_NAV_FULL_WITH = "200px";
 const SIDE_NAV_LESS_WITH = "165px";
 
-// Sidenav icon (open sidenav)
+// DOM-Elemente
+const sideNav = document.querySelector(".side-nav");
 const iconOpenSidenav = document.querySelector(".side-nav--icon");
-iconOpenSidenav.classList.toggle("visible");
-
-// Sidenav icon (close sidenav)
 const iconCloseSidenav = document.querySelector(".closebtn");
-iconCloseSidenav.classList.toggle("visible");
 
-// Set the width of the side navigation to SIDE_NAV_FULL_WITH or SIDE_NAV_LESS_WITH
+// Initialisierung der Fenstergröße
+let currentWindowWidth = window.innerWidth;
+
+// Hilfsfunktionen
 function openNav(sidenavWidth) {
-  document.querySelector(".side-nav").style.width = sidenavWidth;
+  if (!sideNav) return;
+  sideNav.style.width = sidenavWidth;
 }
 
-// Set the width of the side navigation to 0
 function closeNav() {
-  document.querySelector(".side-nav").style.width = "0";
+  if (!sideNav) return;
+  sideNav.style.width = "0";
+}
+
+// Hauptfunktion zum Überprüfen und Setzen der Navigation
+function handleNavigation() {
+  currentWindowWidth = window.innerWidth;
+
+  if (currentWindowWidth >= DEFAULT_CLOSE_SIDENAV) {
+    closeNav();
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Event-Listeners
-  window.addEventListener("resize", () => {
-    resize = window.innerWidth;
+  // Prüfe initial die Fenstergröße
+  handleNavigation();
 
-    if (resize >= DEFAULT_CLOSE_SIDENAV) {
-      closeNav();
-    }
-  });
+  // Toggle Klassen für Icons
+  if (iconOpenSidenav) iconOpenSidenav.classList.toggle("visible");
+  if (iconCloseSidenav) iconCloseSidenav.classList.toggle("visible");
 
-  iconOpenSidenav.addEventListener("click", () => {
-    if (resize <= LESS_WITH_FADE_IN) {
-      openNav(SIDE_NAV_LESS_WITH);
-    } else {
-      openNav(SIDE_NAV_FULL_WITH);
-    }
-  });
+  // Resize Event-Listener
+  window.addEventListener("resize", handleNavigation);
 
-  iconCloseSidenav.addEventListener("click", () => {
-    closeNav();
-  });
+  // Click-Handler für das Öffnen
+  if (iconOpenSidenav) {
+    iconOpenSidenav.addEventListener("click", () => {
+      const sidenavWidth =
+        currentWindowWidth <= LESS_WITH_FADE_IN
+          ? SIDE_NAV_LESS_WITH
+          : SIDE_NAV_FULL_WITH;
+      openNav(sidenavWidth);
+    });
+  }
+
+  // Click-Handler für das Schließen
+  if (iconCloseSidenav) {
+    iconCloseSidenav.addEventListener("click", closeNav);
+  }
 });

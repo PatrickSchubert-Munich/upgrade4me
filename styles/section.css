@@ -20,6 +20,8 @@
 /* -- Section About Us -- */
 #aboutUs {
   position: relative;
+  height: 100vh;
+  width: 100%;
 }
 
 .aboutUs-container {
@@ -27,7 +29,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   margin-top: 55px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -51,14 +53,27 @@
   z-index: 5;
 }
 
-.aboutUs-container header h1 {
-  margin: 0;
-  letter-spacing: 0.025em;
+.aboutUs-container article {
+  padding: 1.5em;
+  border-radius: 4px;
+  color: white;
+  width: 50%;
+  z-index: 2;
+  backdrop-filter: contrast(0.5) blur(5px);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  /* Performance Optimierungen */
+  transform: translateZ(0);
+}
+
+.aboutUs-container article h1 {
+  margin-bottom: 0.5em;
 }
 
 .aboutUs-container article p {
   margin: 0;
   font-size: 1.7em;
+  letter-spacing: 0.03em;
+  line-height: 1.3em;
 }
 
 .aboutUs-container article p a {
@@ -70,20 +85,8 @@
   height: 2px;
 }
 
-.aboutUs-container article {
-  padding: 1em;
-  border-radius: 4px;
-  color: white;
-  width: 50%;
-  z-index: 2;
-  backdrop-filter: contrast(0.5) blur(5px);
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  /* Performance Optimierungen */
-  transform: translateZ(0);
-}
-
 .text-aboutUs--color-a:hover {
-  color: #9e86;
+  color: #4694ff;
 }
 
 .aboutUs-video-popup {
@@ -92,37 +95,42 @@
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
   z-index: 1000;
   /* Performance Optimierungen */
   transform: translateZ(0);
   backface-visibility: hidden;
-  perspective: 1000px;
+  transition: all 0.3s ease;
 }
 
 .aboutUs-video-popup.active {
   opacity: 1;
   visibility: visible;
-  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .aboutUs-video-container {
   position: relative;
-  width: 80%;
-  max-width: 80vw;
-  max-height: 80vh;
+  width: 90%; /* Angepasst für bessere Mobilansicht */
+  max-width: 1200px; /* Maximale Breite definiert */
+  aspect-ratio: 16/9; /* Wichtig für Videoverhältnis */
+  background-color: black; /* Hintergrund für das Video */
+  border-radius: 4px;
+  overflow: hidden; /* Wichtig für border-radius */
 }
 
 .aboutUs-video-container video {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 2.5px;
+  display: block; /* Verhindert unerwünschte Abstände */
 }
 
 /* Section first Scrolling Background */
@@ -130,6 +138,7 @@
   position: relative;
   overflow: hidden;
 }
+
 .scrolling-bg-first--container {
   display: flex;
   flex-direction: column;
@@ -307,7 +316,7 @@
   max-width: 50%;
   margin: 0;
   padding: 0;
-  font-size: 1.2em;
+  font-size: 1.25em;
 }
 
 .team-container--item img {
@@ -425,6 +434,39 @@
   text-align: justify;
 }
 
+.shop-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5em 2em;
+}
+
+.shop-header h2 {
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(128, 128, 128, 0.3);
+}
+
+.shop-header p {
+  margin: 0;
+  font-size: 1.2em;
+  margin-top: 1em;
+}
+
+.shop-header--sub-header h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px #999;
+  letter-spacing: 0.1em;
+  text-decoration: underline;
+}
+
+.shop-header--sub-header span {
+  margin-right: 10px;
+}
+
 .card-wrapper {
   display: flex;
   justify-content: center;
@@ -432,7 +474,7 @@
   flex-wrap: wrap;
   gap: 4em;
   width: auto;
-  margin: 2.5em 0;
+  margin: 2.5em 1.5em;
 }
 
 /* SECTION LOCATION */
@@ -445,7 +487,7 @@
   align-items: center;
   background-color: #f2f4ef;
   /* background-color: #92e984; for testing purposes */
-  padding: 2em;
+  padding: 1em;
 }
 
 .wrapper {
@@ -478,7 +520,7 @@
   border-bottom-right-radius: 0.55em;
   color: white;
   max-width: 19.2em;
-  height: 17em;
+  height: 15em;
   bottom: -3em;
   right: -2em;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
