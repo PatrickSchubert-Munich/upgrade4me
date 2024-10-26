@@ -7,7 +7,7 @@ const URLS_TO_CACHE = [
   "/assets/fonts/Roboto-Regular.woff2",
   "/assets/fonts/Roboto-Medium.woff2",
   "/assets/fonts/Roboto-Bold.woff2",
-  "/assets/img/logo.jpg",
+  "/assets/logo/logo.jpg",
   "/styles/fonts.css",
   "/styles/global.css",
   "/styles/nav.css",
