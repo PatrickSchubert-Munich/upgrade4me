@@ -1,4 +1,18 @@
 :root {
+  /* AboutUs */
+  --text-primary: black;
+  --text-primary-hover: #4694ff;
+  /* Concept */
+  --text-secondary: #1678ff;
+  --text-secondary-hover: #4694ff;
+  /* Team */
+  --team-bg-linear-gradient--even-start: rgba(214, 214, 214, 1);
+  --team-bg-linear-gradient--even-end: rgba(242, 244, 239, 1);
+  --team-bg-linear-gradient--odd-start: rgb(0, 71, 171, 0.75);
+  --team-bg-linear-gradient--odd-end: rgba(255, 0, 0, 0);
+  /* Gallery */
+  --gallery-bg: rgba(0, 72, 171, 0.85);
+  --gallery-fg: rgba(0, 30, 70, 1);
   --gallery-width: 80%;
   --gallery-gap: 2em;
   --gallery-space-top: 6em;
@@ -86,7 +100,7 @@
 }
 
 .text-aboutUs--color-a:hover {
-  color: #4694ff;
+  color: var(--text-primary-hover);
 }
 
 .aboutUs-video-popup {
@@ -221,19 +235,19 @@
 
 .text-concept--color {
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
-  color: #1678ff;
+  color: var(--text-secondary);
 }
 
 .text-concept--color-a {
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
-  color: #1678ff;
+  color: var(--text-secondary);
   text-decoration-line: underline;
   text-underline-offset: 2.5px;
   text-wrap: nowrap;
 }
 
 .text-concept--color-a:hover {
-  color: #4694ff;
+  color: var(--text-secondary-hover);
 }
 
 /* SCROLLING BACKGROUND TEAM*/
@@ -297,8 +311,8 @@
 .team-container--item:nth-child(odd) {
   background-image: linear-gradient(
     to right,
-    rgb(0, 71, 171, 0.75),
-    rgba(255, 0, 0, 0)
+    var(--team-bg-linear-gradient--odd-start),
+    var(--team-bg-linear-gradient--odd-end)
   );
   padding-right: 1em;
 }
@@ -306,8 +320,8 @@
 .team-container--item:nth-child(even) {
   background-image: linear-gradient(
     325deg,
-    rgba(214, 214, 214, 1),
-    rgba(242, 244, 239, 1)
+    var(--team-bg-linear-gradient--even-start),
+    var(--team-bg-linear-gradient--even-end)
   );
   padding-left: 1em;
 }
@@ -506,7 +520,7 @@
   position: relative;
   height: 100%;
   width: 600px;
-  background-color: rgba(0, 72, 171, 0.85);
+  background-color: var(--gallery-bg);
   border-radius: 0.55em;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   z-index: 0;
@@ -514,7 +528,7 @@
 
 .gallery-foreground {
   position: absolute;
-  background-color: rgba(0, 30, 70, 1);
+  background-color: var(--gallery-fg);
   border-top: 0.3em solid #f2f4ef;
   border-left: 0.3em solid #f2f4ef;
   border-bottom-right-radius: 0.55em;

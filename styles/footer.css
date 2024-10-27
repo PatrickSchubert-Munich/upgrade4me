@@ -1,6 +1,15 @@
+:root {
+  --footer-bg: #000c1c;
+  --footer-text-primary: white;
+  --footer-icons-primary: white;
+  --footer-icons-primary--hover: rgba(70, 148, 255, 1);
+  --footer-text-primary: white;
+  --footer-impressung-primary--hover: rgba(70, 148, 255, 1);
+}
+
 #footer {
-  background-color: #000c1c; /* Dunkler Hintergrund */
-  color: white;
+  background-color: var(--footer-bg); /* Dunkler Hintergrund */
+  color: var(--footer-text-primary);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,7 +19,7 @@
 }
 
 .social-icons a {
-  color: white;
+  color: var(--footer-icons-primary);
   margin-right: 15px;
   font-size: 24px; /* Icons etwas größer machen */
   text-decoration: none;
@@ -24,21 +33,21 @@
 }
 
 .social-icons a:hover {
-  color: rgba(70, 148, 255, 1);
+  color: var(--footer-icons-primary--hover);
   transform: scale(1.1);
 }
 
 .footer-info {
-  color: #fff;
+  color: var(--footer-text-primary);
 }
 
 .footer-info .impressum {
-  color: #fff; /* Weiß beim Hover */
+  color: var(--footer-text-primary);
   text-decoration: underline;
 }
 
 .footer-info .impressum:hover {
-  color: rgba(70, 148, 255, 1);
+  color: var(--footer-impressung-primary--hover);
 }
 
 @media (max-width: 562px) {

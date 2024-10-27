@@ -1,3 +1,18 @@
+:root {
+  /* Buttons */
+  --btn-gradient-start: rgba(0, 72, 171, 0.9);
+  --btn-gradient-end: rgba(22, 120, 255, 0.7);
+  /* Shop cards foreground */
+  --card-bg-bronze: #cc8e34;
+  --card-bg-silver: #8a9597;
+  --card-bg-gold: #ffd700;
+  /* Shop cards background */
+  --card-bg-gradient-start: rgba(70, 148, 255, 1);
+  --card-bg-gradient-end: rgb(255, 255, 255, 1);
+  /* Form */
+  --bg-inputs: rgba(70, 148, 255, 0.3);
+}
+
 /* Video Buttons - Gemeinsame Basis-Styles */
 #btn-video-large,
 #btn-video-small {
@@ -11,10 +26,10 @@
   color: white;
   background: radial-gradient(
     circle,
-    rgba(0, 72, 171, 0.9),
-    rgba(22, 120, 255, 0.7)
+    var(--btn-gradient-start),
+    var(--btn-gradient-end)
   );
-  transition: border 0.2s ease, transform 0.2s ease, background 0.2s ease;
+  transition: border 0.2s ease, transform 0.2s ease;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 
@@ -23,8 +38,8 @@
 #btn-video-small:hover {
   background: radial-gradient(
     circle,
-    rgba(22, 120, 255, 0.7),
-    rgba(0, 72, 171, 0.9)
+    var(--btn-gradient-start),
+    var(--btn-gradient-end)
   );
   border-color: rgba(255, 255, 255, 0.9);
   transform: scale(1.02);
@@ -101,15 +116,15 @@
 }
 
 .card-body--footer.bronze {
-  background-color: #cc8e34;
+  background-color: var(--card-bg-bronze);
 }
 
 .card-body--footer.silver {
-  background-color: #8a9597;
+  background-color: var(--card-bg-silver);
 }
 
 .card-body--footer.gold {
-  background-color: #ffd700;
+  background-color: var(--card-bg-gold);
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
@@ -138,8 +153,8 @@
   align-items: center;
   background-image: linear-gradient(
     45deg,
-    rgba(70, 148, 255, 1),
-    rgb(255, 255, 255, 1)
+    var(--card-bg-gradient-start),
+    var(--card-bg-gradient-end)
   );
   transform: rotateY(180deg);
 }
@@ -147,7 +162,7 @@
 .shop-image-container {
   height: 200px;
   position: relative;
-  background-color: #ffd700;
+  background-color: var(--card-bg-gold);
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
 }
@@ -176,15 +191,15 @@
 }
 
 .shop-image-container.bronze {
-  background-color: #cc8e34;
+  background-color: var(--card-bg-bronze);
 }
 
 .shop-image-container.silver {
-  background-color: #8a9597;
+  background-color: var(--card-bg-silver);
 }
 
 .shop-image-container.gold {
-  background-color: #ffd700;
+  background-color: var(--card-bg-gold);
 }
 
 .card-body {
@@ -207,15 +222,15 @@
 }
 
 .card-category.bronze {
-  color: #cc8e34;
+  color: var(--card-bg-bronze);
 }
 
 .card-category.silver {
-  color: #8a9597;
+  color: var(--card-bg-silver);
 }
 
 .card-category.gold {
-  color: #ffd700;
+  color: var(--card-bg-gold);
 }
 
 .card-price {
@@ -261,8 +276,8 @@
   border-radius: 50px;
   background-image: linear-gradient(
     to top,
-    rgba(0, 72, 171, 1),
-    rgba(70, 148, 255, 1)
+    var(--btn-gradient-start),
+    var(--btn-gradient-end)
   );
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
   color: white;
@@ -275,8 +290,8 @@
   outline: 1px solid #e3e3e3;
   background-image: linear-gradient(
     to bottom,
-    rgba(0, 72, 171, 1),
-    rgba(70, 148, 255, 1)
+    var(--btn-gradient-end),
+    var(--btn-gradient-start)
   );
 }
 
@@ -369,14 +384,9 @@ input[type="checkbox"]:checked {
   border-radius: 5px;
   border: none;
   padding: 0.5em;
-  background-color: rgba(70, 148, 255, 0.3);
+  background-color: var(--bg-inputs);
   color: black;
   resize: none;
-}
-
-.form input,
-textarea {
-  background-color: rgba(70, 148, 255, 0.3);
 }
 
 .form input:focus {
@@ -391,8 +401,8 @@ textarea {
 .form .button-submit {
   background-image: linear-gradient(
     to top,
-    rgba(0, 72, 171, 1),
-    rgba(70, 148, 255, 1)
+    var(--btn-gradient-start),
+    var(--btn-gradient-end)
   );
   color: white;
   border: none;
@@ -409,8 +419,8 @@ textarea {
   opacity: 0.85;
   background-image: linear-gradient(
     to bottom,
-    rgba(0, 72, 171, 1),
-    rgba(70, 148, 255, 1)
+    var(--btn-gradient-end),
+    var(--btn-gradient-start)
   );
 }
 
