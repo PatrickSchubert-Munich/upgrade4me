@@ -6,7 +6,7 @@
   --nav-text-primary--active: #e3e3e3;
   --nav-text-primary--focus: #e3e3e3;
   /* Sidenavigation */
-  --sidenav-bg: rgba(0, 71, 171, 0.65);
+  --sidenav-bg: rgb(64, 73, 157,0.75);
   --sidenav-text-primary--hover: #000e46;
   --sidenav-text-primary--focus: #f2f4ef;
 }

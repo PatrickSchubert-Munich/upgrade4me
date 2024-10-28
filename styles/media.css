@@ -237,6 +237,7 @@
   }
 }
 
+/* FORM */
 @media screen and (max-width: 1250px) {
   #form form {
     padding: 15px;
@@ -348,6 +349,42 @@
   }
 }
 
+/* SECTION LOCATION */
+@media screen and (max-width: 1072px) {
+  .scrolling-bg-fourth--container article h2 {
+    font-size: 1.7em;
+    padding: 1.1em;
+  }
+
+  .scrolling-bg-fourth--container article p {
+    font-size: 1.1em;
+    padding: 0 1.1em 1.1em 1.1em;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .scrolling-bg-fourth--container article h2 {
+    padding: 0.65em 0;
+    font-size: 1.5em;
+  }
+
+  .scrolling-bg-fourth--container article p {
+    padding: 0 1em 1em 1em;
+  }
+}
+
+@media screen and (max-width: 672px) {
+  .scrolling-bg-fourth--container article h2 {
+    padding: 0.65em 0;
+    font-size: 1.2em;
+  }
+
+  .scrolling-bg-fourth--container article p {
+    text-align: left;
+    font-size: 0.85em;
+  }
+}
+
 /* FAQ */
 @media screen and (max-width: 628px) {
   .question-answers-header {
@@ -379,8 +416,8 @@
   }
 }
 
-/* BUGFIXING BACKGROUND FOR SMALL DEVICES */
-@media screen and (max-width: 1024px) {
+/* Nur für iOS Geräte */
+@supports (-webkit-touch-callout: none) {
   .bg--phone-devices {
     background-attachment: scroll;
   }
@@ -392,19 +429,15 @@
   #scrolling-bg-fourth.bg--phone-devices {
     background-attachment: scroll;
   }
-}
 
-/* SECTION LOCATION */
-@media screen and (max-width: 768px) {
-  :root {
-    --gallery-image-height: 200px; /* Kleinere Bilder auf mobilen Geräten */
-    --gallery-gap: 1em; /* Kleinerer Abstand */
-  }
-}
-
-@media screen and (max-width: 480px) {
-  :root {
-    --gallery-image-height: 150px; /* Noch kleinere Bilder auf sehr kleinen Geräten */
+  /* Performanceoptimierung für iOS */
+  .bg--phone-devices {
+    /* Verhindert Memory-Leaks auf iOS */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    /* Verbesserte Scrolling-Performance */
+    -webkit-overflow-scrolling: touch;
+    background-attachment: scroll;
   }
 }
 

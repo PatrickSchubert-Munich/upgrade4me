@@ -381,8 +381,18 @@ textarea:focus {
 }
 
 .form label {
-  padding-top: 0.1em;
+  padding: 0.1em 0;
   color: rgb(42, 48, 103);
+}
+
+.form input::placeholder {
+  color: white;
+  opacity: 0.35;
+}
+
+.form textarea::placeholder {
+  color: white;
+  opacity: 0.35;
 }
 
 .form .btn-submit {
