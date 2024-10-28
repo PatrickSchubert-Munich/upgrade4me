@@ -306,6 +306,37 @@
   }
 }
 
+/* FAQ */
+@media screen and (max-width: 628px) {
+  .question-answers-header {
+    padding: 2em 1.5em;
+  }
+
+  .question-answers-header h2 {
+    font-size: 1.5em;
+  }
+
+  .question-answers-header p {
+    font-size: 1em;
+  }
+
+  .accordion-container button,
+  .panel {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .question-answers-header h2 {
+    font-size: 1.25em;
+  }
+
+  .accordion-container button,
+  .panel {
+    font-size: 0.85em;
+  }
+}
+
 /* BUGFIXING BACKGROUND FOR SMALL DEVICES */
 @media screen and (max-width: 1024px) {
   .bg--phone-devices {
