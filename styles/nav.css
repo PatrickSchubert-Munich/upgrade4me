@@ -1,6 +1,6 @@
 :root {
   /* Navigation */
-  --nav-bg: #0047ab;
+  --nav-bg: #40499d;
   --nav-text-primary: white;
   --nav-text-primary--hover: #e3e3e3;
   --nav-text-primary--active: #e3e3e3;
@@ -39,10 +39,22 @@
   position: fixed;
   border-radius: 0px 0 5px 5px;
   left: 31px;
-  top: 47px;
+  top: 30px;
   height: 110px;
   width: auto;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 0px 0 5px 5px;
+  height: 110px;
+  width: auto;
+  box-shadow: 
+    /* Oberer Einschnitt-Schatten */
+    0px -4px 6px -2px rgba(0, 0, 0, 0.3),
+    /* Seitliche und untere Schatten */
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px,
+    /* Innerer Schatten oben */
+    inset 0px 4px 3px -2px rgba(0, 0, 0, 0.25);
+  /* Übergang zur Navbar */
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .main-nav li {

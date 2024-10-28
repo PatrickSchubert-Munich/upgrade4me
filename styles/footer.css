@@ -1,10 +1,10 @@
 :root {
-  --footer-bg: #000c1c;
+  --footer-bg: #2a3067;
   --footer-text-primary: white;
   --footer-icons-primary: white;
-  --footer-icons-primary--hover: rgba(70, 148, 255, 1);
+  --footer-icons-primary--hover: #e3e3e3;
   --footer-text-primary: white;
-  --footer-impressung-primary--hover: rgba(70, 148, 255, 1);
+  --footer-impressung-primary--hover: #e3e3e3;
 }
 
 #footer {

@@ -9,6 +9,7 @@
     <!-- Kritische Meta-Tags -->
     <meta name="description" content="Ihre individuelle Transformation für äußere und innere Schönheit">
     <meta name="theme-color" content="#0047ab">
+    <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> -->
 
     <!-- Lokal gehostete Schriftarten -->
     <link rel="prefetch" href="./assets/fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -19,7 +20,7 @@
     <link rel="stylesheet" href="./styles/fonts.css">
 
     <!-- Kritische Ressourcen -->
-    <link rel="preload" href="./assets/logo/Logo.jpg" as="image" fetchpriority="high">
+    <link rel="preload" href="./assets/logo/logo_450.webp" as="image" fetchpriority="high">
 
     <!-- Scroll-Bilder verzögert laden -->
     <link rel="prefetch" href="./assets/img/banner_concept.jpg" as="image">
@@ -56,9 +57,10 @@
 <body>
     <!-- Navbar -->
     <nav id="navbar" role="navigation" aria-label="Hauptnavigation">
-        <img id="upgrade4me-logo" src="./assets/logo/Logo.jpg" alt="Upgrade4me Firmenlogo" width="auto" height="110">
+
         <ul class="main-nav" role="menubar">
-            <a class="push-left" href="#">Upgrade4me</a>
+            <a class="push-left" href="#"><img id="upgrade4me-logo" src="./assets/logo/logo_450.webp"
+                    alt="Upgrade4me Firmenlogo" width="auto" height="110"></a>
             <li role="none">
                 <a href="#aboutUs" role="menuitem">Über Uns</a>
             </li>
@@ -116,7 +118,7 @@
                             width="30px" aria-hidden="true">
                     </button>
                 </div>
-                <article>
+                <article class="animate__animated animate__fadeInRightBig">
                     <header>
                         <h1>Herzlich Willkommen bei Upgrade4me!</h1>
                     </header>
@@ -144,11 +146,12 @@
         <!-- SECTION SCROLLING BACKGROUND CONCEPT -->
         <section id="scrolling-bg-first">
             <div class="scrolling-bg-first--container bg--phone-devices"></div>
-            <div class="bg-fixed-scroll--divider first z-2"></div>
+            <div class="bg-fixed-scroll--divider first"></div>
         </section>
 
         <!-- SECTION CONCEPT -->
         <section id="concept">
+            <div class="bg-fixed-scroll--divider second"></div>
             <div class="concept-container">
                 <header>
                     <h2>Unser Konzept</h2>
@@ -170,7 +173,7 @@
                 <article>
                     <div class="concept-container--svg">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="50px" height="50px"
-                            fill="#0047ab">
+                            fill="#40499d">
                             <path
                                 d="m240-522-40 22q-14 8-30 4t-24-18L66-654q-8-14-4-30t18-24l230-132h70q9 0 14.5 5.5T400-820v20q0 33 23.5 56.5T480-720q33 0 56.5-23.5T560-800v-20q0-9 5.5-14.5T580-840h70l230 132q14 8 18 24t-4 30l-80 140q-8 14-23.5 17.5T760-501l-40-20v361q0 17-11.5 28.5T680-120H280q-17 0-28.5-11.5T240-160v-362Z" />
                         </svg>
@@ -188,7 +191,7 @@
                 <article>
                     <div class="concept-container--svg">
                         <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px"
-                            fill="#0047ab">
+                            fill="#40499d">
                             <path
                                 d="M782-114 481-415 364-298q11 17 13.5 33t2.5 35q0 64-43 107T230-80q-64 0-107-43T80-230q0-64 43-107t107-43q18 0 35.5 5t36.5 15l116-116-118-118q-17 8-34.5 11t-35.5 3q-64 0-107-43T80-730q0-64 43-107t107-43q64 0 107 43t43 107q0 19-2.5 36T367-662l514 514v34h-99ZM599-527l-66-66 249-249h99v33L599-527ZM230-640q38 0 64-26t26-64q0-38-26-64t-64-26q-38 0-64 26t-26 64q0 38 26 64t64 26Zm253 183q8 0 13.5-5.5T502-476q0-8-5.5-13.5T483-495q-8 0-13.5 5.5T464-476q0 8 5.5 13.5T483-457ZM230-140q38 0 64-26t26-64q0-38-26-64t-64-26q-38 0-64 26t-26 64q0 38 26 64t64 26Z" />
                         </svg>
@@ -208,7 +211,7 @@
                 <article>
                     <div class="concept-container--svg">
                         <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px"
-                            fill="#0047ab">
+                            fill="#40499d">
                             <path
                                 d="m550-84-42-42 142-142-382-382-142 142-42-42 56-58-56-56 85-85-42-42 42-42 43 41 84-84 56 56 58-56 42 42-142 142 382 382 142-142 42 42-56 58 56 56-86 86 42 42-42 42-42-42-84 84-56-56-58 56Z" />
                         </svg>
@@ -228,7 +231,7 @@
                 <article>
                     <div class="concept-container--svg">
                         <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px"
-                            fill="#0047ab">
+                            fill="#40499d">
                             <path
                                 d="m316-700 164-220 164 220H316Zm-76 160v-74q-50-12-83.5-48.5T120-749h61q3 33 28.5 56t59.5 23h422q34 0 59.5-23t28.5-56h61q-3 50-36 86.5T720-614v74H240ZM160-80v-374q-50-12-83.5-48.5T40-589h61q3 33 28.5 56t59.5 23h582q34 0 59.5-23t28.5-56h61q-3 50-36 86.5T800-454v374H530v-160q0-21-14.5-35.5T480-290q-21 0-35.5 14.5T430-240v160H160Z" />
                         </svg>
@@ -248,9 +251,11 @@
 
         <!-- SECTION SCROLLING BACKGROUND TEAM -->
         <section id="scrolling-bg-second">
+
             <div class="scrolling-bg-second--container bg--phone-devices">
+                <div class="bg-fixed-scroll--divider third-one"></div>
                 <h2>TEAM</h2>
-                <div class="bg-fixed-scroll--divider second"></div>
+                <div class="bg-fixed-scroll--divider third-second"></div>
             </div>
         </section>
 
@@ -302,6 +307,7 @@
 
         <!-- SECTION SCROLLING BACKGROUND Geschäftskunden -->
         <section id="scrolling-bg-third" class="bg--phone-devices">
+            <div class="bg-fixed-scroll--divider third-one"></div>
             <div class="scrolling-bg-third--container">
                 <article class="animate__animated">
                     <h2>Für Geschäftskunden</h2>
@@ -314,8 +320,8 @@
                         auch das Unternehmen in seiner ganzen Pracht erstrahlen.
                     </p>
                 </article>
-                <div class="bg-fixed-scroll--divider third"></div>
             </div>
+            <div class="bg-fixed-scroll--divider third-second"></div>
         </section>
 
         <!-- SECTION SHOP -->
@@ -333,7 +339,7 @@
                 <h3>
                     <span>
                         <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px">
-                            <path fill="#0047ab"
+                            <path fill="#40499d"
                                 d="M205-801h589.07q22.97 0 34.95 21 11.98 21-.02 42L694-495q-11 19-28.56 30.5T627-453H324l-56 104h491v60H277q-42 0-60.5-28t.5-63l64-118-152-322H51v-60h117l37 79Z" />
                             <path fill="black"
                                 d="M286.79-81Q257-81 236-102.21t-21-51Q215-183 236.21-204t51-21Q317-225 338-203.79t21 51Q359-123 337.79-102t-51 21Z" />
@@ -348,18 +354,18 @@
             <!-- CARD WRAPPER -->
             <div class="card-wrapper">
 
-                <!-- CARD BRONZE -->
-                <div class="flip-card" role="article" aria-labelledby="bronze-title">
+                <!-- CARD WOMEN -->
+                <div class="flip-card" role="article" aria-labelledby="women-title">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <div class="shop-image-container bronze">
-                                <img src="./assets/img/shopping_cart_bronze.jpg" alt="Shopping card category bronze"
+                            <div class="shop-image-container">
+                                <img src="./assets/img/shopping_cart_women.jpg" alt="Shopping card for category women"
                                     loading="lazy">
                             </div>
                             <div class="card-body">
                                 <header>
-                                    <h2 id="bronze-title" class="card-category bronze">Bronze</h2>
-                                    <p class="card-price">249<span>€</span></p>
+                                    <h2 id="women-title" class="card-category">Women</h2>
+                                    <p class="card-price">599<span>€</span></p>
                                 </header>
                                 <hr>
                                 <article>
@@ -377,7 +383,7 @@
                                     <li class="list-group-item">Kaffee & erfrischende Getränke</li>
                                     <li class="list-group-item">Schreibunterlagen</li>
                                 </ul>
-                                <footer class="card-body--footer bronze"></footer>
+                                <footer class="card-body--footer"></footer>
                             </div>
                         </div>
                         <div class="flip-card-back">
@@ -386,18 +392,18 @@
                     </div>
                 </div>
 
-                <!-- CARD SILBER -->
-                <div class="flip-card" role="article" aria-labelledby="silver-title">
+                <!-- CARD MEN -->
+                <div class="flip-card" role="article" aria-labelledby="men-title">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <div class="shop-image-container silver">
-                                <img src="./assets/img/shopping_cart_silber.jpg" alt="Shopping card category silver"
+                            <div class="shop-image-container">
+                                <img src="./assets/img/shopping_cart_men.jpg" alt="Shopping card for category men"
                                     loading="lazy">
                             </div>
                             <div class="card-body">
                                 <header>
-                                    <h2 id="silver-title" class="card-category silver">Silber</h2>
-                                    <p class="card-price">539<span>€</span></p>
+                                    <h2 id="men-title" class="card-category">Men</h2>
+                                    <p class="card-price">599<span>€</span></p>
                                 </header>
                                 <hr>
                                 <article>
@@ -417,7 +423,7 @@
                                     </li>
                                     <li class="list-group-item">Schreibunterlagen</li>
                                 </ul>
-                                <footer class="card-body--footer silver"></footer>
+                                <footer class="card-body--footer"></footer>
                             </div>
                         </div>
                         <div class="flip-card-back">
@@ -426,18 +432,18 @@
                     </div>
                 </div>
 
-                <!-- CARD GOLD -->
-                <div class="flip-card" role="article" aria-labelledby="gold-title">
+                <!-- CARD COMPANY -->
+                <div class="flip-card" role="article" aria-labelledby="company-title">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <div class="shop-image-container gold">
-                                <img src="./assets/img/shopping_cart_gold.jpg" alt="Shopping card category gold"
-                                    loading="lazy">
+                            <div class="shop-image-container">
+                                <img src="./assets/img/shopping_cart_company.jpg"
+                                    alt="Shopping card for category companys" loading="lazy">
                             </div>
                             <div class="card-body">
                                 <header>
-                                    <h2 id="bronze-title" class="card-category gold">Gold</h2>
-                                    <p class="card-price">939<span>€</span></p>
+                                    <h2 id="bronze-title" class="card-category">Companys</h2>
+                                    <p class="card-price">Individuell</p>
                                 </header>
                                 <hr>
                                 <article>
@@ -460,7 +466,7 @@
                                         Stunden
                                     </li>
                                 </ul>
-                                <footer class="card-body--footer gold"></footer>
+                                <footer class="card-body--footer"></footer>
                             </div>
                         </div>
                         <div class="flip-card-back">
@@ -473,6 +479,7 @@
 
         <!-- SECTION SCROLLING BACKGROUND LOCATION -->
         <section id="scrolling-bg-fourth" class="bg--phone-devices">
+            <div class="bg-fixed-scroll--divider fith-one"></div>
             <div class="scrolling-bg-fourth--container bg--phone-devices">
                 <article class="animate__animated">
                     <h2>Location</h2>
@@ -482,8 +489,8 @@
                         Workshops direkt in den eigenen Geschäftsräumen abzuhalten.
                     </p>
                 </article>
-                <div class="bg-fixed-scroll--divider fourth"></div>
             </div>
+            <div class="bg-fixed-scroll--divider fith-second"></div>
         </section>
 
         <!-- SECTION LOCATION -->
@@ -533,10 +540,11 @@
         <!-- SECTION SCROLLING BACKGROUND KONTAKT -->
         <section id="scrolling-bg-sixth" class="bg--phone-devices">
             <div class="scrolling-bg-sixth--container bg--phone-devices">
+                <div class="bg-fixed-scroll--divider sixth-one"></div>
                 <article class="animate__animated">
                     <h2>Kontakt</h2>
                 </article>
-                <div class="bg-fixed-scroll--divider sixth"></div>
+                <div class="bg-fixed-scroll--divider sixth-second"></div>
             </div>
         </section>
 
@@ -600,13 +608,11 @@
                             <label for="copy-of-message">
                                 Kopie der Nachricht an mich senden
                             </label>
-                            <span id="copy-help" class="help-text" hidden>Sie erhalten eine Kopie dieser Nachricht per
-                                E-Mail</span>
                         </div>
 
                         <!-- Submit button -->
                         <div>
-                            <button class="button-submit" type="submit" aria-label="Formular absenden">
+                            <button class="btn-submit" type="submit" aria-label="Formular absenden">
                                 Absenden
                             </button>
                         </div>

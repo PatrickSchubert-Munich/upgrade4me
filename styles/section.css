@@ -3,16 +3,16 @@
   --text-primary: black;
   --text-primary-hover: #4694ff;
   /* Concept */
-  --text-secondary: #1678ff;
-  --text-secondary-hover: #4694ff;
+  --text-secondary: black;
+  --text-secondary-hover: rgb(64, 73, 157);
   /* Team */
-  --team-bg-linear-gradient--even-start: rgba(214, 214, 214, 1);
-  --team-bg-linear-gradient--even-end: rgba(242, 244, 239, 1);
-  --team-bg-linear-gradient--odd-start: rgb(0, 71, 171, 0.75);
+  --team-bg-linear-gradient--even-start: #ecece7;
+  --team-bg-linear-gradient--even-end: #ecece7;
+  --team-bg-linear-gradient--odd-start: rgba(64, 73, 157, 0.75);
   --team-bg-linear-gradient--odd-end: rgba(255, 0, 0, 0);
   /* Gallery */
-  --gallery-bg: rgba(0, 72, 171, 0.85);
-  --gallery-fg: rgba(0, 30, 70, 1);
+  --gallery-bg: rgba(64, 73, 157, 0.75);
+  --gallery-fg: rgb(64, 73, 157);
   --gallery-width: 80%;
   --gallery-gap: 2em;
   --gallery-space-top: 6em;
@@ -23,6 +23,7 @@
 
 /* global */
 .bg-fixed-scroll--divider {
+  position: absolute;
   overflow-x: hidden;
   background-color: white;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
@@ -169,7 +170,6 @@
 }
 
 .bg-fixed-scroll--divider.first {
-  position: absolute;
   top: 0;
 }
 
@@ -181,7 +181,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center; /* Vertikale Zentrierung des Inhalts */
-  background-color: #f2f4ef;
+  background-color: #fff;
 }
 
 .concept-container {
@@ -193,7 +193,7 @@
   margin: -10em auto 2em; /* Zentrieren und Abstand nach unten hinzufügen */
   border-radius: 7.5px;
   padding: 1.5em 2em;
-  background-color: white;
+  background-color: #ecece7;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
@@ -250,6 +250,10 @@
   color: var(--text-secondary-hover);
 }
 
+.bg-fixed-scroll--divider.second {
+  top: 0;
+}
+
 /* SCROLLING BACKGROUND TEAM*/
 .scrolling-bg-second--container {
   display: flex;
@@ -265,11 +269,6 @@
   background-attachment: fixed;
   filter: grayscale(75%);
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-}
-
-.bg-fixed-scroll--divider.second {
-  position: absolute;
-  bottom: 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -291,6 +290,14 @@
       letter-spacing: 0.1em;
     }
   }
+}
+
+.bg-fixed-scroll--divider.third-one {
+  top: 0;
+}
+
+.bg-fixed-scroll--divider.third-second {
+  bottom: 0;
 }
 
 /* SECTION TEAM */
@@ -385,64 +392,18 @@
   column-rule: 0.125em solid rgba(255, 255, 255, 0.5);
 }
 
-.bg-fixed-scroll--divider.third {
-  position: absolute;
+.bg-fixed-scroll--divider.fourth-one {
   top: 0;
 }
 
-/* SCROLLING BACKGROUND LOCATION*/
-#scrolling-bg-fourth {
-  position: relative;
-  height: 75vh;
-  width: 100%;
-  background-image: url("../assets/img/location_background.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  filter: grayscale(50%);
-}
-
-.scrolling-bg-fourth--container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.scrolling-bg-fourth--container article {
-  color: white;
-  text-align: justify;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-  backdrop-filter: contrast(0.5) blur(5px);
-  width: 85%;
-}
-
-.scrolling-bg-fourth--container article h2 {
-  text-align: center;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 1em 0;
-  margin: 0;
-}
-
-.scrolling-bg-fourth--container article p {
-  margin: 0;
-  padding: 0 1.25em 1.25em 1.25em;
-  font-size: 1.25em;
-}
-
-.bg-fixed-scroll--divider.fourth {
-  position: absolute;
-  top: 0;
+.bg-fixed-scroll--divider.fourth-second {
+  bottom: 0;
 }
 
 /* SECTION SHOP */
 #shop {
   position: relative;
-  background-color: #f2f4ef;
+  background-color: #ecece7;
   min-height: 100%;
   padding-bottom: 3em;
   text-align: justify;
@@ -491,6 +452,58 @@
   margin: 2.5em 1.5em;
 }
 
+/* SCROLLING BACKGROUND LOCATION*/
+#scrolling-bg-fourth {
+  position: relative;
+  height: 75vh;
+  width: 100%;
+  background-image: url("../assets/img/location_background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  filter: grayscale(50%);
+}
+
+.scrolling-bg-fourth--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.scrolling-bg-fourth--container article {
+  color: white;
+  text-align: justify;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  backdrop-filter: contrast(0.5) blur(5px);
+  width: 85%;
+}
+
+.scrolling-bg-fourth--container article h2 {
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 1em 0;
+  margin: 0;
+}
+
+.scrolling-bg-fourth--container article p {
+  margin: 0;
+  padding: 0 1.25em 1.25em 1.25em;
+  font-size: 1.25em;
+}
+
+.bg-fixed-scroll--divider.fith-one {
+  top: 0;
+}
+
+.bg-fixed-scroll--divider.fith-second {
+  bottom: 0;
+}
+
 /* SECTION LOCATION */
 #location {
   position: relative;
@@ -499,7 +512,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f2f4ef;
+  background-color: #ecece7;
   /* background-color: #92e984; for testing purposes */
   padding: 1em;
 }
@@ -512,7 +525,7 @@
   justify-content: center;
   align-items: center;
   padding: 1em;
-  background-color: #f2f4ef;
+  background-color: #ecece7;
   /* background-color: rgb(112, 112, 228); for testing purposes */
 }
 
@@ -623,6 +636,7 @@
 
 /* SCROLLING BACKGROUND KONTAKT*/
 .scrolling-bg-sixth--container {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 75vh;
@@ -638,9 +652,12 @@
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
 
-.bg-fixed-scroll--divider.sixth {
-  position: absolute;
+.bg-fixed-scroll--divider.sixth-one {
   top: 0;
+}
+
+.bg-fixed-scroll--divider.sixth-second {
+  bottom: 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -664,7 +681,7 @@
   }
 }
 
-/* SECTION MAPS AND CONTACT */
+/* SECTION MAPS AND KONTAKT */
 #kontakt {
   position: relative;
   min-height: 85vh;
@@ -672,7 +689,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f2f4ef;
+  background-color: #ecece7;
 }
 
 .kontakt-container {

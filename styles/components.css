@@ -1,16 +1,16 @@
 :root {
   /* Buttons */
-  --btn-gradient-start: rgba(0, 72, 171, 0.9);
-  --btn-gradient-end: rgba(22, 120, 255, 0.7);
+  --btn-gradient-start: rgba(89, 101, 216, 0.75);
+  --btn-gradient-end: rgba(42, 48, 103, 1);
   /* Shop cards foreground */
-  --card-bg-bronze: #cc8e34;
-  --card-bg-silver: #8a9597;
-  --card-bg-gold: #ffd700;
+  --card-text--category: rgba(42, 48, 103, 1);
+  --card-bg-image: rgba(89, 101, 216, 0.75);
+  --card-bg-footer: rgba(89, 101, 216, 0.75);
   /* Shop cards background */
-  --card-bg-gradient-start: rgba(70, 148, 255, 1);
+  --card-bg-gradient-start: rgba(64, 73, 157, 1);
   --card-bg-gradient-end: rgb(255, 255, 255, 1);
   /* Form */
-  --bg-inputs: rgba(70, 148, 255, 0.3);
+  --bg-inputs: rgba(64, 73, 157, 1);
 }
 
 /* Video Buttons - Gemeinsame Basis-Styles */
@@ -38,8 +38,8 @@
 #btn-video-small:hover {
   background: radial-gradient(
     circle,
-    var(--btn-gradient-start),
-    var(--btn-gradient-end)
+    var(--btn-gradient-end),
+    var(--btn-gradient-start)
   );
   border-color: rgba(255, 255, 255, 0.9);
   transform: scale(1.02);
@@ -115,16 +115,8 @@
   height: 0.6em;
 }
 
-.card-body--footer.bronze {
-  background-color: var(--card-bg-bronze);
-}
-
-.card-body--footer.silver {
-  background-color: var(--card-bg-silver);
-}
-
-.card-body--footer.gold {
-  background-color: var(--card-bg-gold);
+.card-body--footer {
+  background-color: var(--card-bg-footer);
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
@@ -162,7 +154,7 @@
 .shop-image-container {
   height: 200px;
   position: relative;
-  background-color: var(--card-bg-gold);
+  background-color: var(--card-bg-company);
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
 }
@@ -190,16 +182,8 @@
   height: 3.5em;
 }
 
-.shop-image-container.bronze {
-  background-color: var(--card-bg-bronze);
-}
-
-.shop-image-container.silver {
-  background-color: var(--card-bg-silver);
-}
-
-.shop-image-container.gold {
-  background-color: var(--card-bg-gold);
+.shop-image-container {
+  background-color: var(--card-bg-image);
 }
 
 .card-body {
@@ -219,21 +203,11 @@
   margin: 0;
   text-shadow: 1px 1px 1.5px rgba(0, 0, 0, 0.5);
   letter-spacing: 0.1em;
-}
-
-.card-category.bronze {
-  color: var(--card-bg-bronze);
-}
-
-.card-category.silver {
-  color: var(--card-bg-silver);
-}
-
-.card-category.gold {
-  color: var(--card-bg-gold);
+  color: var(--card-text--category);
 }
 
 .card-price {
+  color: var(--card-text--category);
   margin: 0;
   font-size: 1.5em;
 }
@@ -289,7 +263,7 @@
 .card-back-btn:hover {
   outline: 1px solid #e3e3e3;
   background-image: linear-gradient(
-    to bottom,
+    to top,
     var(--btn-gradient-end),
     var(--btn-gradient-start)
   );
@@ -375,7 +349,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked {
-  accent-color: #001e46;
+  accent-color: #2a3067;
 }
 
 .form input:not(.checkbox-container input),
@@ -383,48 +357,61 @@ input[type="checkbox"]:checked {
   width: 100%;
   border-radius: 5px;
   border: none;
-  padding: 0.5em;
+  padding: 0.75em;
   background-color: var(--bg-inputs);
-  color: black;
+  color: white;
   resize: none;
+  font-size: 1em;
 }
 
-.form input:focus {
-  outline: 2px solid #001e46;
+.form .checkbox-container {
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+.checkbox-container input {
+  margin-right: 0.75em;
+}
+
+.form input:focus,
+textarea:focus {
+  outline: 2px solid rgba(42, 48, 103, 0.5);
 }
 
 .form label {
   padding-top: 0.1em;
-  color: #001e46;
+  color: rgb(42, 48, 103);
 }
 
-.form .button-submit {
+.form .btn-submit {
   background-image: linear-gradient(
     to top,
     var(--btn-gradient-start),
     var(--btn-gradient-end)
   );
+  margin: 0.5em 0.5em;
   color: white;
-  border: none;
-  padding: 7.5px 30px;
+  border: 1px solid white;
+  padding: 8px 25px;
   border-radius: 50px;
   font-size: 1.1em;
   cursor: pointer;
-  transition: opacity 0.3s ease, transform 0.2s ease;
+  transition: border 0.2s ease, transform 0.2s ease;
   align-self: center;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 
-.form .button-submit:hover {
-  opacity: 0.85;
+.form .btn-submit:hover {
+  border: 1px solid rgba(42, 48, 103, 0.5);
   background-image: linear-gradient(
     to bottom,
-    var(--btn-gradient-end),
-    var(--btn-gradient-start)
+    var(--btn-gradient-start),
+    var(--btn-gradient-end)
   );
 }
 
-.form .button-submit:active {
+.form .btn-submit:active {
   transform: scale(0.98); /* Drück-Effekt */
 }
 
@@ -447,4 +434,34 @@ input[type="checkbox"]:checked {
   margin: 0;
   overflow: visible;
   clip: auto;
+}
+
+/* SPINNER */
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #40499d;
+  border-bottom: 16px solid 40499d;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
