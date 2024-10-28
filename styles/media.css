@@ -167,15 +167,18 @@
 
 /* SECTION TEAM */
 @media screen and (max-width: 780px) {
-  .team-container--item p {
+  .team-container p {
     font-size: 1.1em;
   }
 }
 
 @media screen and (max-width: 705px) {
+  .team-container {
+    font-size: 1em;
+  }
+
   .team-container--item:nth-child(odd) {
     flex-wrap: wrap;
-    font-size: 1.1em;
     padding-right: 0;
   }
 
@@ -188,6 +191,12 @@
     max-width: 350px;
     text-align: justify;
     padding: 0 0.5em 1.2em 0.5em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .team-container {
+    font-size: 0.85em;
   }
 }
 
