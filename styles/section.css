@@ -634,8 +634,90 @@
   }
 }
 
-/* SCROLLING BACKGROUND KONTAKT*/
+/* SCROLLING BACKGROUND FAQ*/
 .scrolling-bg-sixth--container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/img/question_answers.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.bg-fixed-scroll--divider.sixth-one {
+  top: 0;
+}
+
+.bg-fixed-scroll--divider.sixth-second {
+  bottom: 0;
+}
+
+/* SECTION FAQ */
+#question-answers {
+  position: relative;
+  height: 75vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ecece7;
+}
+
+.accordion-container {
+  margin: 5px 0;
+  width: 70%;
+}
+
+.accordion {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(64, 73, 157);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  outline: none;
+  border: none;
+  font-size: 1.2em;
+  transition: 0.4s;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.active,
+.accordion:hover {
+  background-color: #ccc;
+  color: #000c1c;
+}
+
+.accordion .add {
+  display: block;
+}
+
+.accordion .remove {
+  display: none;
+}
+
+.panel {
+  padding: 0 18px;
+  border-radius: 0 0 5px 5px;
+  background-color: white;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+}
+
+/* SCROLLING BACKGROUND KONTAKT*/
+.scrolling-bg-seventh--container {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -652,16 +734,16 @@
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
 
-.bg-fixed-scroll--divider.sixth-one {
+.bg-fixed-scroll--divider.seventh-one {
   top: 0;
 }
 
-.bg-fixed-scroll--divider.sixth-second {
+.bg-fixed-scroll--divider.seventh-second {
   bottom: 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .scrolling-bg-sixth--container h2 {
+  .scrolling-bg-seventh--container h2 {
     margin: 0;
     scale: 0.25;
     opacity: 0;
