@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Video vorausladen, wenn der Browser es unterstützt
   if (backgroundVideo) {
-    backgroundVideo.preload = "metadata";
+    backgroundVideo.preload = "auto";
   }
 
   // IntersectionObserver für das Hintergrundvideo

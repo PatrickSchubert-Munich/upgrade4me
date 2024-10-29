@@ -42,7 +42,7 @@
     <link rel="manifest" href="./assets/favicon/site.webmanifest">
 
     <!-- Kritische Ressourcen -->
-    <link rel="preload" href="./assets/video/intro.mp4" as="video" fetchpriority="high" />
+    <link render rel="preload" href="./assets/video/intro.mp4" as="video" fetchpriority="high" />
     <link rel="preload" href="./assets/logo/logo_450.webp" as="image" fetchpriority="high">
 
     <!-- Schriftarten vorladen -->
@@ -128,9 +128,10 @@
         <!-- SECTION AboutUs -->
         <section id="aboutUs" aria-labelledby="aboutus-title">
             <div class="aboutUs-container">
-                <video class="aboutUs-video" autoplay preload="auto" playsinline muted loop
+                <video class="aboutUs-video" autoplay playsinline muted loop preload="auto"
                     poster="./assets/img/company_background.webp" aria-hidden="true">
                     <source type="video/mp4" src="./assets/video/intro.mp4">
+                    <source type="video/mp4" src="./assets/video/intro.webm">
                     Upps...your Browser doesn't support video!
                 </video>
                 <div class="container-btn-video">
@@ -168,6 +169,7 @@
                 <div class="aboutUs-video-container">
                     <video controls preload="metadata" playsinline>
                         <source type="video/mp4" src="./assets/video/intro.mp4">
+                        <source type="video/mp4" src="./assets/video/intro.webm">
                         Upps...your Browser doesn't support video!
                     </video>
                     <button id="btn-video-close" aria-label="Video schließen">
