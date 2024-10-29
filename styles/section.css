@@ -340,11 +340,6 @@
   font-size: 1.25em;
 }
 
-.team-container--item img {
-  height: 350px;
-  width: auto;
-}
-
 /* SCROLLING BACKGROUND GESCHÄFTSKUNDEN */
 #scrolling-bg-third {
   position: relative;
