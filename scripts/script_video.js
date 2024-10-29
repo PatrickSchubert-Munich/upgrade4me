@@ -9,11 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let popupActive = false;
 
-  // Video vorausladen, wenn der Browser es unterstützt
-  if (backgroundVideo) {
-    backgroundVideo.preload = "auto";
-  }
-
   // IntersectionObserver für das Hintergrundvideo
   const videoObserver = new IntersectionObserver(
     (entries) => {

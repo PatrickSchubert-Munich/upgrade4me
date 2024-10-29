@@ -42,7 +42,6 @@
     <link rel="manifest" href="./assets/favicon/site.webmanifest">
 
     <!-- Kritische Ressourcen -->
-    <link render rel="preload" href="./assets/video/intro.mp4" as="video" fetchpriority="high" />
     <link rel="preload" href="./assets/logo/logo_450.webp" as="image" fetchpriority="high">
 
     <!-- Schriftarten vorladen -->
@@ -166,7 +165,7 @@
             <!-- Video PopUp -->
             <div id="videoPopup" class="aboutUs-video-popup" role="dialog" aria-modal="true" aria-label="Video Player">
                 <div class="aboutUs-video-container">
-                    <video controls preload="metadata" playsinline>
+                    <video controls playsinline>
                         <source type="video/mp4" src="./assets/video/intro.mp4">
                         Upps...your Browser doesn't support video!
                     </video>
