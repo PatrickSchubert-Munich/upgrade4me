@@ -42,6 +42,7 @@
     <link rel="manifest" href="./assets/favicon/site.webmanifest">
 
     <!-- Kritische Ressourcen -->
+    <link rel="preload" href="./assets/video/intro.mp4" as="video" fetchpriority="high" />
     <link rel="preload" href="./assets/logo/logo_450.webp" as="image" fetchpriority="high">
 
     <!-- Schriftarten vorladen -->
@@ -165,7 +166,7 @@
             <!-- Video PopUp -->
             <div id="videoPopup" class="aboutUs-video-popup" role="dialog" aria-modal="true" aria-label="Video Player">
                 <div class="aboutUs-video-container">
-                    <video controls preload="none" playsinline>
+                    <video controls preload="metadata" playsinline>
                         <source type="video/mp4" src="./assets/video/intro.mp4">
                         Upps...your Browser doesn't support video!
                     </video>
@@ -198,9 +199,9 @@
                                 class="text-concept--color-a" href="#team">Expertenteam</a></strong>, bestehend aus vier
                         Coaches, begleitet Sie mit einem <strong class="text-concept--color">maßgeschneiderten
                             Coaching-Programm</strong>, das Ihr Wohlbefinden, Ihre Gesundheit und Ihr äußeres
-                        Erscheinungsbild nachhaltig verbessert. In unserem Studio im Glockenbachviertel erleben Sie eine
-                        ganzheitliche Transformation: Durch praxisnahe Methoden entdecken Sie Ihren persönlichen Stil
-                        und entwickeln neue Perspektiven für einen ausgewogenen und energiegeladenen Lebensstil.
+                        Erscheinungsbild nachhaltig verbessert. Sie erleben eine ganzheitliche Transformation: Durch
+                        praxisnahe Methoden entdecken Sie Ihren persönlichen Stil und entwickeln neue Perspektiven für
+                        einen ausgewogenen und energiegeladenen Lebensstil.
                     </p>
                 </header>
                 <article>
@@ -360,10 +361,9 @@
             <header class="shop-header">
                 <h2>Warum Upgrade4me?</h2>
                 <p>
-                    Upgrade4me bietet Ihnen individuell abgestimmte Pakete, die Ihre Lernerfahrung bereichern. Jedes
-                    Paket garantiert ein umfassendes Seminarerlebnis, das Ihnen wertvolles Wissen vermittelt und
-                    gleichzeitig Spaß bei der Umsetzung bietet. Wählen Sie das Paket, das ihren Wünschen am besten
-                    entspricht!
+                    Upgrade4me präsentiert Ihnen Pakete, die Ihre Lernerfahrung bereichern. Jedes dieser Pakete
+                    gewährleistet ein umfassendes Seminarerlebnis, das Ihnen nicht nur wertvolles Wissen vermittelt,
+                    sondern auch Spaß bei der praktischen Umsetzung bietet.
                 </p>
             </header>
             <div class="shop-header--sub-header">
@@ -508,9 +508,9 @@
                 <article class="animate__animated">
                     <h2>Location</h2>
                     <p>
-                        Unsere Workshops finden im malerischen Glockenbachviertel statt, umgeben von zahlreichen Cafés,
-                        Restaurants und der Isar. Für unsere Geschäftskunden besteht zudem die Möglichkeit, die
-                        Workshops direkt in den eigenen Geschäftsräumen abzuhalten.
+                        Unsere Workshops finden in Schwabing-Freimann statt. Direkt vor der Tür stehen Ihnen zahlreiche
+                        Parkmöglichkeiten zur Verfügung. Außerdem sind wir gut mit den öffentlichen Verkehrsmitteln
+                        erreichbar.
                     </p>
                 </article>
             </div>
