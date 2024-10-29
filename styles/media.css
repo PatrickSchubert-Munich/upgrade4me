@@ -18,8 +18,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 45px; /* Feste Breite für rundes Design */
-    height: 45px; /* Gleiche Höhe wie Breite für perfekten Kreis */
+    width: 50px; /* Feste Breite für rundes Design */
+    height: 50px; /* Gleiche Höhe wie Breite für perfekten Kreis */
     padding: 10px;
     border-radius: 50%;
   }

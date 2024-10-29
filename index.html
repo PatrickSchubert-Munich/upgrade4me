@@ -2,16 +2,49 @@
 <html lang="en">
 
 <head>
+    <!-- Grundlegende Meta-Tags - immer zuerst -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upgrade4me</title>
+    <title>Upgrade4me | Coaching für persönliche Transformation, Styling & Typberatung in München</title>
 
-    <!-- Kritische Meta-Tags -->
-    <meta name="description" content="Ihre individuelle Transformation für äußere und innere Schönheit">
-    <meta name="theme-color" content="#0047ab">
-    <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> -->
+    <!-- SEO Meta-Tags -->
+    <meta name="description"
+        content="Professionelles Coaching für Ihre persönliche Transformation in München ✓ Styling ✓ Make-up ✓ Fitness ✓ Gesundheit ★ Jetzt persönliche Transformation starten und Workshop buchen!">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords"
+        content="Transformation, Beauty, Coaching, Styling, Make-up, Wellness, Gesundheit, Fitness, München, Workshop, Beratung">
 
-    <!-- Lokal gehostete Schriftarten -->
+    <!-- Open Graph und Social Media Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Upgrade4me - Ihre Transformation für äußere und innere Schönheit">
+    <meta property="og:description"
+        content="Professionelles Coaching für Ihre persönliche Entwicklung in München. Styling, Gesundheit und Wohlbefinden.">
+    <meta property="og:image" content="https://www.upgrade4-me.de/assets/logo/logo_450.webp">
+    <meta property="og:url" content="https://www.upgrade4-me.de/">
+    <meta property="og:locale" content="de_DE">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.upgrade4me.de">
+
+    <!-- Browser Theme -->
+    <meta name="theme-color" content="#40499d">
+    <meta name="msapplication-TileColor" content="#40499d">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./assets/favicon/android-chrome-512x512.png">
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="./assets/favicon/site.webmanifest">
+
+    <!-- Kritische Ressourcen -->
+    <link rel="preload" href="./assets/logo/logo_450.webp" as="image" fetchpriority="high">
+
+    <!-- Schriftarten vorladen -->
     <link rel="prefetch" href="./assets/fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="prefetch" href="./assets/fonts/Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="prefetch" href="./assets/fonts/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin>
@@ -19,33 +52,30 @@
     <!-- Schriftarten CSS -->
     <link rel="stylesheet" href="./styles/fonts.css">
 
-    <!-- Kritische Ressourcen -->
-    <link rel="preload" href="./assets/logo/logo_450.webp" as="image" fetchpriority="high">
-
-    <!-- Scroll-Bilder verzögert laden -->
+    <!-- Bilder vorladen -->
     <link rel="prefetch" href="./assets/img/banner_concept.jpg" as="image">
     <link rel="prefetch" href="./assets/img/workbench_team.jpg" as="image">
     <link rel="prefetch" href="./assets/img/company.jpg" as="image">
 
-    <!-- Service Worker -->
-    <script src="./scripts/script_load_sw.js" defer></script>
-
-    <!-- Eigene Stylesheets -->
-    <!-- <link rel="stylesheet" href="./styles/min.css"> -->
+    <!-- Kritische CSS -->
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/nav.css">
+
+    <!-- Nicht-kritische CSS -->
     <link rel="stylesheet" href="./styles/section.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="./styles/components.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="./styles/footer.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="./styles/media.css" media="print" onload="this.media='all'">
 
-    <!-- Animate.css optimiert laden -->
+    <!-- Externe CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="print"
         onload="this.media='all'" crossorigin="anonymous">
 
+    <!-- Service Worker -->
+    <script src="./scripts/script_load_sw.js" defer></script>
+
     <!-- Fallback für JavaScript-deaktiviert -->
     <noscript>
-        <!-- <link rel="stylesheet" href="./styles/min.css"> -->
         <link rel="stylesheet" href="./styles/section.css">
         <link rel="stylesheet" href="./styles/components.css">
         <link rel="stylesheet" href="./styles/footer.css">
@@ -114,8 +144,11 @@
                     </button>
                     <button id="btn-video-small" class="aboutUs-btn--video aboutUs--play-video"
                         aria-label="Video in Großansicht abspielen">
-                        <img src="./assets/img/play-arrow.png" alt="" class="aboutUs--play-video" height="30px"
-                            width="30px" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="white" height="25px"
+                            width="25px" aria-hidden="true">
+                            <path
+                                d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+                        </svg>
                     </button>
                 </div>
                 <article class="animate__animated animate__fadeInRightBig">
@@ -157,17 +190,17 @@
                     <h2>Unser Konzept</h2>
                     <hr>
                     <p>
-                        Unser Konzept bei Upgrade4me bietet Ihnen eine transformative Erfahrung, die sowohl Ihr
-                        äußeres Erscheinungsbild als auch Ihre Gesundheit auf ein neues Niveau hebt. In enger
-                        Zusammenarbeit mit unserem <strong><a class="text-concept--color-a" href="#team">Team aus
-                                vier Experten</a></strong> haben wir ein <strong
-                            class="text-concept--color">maßgeschneidertes Programm</strong> entwickelt, das Ihnen
-                        dabei hilft, sich selbst neu zu entdecken und Ihren Alltag bewusster und gezielter zu
-                        gestalten, sei es im Hinblick auf <strong class="text-concept--color">Stil, Styling,
-                            körperliche Fitness</strong> und <strong class="text-concept--color">Gesundheit</strong>.
-                        Unser Ansatz ist darauf ausgelegt,
-                        Ihnen praxisnahe Methoden an die Hand zu geben, um Ihr Erscheinungsbild und Ihr Wohlbefinden
-                        nachhaltig zu verbessern.
+                        Unser Konzept bei Upgrade4me in München bietet Ihnen einen ganzheitlichen Workshop, der sich auf
+                        <strong class="text-concept--color">typgerechtes Styling</strong>, <strong
+                            class="text-concept--color">Stilberatung</strong>, <strong
+                            class="text-concept--color">körperliche Fitness</strong> und <strong
+                            class="text-concept--color">gesunde Ernährung</strong> konzentriert. Unser <strong><a
+                                class="text-concept--color-a" href="#team">Expertenteam</a></strong>, bestehend aus vier
+                        Coaches, begleitet Sie mit einem <strong class="text-concept--color">maßgeschneiderten
+                            Coaching-Programm</strong>, das Ihr Wohlbefinden, Ihre Gesundheit und Ihr äußeres
+                        Erscheinungsbild nachhaltig verbessert. In unserem Studio im Glockenbachviertel erleben Sie eine
+                        ganzheitliche Transformation: Durch praxisnahe Methoden entdecken Sie Ihren persönlichen Stil
+                        und entwickeln neue Perspektiven für einen ausgewogenen und energiegeladenen Lebensstil.
                     </p>
                 </header>
                 <article>
@@ -179,13 +212,12 @@
                         </svg>
                     </div>
                     <p>
-                        Die Reise beginnt mit einer umfassenden Analyse Ihrer Persönlichkeit, Vorlieben und Ihres
-                        Lebensstils durch unsere Stilberaterin Tinka. Auf Basis dieser Erkenntnisse entwickelt sie ein
-                        individuelles Styling-Konzept, das Ihre innere und äußere Ausstrahlung optimal in Einklang
-                        bringt.
-                        Sie lernen, Ihren Farbtyp zu identifizieren und Outfits geschickt zu kombinieren, um immer einen
-                        stilsicheren und selbstbewussten Auftritt zu haben. Tinka zeigt Ihnen, wie Sie Ihre Kleidung als
-                        Ausdruck Ihrer Persönlichkeit einsetzen können, um Einzigartigkeit zu betonen.
+                        Ihre Reise beginnt mit Phillip. Unser Personal Trainer und Ernährungsberater fokussiert sich auf
+                        Ihr körperliches Wohlbefinden und Ihre Fitness. Er wird Ihnen zeigen, wie Ernährung und Sport
+                        nicht nur Ihre körperliche Gesundheit, sondern auch Ihr mentales Wohlbefinden fördern. Durch
+                        seine praktischen Tipps lernen Sie, gesunde Gewohnheiten leicht in Ihren Alltag zu integrieren,
+                        um fitter und energiegeladener zu werden. Ziel dieser Transformation ist es, Ihre körperliche
+                        Verfassung zu stärken und Ihnen mehr Lebensenergie für den Alltag zu geben.
                     </p>
                 </article>
                 <article>
@@ -197,15 +229,11 @@
                         </svg>
                     </div>
                     <p>
-                        Elena, unsere erfahrene Make-up Artistin und Master-Stylistin, bringt Ihre natürliche Schönheit
-                        mit
-                        professionellem Make-up und Hairstyling optimal zur Geltung. Durch auf Sie abgestimmte Techniken
-                        sorgt sie dafür, dass Sie immer frisch und ausdrucksstark wirken. Schritt für Schritt zeigt sie
-                        Ihnen, wie Sie diese Techniken selbst anwenden können, um jederzeit perfekt gestylt zu sein.
-                        Egal ob Sie im Büro sind, sich bei besonderen Anlässen aufhalten oder im Alltag glänzen wollen.
-                        Mit
-                        praxisnahen Tipps und Tricks lehrt Elena, wie Sie mit wenig Aufwand eine maximale Wirkung
-                        erzielen und gleichzeitig Ihre persönliche Ausstrahlung betonen.
+                        Regina, unsere Heilpraktikerin, erweitert das Konzept der körperlichen Gesundheit und legt den
+                        Fokus auf Ihr ganzheitliches Wohlbefinden. Mit natürlichen Methoden aus der Heilpraxis zeigt sie
+                        Ihnen, wie Ihr Körper wieder ins Gleichgewicht kommt. Durch praktische Tests – etwa zur
+                        Übersäuerung – vermittelt sie Ihnen wertvolle Einsichten in Ihren Körper und hilft Ihnen, Ihre
+                        Gesundheit auf natürliche Weise zu stärken.
                     </p>
                 </article>
                 <article>
@@ -217,15 +245,12 @@
                         </svg>
                     </div>
                     <p>
-                        Ihr körperliches Wohlbefinden und Ihre Fitness stehen bei unserem Personal Trainer und
-                        Ernährungsberater Phillip im Fokus. Er entwickelt einen individuellen Trainings- und
-                        Ernährungsplan,
-                        der sich leicht in ihren Alltag integrieren lässt und Ihnen hilft, fitter und energiegeladener
-                        zu
-                        werden. Dieser Plan zielt darauf ab, Ihre körperliche Verfassung zu stärken, sodass Sie sich
-                        nicht
-                        nur besser fühlen, sondern auch mehr Lebensenergie für den Alltag haben. Phillip unterstützt Sie
-                        dabei, Ihre Fitnessziele auf eine nachhaltige und motivierende Weise zu erreichen
+                        Im Anschluss an die innere Transformation richtet sich der Blick auf die äußere Erscheinung.
+                        Elena, eine Master-Stylistin und Make-up-Artistin, zeigt, wie unser Aussehen unser
+                        Selbstbewusstsein beeinflusst und wie wir von anderen wahrgenommen werden. Sie vermittelt
+                        umfassendes Wissen mit nützlichen Tipps und Tricks zu häufigen Haarproblemen. Im
+                        Make-up-Workshop erhalten Sie praxisnahe Anleitungen, um mit geringem Aufwand eine große Wirkung
+                        zu erzielen und gleichzeitig Ihre individuelle Ausstrahlung zu betonen.
                     </p>
                 </article>
                 <article>
@@ -237,13 +262,10 @@
                         </svg>
                     </div>
                     <p>
-                        Regina, unsere Heilpraktikerin, komplettiert das Team und kümmert sich um Ihr ganzheitliches
-                        Wohlbefinden. Sie setzt auf natürliche Methoden, um Ihren Körper wieder ins Gleichgewicht zu
-                        bringen
-                        und Blockaden auf körperlicher und mentaler Ebene zu lösen. Durch praktische Tests,
-                        beispielsweise
-                        zum Thema Übersäuerung, zeigt Regina Ihnen, wie Sie ein tieferes Verständnis für Ihren Körper
-                        erlangen und Ihr inneres Wohl langfristig stärken können.
+                        Die Reise setzt sich fort mit unserer Stilberaterin Tinka, die Ihnen dabei hilft, Ihren Farbtyp
+                        zu erkennen und Outfits gekonnt zu kombinieren, damit Sie stets stilbewusst und selbstsicher
+                        auftreten. Tinka zeigt Ihnen, wie Sie Kleidung als Ausdruck Ihrer Persönlichkeit nutzen können.
+                        Sie lernen, Modetrends zu erkennen und Farbkombinationen professionell zusammenzustellen.
                     </p>
                 </article>
             </div>
@@ -263,7 +285,8 @@
         <section id="team">
             <div class="team-container">
                 <div class="team-container--item first-item">
-                    <img class="flex-item--animated" src="./assets/img/team_elena.png" alt="Teammitglied Elena">
+                    <img class="flex-item--animated" src="./assets/img/team_elena.png"
+                        alt="Upgrade4me Teammitglied Elena für ihr personal Styling und Make up">
                     <p class="flex-item--animated">
                         Meine Vision ist klar: Für jeden Menschen möchte ich den Look kreieren, der seine innere
                         Ausstrahlung perfekt nach außen trägt - authentisch, individuell und unverstellt. Ich bin Elena,
@@ -282,10 +305,12 @@
                         Magazin ehrte sie 2019 und 2024 für ihr Konzept und Design und wählte ihren Salon zu den besten
                         15 in Deutschland, Österreich und der Schweiz.
                     </p>
-                    <img class="flex-item--animated" src="./assets/img/team_tinka.png" alt="Teammitglied Tinka">
+                    <img class="flex-item--animated" src="./assets/img/team_tinka.png"
+                        alt="Upgrade4me Teammitglied Tinka sorgt für ihre Stil- und Typberatung und ihr neues Image.">
                 </div>
                 <div class="team-container--item third-item">
-                    <img class="flex-item--animated" src="./assets/img/team_phillip.png" alt="Teammitglied Phillip">
+                    <img class="flex-item--animated" src="./assets/img/team_phillip.png"
+                        alt="Upgrade4me Teammitglied Phillip coacht Sie in Sachen Fitness, Gesundheit, Ernährung und Persönlichkeit.">
                     <p class="flex-item--animated">
                         Als Personal Trainer mit über zehn Jahren Erfahrung ist es meine Leidenschaft, Menschen auf
                         ihrem Weg zu einem fitteren Leben zu begleiten. Mein Name ist Phillip, und durch kontinuierliche
@@ -297,13 +322,16 @@
                 </div>
                 <div class="team-container--item fourth-item">
                     <p class="flex-item--animated">
-                        Elena ist eine erfahrene Make-up-Artistin und Master-Stylistin mit mehr als 18
-                        Jahren Berufserfahrung. Vor 13 Jahren gründete sie das Unternehmen 4secrets, das sich als eine
-                        der besten Adressen für Hairstyling und Make-up etabliert hat. Das Top Hair Magazin ehrte sie
-                        2019 und 2024 für ihr Konzept und Design und wählte ihren Salon zu den besten 15 in Deutschland,
-                        Österreich und der Schweiz.
+                        Ich heiße Regina und bin seit 17 Jahren in der Gesundheitsbranche tätig. Meine berufliche
+                        Laufbahn begann in einer Apotheke, wo ich die letzten acht Jahre meinen ganzheitlichen Ansatz in
+                        einer naturheilkundlich orientierten Apotheke vertiefen konnte. Heute arbeite ich als
+                        Heilpraktikerin mit einem klaren Fokus auf Traditionelle Chinesische Medizin und Funktionelle
+                        Medizin. Seit über drei Jahren führe ich meine eigene Praxis, in der ich Menschen auf ihrem Weg
+                        zu besserem Wohlbefinden begleite. Mein Ziel ist es, individuelle Behandlungsansätze zu
+                        entwickeln, die Körper, Geist und Seele in Einklang bringen.
                     </p>
-                    <img class="flex-item--animated" src="./assets/img/team_regina.png" alt="Teammitglied Regina">
+                    <img class="flex-item--animated" src="./assets/img/team_regina.png"
+                        alt="Upgrade4me Teammitglied Regina berät Sie ganzheitlich zu chinesischer Medizin, Akupunktur und Heilpraktik.">
                 </div>
             </div>
         </section>
@@ -362,7 +390,7 @@
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
                             <div class="shop-image-container">
-                                <img src="./assets/img/shopping_cart_women.jpg" alt="Shopping card for category women"
+                                <img src="./assets/img/shopping_cart_women.webp" alt="Shopping card for category women"
                                     loading="lazy">
                             </div>
                             <div class="card-body">
@@ -400,7 +428,7 @@
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
                             <div class="shop-image-container">
-                                <img src="./assets/img/shopping_cart_men.jpg" alt="Shopping card for category men"
+                                <img src="./assets/img/shopping_cart_men.webp" alt="Shopping card for category men"
                                     loading="lazy">
                             </div>
                             <div class="card-body">
@@ -438,7 +466,7 @@
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
                             <div class="shop-image-container">
-                                <img src="./assets/img/shopping_cart_company.jpg"
+                                <img src="./assets/img/shopping_cart_company.webp"
                                     alt="Shopping card for category companys" loading="lazy">
                             </div>
                             <div class="card-body">
@@ -756,6 +784,7 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7wPZ1v-OoOay_0ImAlda8S3Tm9GtFmi4&callback=console.debug&libraries=maps,marker&v=beta">
         </script>
     <script src="./scripts/script_accordion.js" defer></script>
+    <script src="./scripts/script_schema.js" type="application/ld+json" defer></script>
 </body>
 
 </html>

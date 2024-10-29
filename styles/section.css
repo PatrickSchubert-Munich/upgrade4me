@@ -161,7 +161,7 @@
   color: white;
   justify-content: center;
   align-items: center;
-  background-image: url("../assets/img/banner_concept.jpg");
+  background-image: url("../assets/img/concept_background.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -262,7 +262,7 @@
   color: white;
   justify-content: center;
   align-items: center;
-  background-image: url("../assets/img/workbench_team.jpg");
+  background-image: url("../assets/img/team_background.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -350,7 +350,7 @@
   position: relative;
   height: 75vh;
   width: 100%;
-  background-image: url("../assets/img/company.jpg");
+  background-image: url("../assets/img/company_background.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -457,7 +457,7 @@
   position: relative;
   height: 75vh;
   width: 100%;
-  background-image: url("../assets/img/location_background.jpg");
+  background-image: url("../assets/img/location_background.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -643,7 +643,7 @@
   color: white;
   justify-content: center;
   align-items: center;
-  background-image: url("../assets/img/question_answers.jpg");
+  background-image: url("../assets/img/faq_background.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -700,7 +700,8 @@
   width: 70%;
 }
 
-.accordion-container button, .panel {
+.accordion-container button,
+.panel {
   font-size: 1.2em;
 }
 
@@ -757,7 +758,7 @@
   color: white;
   justify-content: center;
   align-items: center;
-  background-image: url("../assets/img/kontakt_background.jpg");
+  background-image: url("../assets/img/kontakt_background.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
