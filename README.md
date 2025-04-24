@@ -32,3 +32,8 @@ It´s only for showcases.
 
 ## Contacts
 - Discord alias patrick.munich
+
+## Acknowledgement
+This project was developed as part of a university module at the University of Bamberg in the Development of Digital Prototypes module.
+The idea for this project came from one of the founders. The design was created in collaboration with Upgrade4me.
+There is a term paper that explains the project and the approach to web development projects in more detail.
