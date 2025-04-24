@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Grundlegende Meta-Tags - immer zuerst -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Upgrade4me | Coaching für persönliche Transformation, Styling & Typberatung in München</title>
+
+    <!-- ... andere Meta-Tags ... -->
+
+    <!-- Kritische CSS -->
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/nav.css">
+
+    <!-- Cookie Consent CSS - nicht-blockierend laden -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" media="print"
+        onload="this.media='all'"> -->
+
+    <!-- Nicht-kritische CSS -->
+    <link rel="stylesheet" href="./styles/section.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="./styles/components.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="./styles/footer.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="./styles/media.css" media="print" onload="this.media='all'">
+
+    <!-- Externe CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="print"
+        onload="this.media='all'" crossorigin="anonymous">
+
+    <!-- Service Worker -->
+    <script src="./scripts/load_sw.js" defer></script>
+
+    <!-- Fallback für JavaScript-deaktiviert -->
+    <noscript>
+        <link rel="stylesheet" href="./styles/section.css">
+        <link rel="stylesheet" href="./styles/components.css">
+        <link rel="stylesheet" href="./styles/footer.css">
+        <link rel="stylesheet" href="./styles/media.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
+    </noscript>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav id="navbar" role="navigation" aria-label="Hauptnavigation">
+
+        <ul class="main-nav" role="menubar">
+            <a class="push-left" href="#"><img id="upgrade4me-logo" src="./assets/logo/logo_450.webp"
+                    alt="Upgrade4me Firmenlogo" height="110px" width="110px"></a>
+            <li role="none">
+                <a href="#aboutUs" role="menuitem">Über Uns</a>
+            </li>
+            <li> <a href="#concept" role="menuitem">Konzept</a></li>
+            <li> <a href="#team" name="team" role="menuitem">Team</a></li>
+            <li> <a href="#shop" role="menuitem">Shop</a></li>
+            <li> <a href="#location" role="menuitem">Location</a></li>
+            <span class="side-nav--icon" aria-label="Menü öffnen">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" fill="none"
+                    stroke="white" stroke-width="2" stroke-linecap="round">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </span>
+        </ul>
+        <!-- Side Navigation -->
+        <div class="side-nav" role="navigation" aria-label="Mobile Navigation">
+            <a class="closebtn" aria-label="Menü schließen">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="25" height="25" fill="white">
+                    <path
+                        d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+                </svg>
+            </a>
+            <a href="#aboutUs">ÜberUns</a>
+            <a href="#concept">Konzept</a>
+            <a href="#team">Team</a>
+            <a href="#shop">Shop</a>
+            <a href="#location">Location</a>
+        </div>
+    </nav>
+
+    <main role="main">
+        <!-- SECTION AboutUs -->
+        <section id="aboutUs" aria-labelledby="aboutus-title">
+            <div class="aboutUs-container">
+                <video class="aboutUs-video" autoplay playsinline muted loop preload="auto"
+                    poster="./assets/img/company_background.webp" aria-hidden="true">
+                    <source type="video/mp4" src="./assets/video/intro.mp4">
+                    Upps...your Browser doesn't support video!
+                </video>
+                <div class="container-btn-video">
+                    <button id="btn-video-large" class="aboutUs-btn--video aboutUs--play-video"
+                        aria-label="Video in Großansicht abspielen">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="white" width="20px"
+                            height="20px" class="aboutUs--play-video" aria-hidden="true">
+                            <path
+                                d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+                        </svg>
+                        Play
+                    </button>
+                    <button id="btn-video-small" class="aboutUs-btn--video aboutUs--play-video"
+                        aria-label="Video in Großansicht abspielen">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="white" height="25px"
+                            width="25px" aria-hidden="true">
+                            <path
+                                d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+                        </svg>
+                    </button>
+                </div>
+                <article class="animate__animated animate__fadeInRightBig">
+                    <header>
+                        <h1>Herzlich Willkommen bei Upgrade4me!</h1>
+                    </header>
+                    <hr>
+                    <p>Wir sind ein <strong><a class="text-aboutUs--color-a" href="#team">Team
+                                von Spezialisten für äußere und innere Schönheit.</a></strong>
+                        Unser Anliegen ist es, Dich auf deinem Weg zu persönlichem Wachstum zu begleiten.
+                    </p>
+                </article>
+            </div>
+            <!-- Video PopUp -->
+            <div id="videoPopup" class="aboutUs-video-popup" role="dialog" aria-modal="true" aria-label="Video Player">
+                <div class="aboutUs-video-container">
+                    <video controls playsinline>
+                        <source type="video/mp4" src="./assets/video/intro.mp4">
+                        Upps...your Browser doesn't support video!
+                    </video>
+                    <button id="btn-video-close" aria-label="Video schließen">
+                        <span aria-hidden="true">X</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION SCROLLING BACKGROUND CONCEPT -->
+        <section id="scrolling-bg-first">
+            <div class="scrolling-bg-first--container bg--phone-devices"></div>
+            <div class="bg-fixed-scroll--divider first"></div>
+        </section>
+
+        <!-- SECTION CONCEPT -->
+        <section id="concept">
+            <div class="bg-fixed-scroll--divider second"></div>
+            <div class="concept-container">
+                <header>
+                    <h2>Unser Konzept</h2>
+                    <hr>
+                    <p>
+                        Unser Konzept bei Upgrade4me in München bietet Ihnen einen ganzheitlichen Workshop, der sich auf
+                        <strong class="text-concept--color">typgerechtes Styling</strong>, <strong
+                            class="text-concept--color">Stilberatung</strong>, <strong
+                            class="text-concept--color">körperliche Fitness</strong> und <strong
+                            class="text-concept--color">gesunde Ernährung</strong> konzentriert. Unser <strong><a
+                                class="text-concept--color-a" href="#team">Expertenteam</a></strong>, bestehend aus vier
+                        Coaches, begleitet Sie mit einem <strong class="text-concept--color">maßgeschneiderten
+                            Coaching-Programm</strong>, das Ihr Wohlbefinden, Ihre Gesundheit und Ihr äußeres
+                        Erscheinungsbild nachhaltig verbessert. Sie erleben eine ganzheitliche Transformation: Durch
+                        praxisnahe Methoden entdecken Sie Ihren persönlichen Stil und entwickeln neue Perspektiven für
+                        einen ausgewogenen und energiegeladenen Lebensstil.
+                    </p>
+                </header>
+                <article>
+                    <div class="concept-container--svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px"
+                            fill="#40499d">
+                            <path
+                                d="m550-84-42-42 142-142-382-382-142 142-42-42 56-58-56-56 85-85-42-42 42-42 43 41 84-84 56 56 58-56 42 42-142 142 382 382 142-142 42 42-56 58 56 56-86 86 42 42-42 42-42-42-84 84-56-56-58 56Z" />
+                        </svg>
+                    </div>
+                    <p>
+                        Ihre Reise beginnt mit Phillip. Unser Personal Trainer und Ernährungsberater fokussiert sich auf
+                        Ihr körperliches Wohlbefinden und Ihre Fitness. Er wird Ihnen zeigen, wie Ernährung und Sport
+                        nicht nur Ihre körperliche Gesundheit, sondern auch Ihr mentales Wohlbefinden fördern. Durch
+                        seine praktischen Tipps lernen Sie, gesunde Gewohnheiten leicht in Ihren Alltag zu integrieren,
+                        um fitter und energiegeladener zu werden. Ziel dieser Transformation ist es, Ihre körperliche
+                        Verfassung zu stärken und Ihnen mehr Lebensenergie für den Alltag zu geben.
+                    </p>
+                </article>
+                <article>
+                    <div class="concept-container--svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px"
+                            fill="#40499d">
+                            <path
+                                d="m316-700 164-220 164 220H316Zm-76 160v-74q-50-12-83.5-48.5T120-749h61q3 33 28.5 56t59.5 23h422q34 0 59.5-23t28.5-56h61q-3 50-36 86.5T720-614v74H240ZM160-80v-374q-50-12-83.5-48.5T40-589h61q3 33 28.5 56t59.5 23h582q34 0 59.5-23t28.5-56h61q-3 50-36 86.5T800-454v374H530v-160q0-21-14.5-35.5T480-290q-21 0-35.5 14.5T430-240v160H160Z" />
+                        </svg>
+                    </div>
+                    <p>
+                        Regina, unsere Heilpraktikerin, erweitert das Konzept der körperlichen Gesundheit und legt den
+                        Fokus auf Ihr ganzheitliches Wohlbefinden. Mit natürlichen Methoden aus der Heilpraxis zeigt sie
+                        Ihnen, wie Ihr Körper wieder ins Gleichgewicht kommt. Durch praktische Tests – etwa zur
+                        Übersäuerung – vermittelt sie Ihnen wertvolle Einsichten in Ihren Körper und hilft Ihnen, Ihre
+                        Gesundheit auf natürliche Weise zu stärken.
+                    </p>
+                </article>
+                <article>
+                    <div class="concept-container--svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px"
+                            fill="#40499d">
+                            <path
+                                d="M782-114 481-415 364-298q11 17 13.5 33t2.5 35q0 64-43 107T230-80q-64 0-107-43T80-230q0-64 43-107t107-43q18 0 35.5 5t36.5 15l116-116-118-118q-17 8-34.5 11t-35.5 3q-64 0-107-43T80-730q0-64 43-107t107-43q64 0 107 43t43 107q0 19-2.5 36T367-662l514 514v34h-99ZM599-527l-66-66 249-249h99v33L599-527ZM230-640q38 0 64-26t26-64q0-38-26-64t-64-26q-38 0-64 26t-26 64q0 38 26 64t64 26Zm253 183q8 0 13.5-5.5T502-476q0-8-5.5-13.5T483-495q-8 0-13.5 5.5T464-476q0 8 5.5 13.5T483-457ZM230-140q38 0 64-26t26-64q0-38-26-64t-64-26q-38 0-64 26t-26 64q0 38 26 64t64 26Z" />
+                        </svg>
+                    </div>
+                    <p>
+                        Im Anschluss an die innere Transformation richtet sich der Blick auf die äußere Erscheinung.
+                        Elena, eine Master-Stylistin und Make-up-Artistin, zeigt, wie unser Aussehen unser
+                        Selbstbewusstsein beeinflusst und wie wir von anderen wahrgenommen werden. Sie vermittelt
+                        umfassendes Wissen mit nützlichen Tipps und Tricks zu häufigen Haarproblemen. Im
+                        Make-up-Workshop erhalten Sie praxisnahe Anleitungen, um mit geringem Aufwand eine große Wirkung
+                        zu erzielen und gleichzeitig Ihre individuelle Ausstrahlung zu betonen.
+                    </p>
+                </article>
+                <article>
+                    <div class="concept-container--svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="50px" height="50px"
+                            fill="#40499d">
+                            <path
+                                d="m240-522-40 22q-14 8-30 4t-24-18L66-654q-8-14-4-30t18-24l230-132h70q9 0 14.5 5.5T400-820v20q0 33 23.5 56.5T480-720q33 0 56.5-23.5T560-800v-20q0-9 5.5-14.5T580-840h70l230 132q14 8 18 24t-4 30l-80 140q-8 14-23.5 17.5T760-501l-40-20v361q0 17-11.5 28.5T680-120H280q-17 0-28.5-11.5T240-160v-362Z" />
+                        </svg>
+                    </div>
+                    <p>
+                        Die Reise setzt sich fort mit unserer Stilberaterin Tinka, die Ihnen dabei hilft, Ihren Farbtyp
+                        zu erkennen und Outfits gekonnt zu kombinieren, damit Sie stets stilbewusst und selbstsicher
+                        auftreten. Tinka zeigt Ihnen, wie Sie Kleidung als Ausdruck Ihrer Persönlichkeit nutzen können.
+                        Sie lernen, Modetrends zu erkennen und Farbkombinationen professionell zusammenzustellen.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECTION SCROLLING BACKGROUND TEAM -->
+        <section id="scrolling-bg-second">
+
+            <div class="scrolling-bg-second--container bg--phone-devices">
+                <div class="bg-fixed-scroll--divider third-one"></div>
+                <h2>TEAM</h2>
+                <div class="bg-fixed-scroll--divider third-second"></div>
+            </div>
+        </section>
+
+        <!-- SECTION TEAM -->
+        <section id="team">
+            <div class="team-container">
+                <div class="team-container--item first-item">
+                    <img class="flex-item--animated" src="./assets/img/team_elena.webp" height="350px" width="350px"
+                        loading="lazy" alt="Upgrade4me Teammitglied Elena für ihr personal Styling und Make up">
+                    <p class="flex-item--animated">
+                        Meine Vision ist klar: Für jeden Menschen möchte ich den Look kreieren, der seine innere
+                        Ausstrahlung perfekt nach außen trägt - authentisch, individuell und unverstellt. Ich bin Elena,
+                        eine erfahrene Master-Stylistin und Make-up-Artistin mit über 18 Jahren Berufserfahrung. Meine
+                        Leidenschaft führte mich im Jahr 2012 zur Gründung meines eigenen Unternehmens, 4secrets, das
+                        sich als eine der führenden Adressen für Hairstyling, Color, Make-up und Wedding in München
+                        etabliert hat. Das Top Hair Magazin ehrte mein Konzept und Design 2019 und 2024 und wählte mein
+                        Studio zu den besten 15 Studios in Deutschland, Österreich und der Schweiz.
+                    </p>
+                </div>
+                <div class="team-container--item second-item">
+                    <p class="flex-item--animated">
+                        Elena ist eine erfahrene Make-up-Artistin und Master-Stylistin mit
+                        mehr als 18 Jahren Berufserfahrung. Vor 13 Jahren gründete sie das Unternehmen 4secrets, das
+                        sich als eine der besten Adressen für Hairstyling und Make-up etabliert hat. Das Top Hair
+                        Magazin ehrte sie 2019 und 2024 für ihr Konzept und Design und wählte ihren Salon zu den besten
+                        15 in Deutschland, Österreich und der Schweiz.
+                    </p>
+                    <img class="flex-item--animated" src="./assets/img/team_tinka.webp" height="350px" width="350px"
+                        loading="lazy"
+                        alt="Upgrade4me Teammitglied Tinka sorgt für ihre Stil- und Typberatung und ihr neues Image.">
+                </div>
+                <div class="team-container--item third-item">
+                    <img class="flex-item--animated" src="./assets/img/team_phillip.webp" height="350px" width="350px"
+                        loading="lazy"
+                        alt="Upgrade4me Teammitglied Phillip coacht Sie in Sachen Fitness, Gesundheit, Ernährung und Persönlichkeit.">
+                    <p class="flex-item--animated">
+                        Als Personal Trainer mit über zehn Jahren Erfahrung ist es meine Leidenschaft, Menschen auf
+                        ihrem Weg zu einem fitteren Leben zu begleiten. Mein Name ist Phillip, und durch kontinuierliche
+                        Weiterbildungen habe ich mir ein umfassendes Expertenwissen in den Bereichen Fitness,
+                        Rehabilitation und Ernährung aufgebaut. Ob Sie Ihr Fitnesslevel steigern, nach einer Verletzung
+                        wieder in Form kommen oder Ihre Ernährung optimieren möchten – gemeinsam entwickeln wir ein
+                        maßgeschneidertes Konzept, das Sie nicht nur äußerlich, sondern auch innerlich transformiert.
+                    </p>
+                </div>
+                <div class="team-container--item fourth-item">
+                    <p class="flex-item--animated">
+                        Ich heiße Regina und bin seit 17 Jahren in der Gesundheitsbranche tätig. Meine berufliche
+                        Laufbahn begann in einer Apotheke, wo ich die letzten acht Jahre meinen ganzheitlichen Ansatz in
+                        einer naturheilkundlich orientierten Apotheke vertiefen konnte. Heute arbeite ich als
+                        Heilpraktikerin mit einem klaren Fokus auf Traditionelle Chinesische Medizin und Funktionelle
+                        Medizin. Seit über drei Jahren führe ich meine eigene Praxis, in der ich Menschen auf ihrem Weg
+                        zu besserem Wohlbefinden begleite. Mein Ziel ist es, individuelle Behandlungsansätze zu
+                        entwickeln, die Körper, Geist und Seele in Einklang bringen.
+                    </p>
+                    <img class="flex-item--animated" src="./assets/img/team_regina.webp" height="350px" width="350px"
+                        loading="lazy"
+                        alt="Upgrade4me Teammitglied Regina berät Sie ganzheitlich zu chinesischer Medizin, Akupunktur und Heilpraktik.">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION SCROLLING BACKGROUND Geschäftskunden -->
+        <section id="scrolling-bg-third" class="bg--phone-devices">
+            <div class="bg-fixed-scroll--divider third-one"></div>
+            <div class="scrolling-bg-third--container">
+                <article class="animate__animated">
+                    <h2>Für Geschäftskunden</h2>
+                    <p>
+                        Mitarbeiter verkörpern das Unternehmen und fungieren als dessen Aushängeschild. Um ein
+                        ausgeglichenes, gesundes und zufriedenes Arbeitsumfeld zu schaffen, ist die professionelle
+                        Unterstützung entscheidend. Wir entwickeln individuelle Konzepte, die den Bedürfnissen Ihres
+                        Unternehmens gerecht werden, und unterstützen Ihre Mitarbeiter auf ihrem Weg zu innerer Stärke,
+                        äußerer Veränderung und gesundheitlichem Wohlbefinden. Erst wenn jeder Einzelne aufblüht, wird
+                        auch das Unternehmen in seiner ganzen Pracht erstrahlen.
+                    </p>
+                </article>
+            </div>
+            <div class="bg-fixed-scroll--divider third-second"></div>
+        </section>
+
+        <!-- SECTION SHOP -->
+        <section id="shop">
+            <header class="shop-header">
+                <h2>Warum Upgrade4me?</h2>
+                <p>
+                    Upgrade4me präsentiert Ihnen Pakete, die Ihre Lernerfahrung bereichern. Jedes dieser Pakete
+                    gewährleistet ein umfassendes Seminarerlebnis, das Ihnen nicht nur wertvolles Wissen vermittelt,
+                    sondern auch Spaß bei der praktischen Umsetzung bietet.
+                </p>
+            </header>
+            <div class="shop-header--sub-header">
+                <h3>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px">
+                            <path fill="#40499d"
+                                d="M205-801h589.07q22.97 0 34.95 21 11.98 21-.02 42L694-495q-11 19-28.56 30.5T627-453H324l-56 104h491v60H277q-42 0-60.5-28t.5-63l64-118-152-322H51v-60h117l37 79Z" />
+                            <path fill="black"
+                                d="M286.79-81Q257-81 236-102.21t-21-51Q215-183 236.21-204t51-21Q317-225 338-203.79t21 51Q359-123 337.79-102t-51 21Z" />
+                            <path fill="black"
+                                d="M686.79-81Q657-81 636-102.21t-21-51Q615-183 636.21-204t51-21Q717-225 738-203.79t21 51Q759-123 737.79-102t-51 21Z" />
+                        </svg>
+                    </span>
+                    Shop
+                </h3>
+            </div>
+
+            <!-- CARD WRAPPER -->
+            <div class="card-wrapper">
+
+                <!-- CARD WOMEN -->
+                <div class="flip-card" role="article" aria-labelledby="women-title">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="shop-image-container">
+                                <img src="./assets/img/shopping_cart_women.webp" alt="Shopping card for category women"
+                                    loading="lazy">
+                            </div>
+                            <div class="card-body">
+                                <header>
+                                    <h2 id="women-title" class="card-category">Women</h2>
+                                    <p class="card-price">599<span>€</span></p>
+                                </header>
+                                <hr>
+                                <article>
+                                    <p class="card-text">
+                                        Erleben Sie den Upgrade4me Workshop: Zwei Tage voller Inspiration und
+                                        Weiterentwicklung! Durch die perfekte Balance von Theorie und Praxis bringen Sie
+                                        Ihre Fähigkeiten auf das nächste Level. Lernen Sie von unseren Experten, die Sie
+                                        in Ihrer individuellen Entfaltung unterstützen.
+                                    </p>
+                                </article>
+                                <ul class="list-group">
+                                    <li class="list-group-item">2 tägiger Workshop</li>
+                                    <li class="list-group-item">Kombination aus Theorie und Praxis</li>
+                                    <li class="list-group-item">Kaffee & erfrischende Getränke</li>
+                                    <li class="list-group-item">Vital - Catering</li>
+                                    <li class="list-group-item">Schreibunterlagen</li>
+                                </ul>
+                                <footer class="card-body--footer"></footer>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <button class="card-back-btn btn-tickets" aria-label="Paket Frauen buchen"
+                                type="button">Tickets</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD MEN -->
+                <div class="flip-card" role="article" aria-labelledby="men-title">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="shop-image-container">
+                                <img src="./assets/img/shopping_cart_men.webp" alt="Shopping card for category men"
+                                    loading="lazy">
+                            </div>
+                            <div class="card-body">
+                                <header>
+                                    <h2 id="men-title" class="card-category">Men</h2>
+                                    <p class="card-price">599<span>€</span></p>
+                                </header>
+                                <hr>
+                                <article>
+                                    <p class="card-text">
+                                        Erleben Sie den Upgrade4me Workshop: Zwei Tage voller Inspiration und
+                                        Weiterentwicklung! Durch die perfekte Balance von Theorie und Praxis bringen Sie
+                                        Ihre Fähigkeiten auf das nächste Level. Lernen Sie von unseren Experten, die Sie
+                                        in Ihrer individuellen Entfaltung unterstützen.
+                                    </p>
+                                </article>
+                                <ul class="list-group">
+                                    <li class="list-group-item">2 tägiger Workshop</li>
+                                    <li class="list-group-item">Kombination aus Theorie und Praxis</li>
+                                    <li class="list-group-item">Kaffee & erfrischende Getränke</li>
+                                    <li class="list-group-item">Vital - Catering</li>
+                                    <li class="list-group-item">Schreibunterlagen</li>
+                                </ul>
+                                <footer class="card-body--footer"></footer>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <button class="card-back-btn btn-tickets" aria-label="Paket Männer buchen"
+                                type="button">Tickets</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD COMPANY -->
+                <div class="flip-card" role="article" aria-labelledby="company-title">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="shop-image-container">
+                                <img src="./assets/img/shopping_cart_company.webp"
+                                    alt="Shopping card for category companys" loading="lazy">
+                            </div>
+                            <div class="card-body">
+                                <header>
+                                    <h2 id="company-title" class="card-category">Companys</h2>
+                                    <p class="card-price">Individuell</p>
+                                </header>
+                                <hr>
+                                <article>
+                                    <p class="card-text">
+                                        Upgrade4me bietet ihren Mitarbeitern eine wertvolle Erfahrung. Durch eine
+                                        perfekte Balance von Theorie und Praxis bringen wir ihre Fähigkeiten auf das
+                                        nächste Level.
+                                    </p>
+                                </article>
+                                <ul class="list-group">
+                                    <li class="list-group-item">individuelle Gestaltung des Workshops</li>
+                                    <li class="list-group-item">Kombination aus Theorie und Praxis</li>
+                                    <li class="list-group-item">Kaffee & erfrischende Getränke</li>
+                                    <li class="list-group-item">Schreibunterlagen</li>
+                                    <li class="list-group-item"> Auf Wunsch auch 1:1 Coaching mit allen 4 Experten
+                                        möglich</li>
+                                </ul>
+                                <footer class="card-body--footer"></footer>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <button class="card-back-btn btn-tickets company" aria-label="Paket Company anfragen"
+                                type="button">Tickets</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL (OVERLAY) -->
+            <div id="modal">
+                <div id="calendar-widget" class="calendar-widget">
+                    <!-- Calendar Header -->
+                    <div class="calendar-header">
+                        <button class="nav-button" id="prev-month">&lt;</button>
+                        <h2 id="current-month">Oktober 2024</h2>
+                        <button class="nav-button" id="next-month">&gt;</button>
+                        <!-- Cart Widget -->
+                        <div class="cart-widget">
+                            <span>Gesamt: </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                                class="cart-icon" aria-hidden="true" role="img">
+                                <path
+                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+                            </svg>
+                            <span class="cart-counter" id="cart-total">0</span>
+                        </div>
+                    </div>
+
+                    <!-- Calendar Grid -->
+                    <div class="calendar-grid" id="weekdays">
+                        <div class="weekday-header">So</div>
+                        <div class="weekday-header">Mo</div>
+                        <div class="weekday-header">Di</div>
+                        <div class="weekday-header">Mi</div>
+                        <div class="weekday-header">Do</div>
+                        <div class="weekday-header">Fr</div>
+                        <div class="weekday-header">Sa</div>
+                    </div>
+                    <div class="calendar-grid" id="calendar-days"></div>
+
+                    <!-- Ticket Panel -->
+                    <div id="ticket-panel" class="ticket-panel">
+                        <!-- Event Info -->
+                        <div class="event-header">
+                            <div class="event-info">
+                                <span id="selected-date-header" class="event-date"></span>
+                                <span class="event-time">
+                                    Beginn
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#000000">
+                                        <path
+                                            d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z" />
+                                    </svg>
+                                    09:00 Uhr
+                                </span>
+                            </div>
+                        </div>
+                        <!-- Ticket Controls -->
+                        <div class="ticket-controls first">
+                            <div class="total-section">
+                                Preis: <span id="total-price" class="total-price">0 €</span>
+                            </div>
+                            <div class="counter-controls">
+                                <button id="decrease-tickets" class="counter-button" disabled>-</button>
+                                <span id="ticket-counter" class="ticket-count">0</span>
+                                <button id="increase-tickets" class="counter-button" disabled>+</button>
+                            </div>
+                        </div>
+                        <div class="ticket-controls">
+                            <div class="total-section">Gesamtsumme:</div>
+                            <div id="ticket-sum" class="total-price">0 €</div>
+                        </div>
+                        <div class="kasse-controls">
+                            <button id="checkout-button" class="kasse-button checkout-button" type="button">zur
+                                Kasse</button>
+                        </div>
+                    </div>
+                </div>
+                <span class="mc-close">&times;</span>
+                <!-- Dialog außerhalb des Widgets -->
+                <dialog>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#dc3545">
+                        <path
+                            d="m40-120 440-760 440 760H40Zm138-80h604L480-720 178-200Zm302-40q17 0 28.5-11.5T520-280q0-17-11.5-28.5T480-320q-17 0-28.5 11.5T440-280q0 17 11.5 28.5T480-240Zm-40-120h80v-200h-80v200Zm40-100Z" />
+                    </svg>
+                    <span class="sold-out-date"></span>
+                    <span>ausverkauft</span>
+                </dialog>
+            </div>
+        </section>
+
+        <!-- SECTION SCROLLING BACKGROUND LOCATION -->
+        <section id="scrolling-bg-fourth" class="bg--phone-devices">
+            <div class="bg-fixed-scroll--divider fith-one"></div>
+            <div class="scrolling-bg-fourth--container bg--phone-devices">
+                <article class="animate__animated">
+                    <h2>Location</h2>
+                    <p>
+                        Unsere Workshops finden in Schwabing-Freimann statt. Direkt vor der Tür stehen Ihnen zahlreiche
+                        Parkmöglichkeiten zur Verfügung. Außerdem sind wir gut mit den öffentlichen Verkehrsmitteln
+                        erreichbar.
+                    </p>
+                </article>
+            </div>
+            <div class="bg-fixed-scroll--divider fith-second"></div>
+        </section>
+
+        <!-- SECTION LOCATION -->
+        <section id="location">
+            <div class="wrapper">
+                <!-- BACKGROUND -->
+                <div class="gallery-background">
+                    <!-- FOREGROUND -->
+                    <div class="gallery-foreground">
+                        <h3>Location</h3>
+                        <p>Tauche ein in die besondere Welt von Upgrade4me und lass Dich von ihrer einzigartigen
+                            Atmosphäre
+                            überzeugen – wir freuen uns auf Dich.</p>
+                    </div>
+                </div>
+
+                <!-- GALLERIE -->
+                <div class="gallery-container gc-first" data-direction="right" data-speed="slow" role="region"
+                    aria-label="Location Bildergalerie">
+                    <div class="gallery-container--rows">
+                        <img src="./assets/img/location_1.webp"
+                            alt="Empfangsbereich mit modernem Design und hellem Ambiente" loading="lazy" width="250"
+                            height="250" decoding="async">
+                        <img src="./assets/img/location_2.webp" alt="Behandlungsraum mit hochwertiger Ausstattung"
+                            loading="lazy" width="250" height="250" decoding="async">
+                        <img src="./assets/img/location_3.webp" alt="Entspannungsbereich mit bequemen Sitzgelegenheiten"
+                            loading="lazy" width="250" height="250" decoding="async">
+                        <img src="./assets/img/location_4.webp" alt="Location Bild 10" loading="lazy" width="250"
+                            height="250" decoding="async" class="gallery-image">
+                        <img src="./assets/img/location_5.webp" alt="Location Bild 2" loading="lazy" width="250"
+                            height="250" decoding="async" class="gallery-image">
+                        <img src="./assets/img/location_6.webp" alt="Location Bild 5" loading="lazy" width="250"
+                            height="250" decoding="async" class="gallery-image">
+                        <img src="./assets/img/location_7.webp" alt="Location Bild 5" loading="lazy" width="250"
+                            height="250" decoding="async" class="gallery-image">
+                        <img src="./assets/img/location_8.webp" alt="Location Bild 5" loading="lazy" width="250"
+                            height="250" decoding="async" class="gallery-image">
+                        <img src="./assets/img/location_9.webp" alt="Location Bild 5" loading="lazy" width="250"
+                            height="250" decoding="async" class="gallery-image">
+                        <img src="./assets/img/location_10.webp" alt="Location Bild 5" loading="lazy" width="250"
+                            height="250" decoding="async" class="gallery-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION SCROLLING BACKGROUND FAQ -->
+        <section id="scrolling-bg-sixth" class="bg--phone-devices">
+            <div class="scrolling-bg-sixth--container bg--phone-devices">
+                <div class="bg-fixed-scroll--divider sixth-one"></div>
+                <div class="bg-fixed-scroll--divider sixth-second"></div>
+            </div>
+        </section>
+
+        <!-- SECTION FAQ -->
+        <section id="question-answers">
+            <header class="question-answers-header">
+                <h2>Haben Sie noch Fragen?</h2>
+                <p>
+                    Im Weiteren Verlauf finden Sie Fragen und Antworten von Teilnehmern, die wir des Öfteren gestellt
+                    bekommen.
+                </p>
+            </header>
+            <div class="question-answers--container">
+                <div class="accordion-container">
+                    <button class="accordion">Wie groß sind die Gruppen beim Workshop?
+                        <span>
+                            <svg class="add" xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960"
+                                width="28px" fill="#fff">
+                                <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+                            </svg>
+                            <svg class="remove" xmlns="http://www.w3.org/2000/svg" height="28px"
+                                viewBox="0 -960 960 960" width="28px" fill="#fff">
+                                <path d="M200-440v-80h560v80H200Z" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="panel">
+                        <p>Unsere Workshops finden immer in einer gemütlichen Atmosphäre statt. Dabei umfasst die Gruppe
+                            eine maximale Anzahl von bis zu 11 Teilnehmern.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-container">
+                    <button class="accordion">Was passiert mit meinem Ticket, wenn ich am Workshop nicht teilnehmen
+                        kann?
+                        <span>
+                            <svg class="add" xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960"
+                                width="28px" fill="#fff">
+                                <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+                            </svg>
+                            <svg class="remove" xmlns="http://www.w3.org/2000/svg" height="28px"
+                                viewBox="0 -960 960 960" width="28px" fill="#fff">
+                                <path d="M200-440v-80h560v80H200Z" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="panel">
+                        <p>Ihr Ticket bleibt ihnen selbstverständlich erhalten. Wenn Sie am nächsten Workshop
+                            teilnehmen möchten, dann sollten Sie sich lediglich bei uns melden und ihren Platz
+                            reservieren
+                            lassen.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-container">
+                    <button class="accordion">Was muss ich zum Workshop mitbringen?
+                        <span>
+                            <svg class="add" xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960"
+                                width="28px" fill="#fff">
+                                <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+                            </svg>
+                            <svg class="remove" xmlns="http://www.w3.org/2000/svg" height="28px"
+                                viewBox="0 -960 960 960" width="28px" fill="#fff">
+                                <path d="M200-440v-80h560v80H200Z" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="panel">
+                        <p>Es ist nichts bestimmtes erforderlich. Sie bekommen vor Ort Schreibmaterialien, wie auch
+                            Getränke
+                            und ein exclusives Catering.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION SCROLLING BACKGROUND KONTAKT -->
+        <section id="scrolling-bg-seventh" class="bg--phone-devices">
+            <div class="scrolling-bg-seventh--container bg--phone-devices">
+                <div class="bg-fixed-scroll--divider seventh-one"></div>
+                <article class="animate__animated">
+                    <h2>Kontakt</h2>
+                </article>
+                <div class="bg-fixed-scroll--divider seventh-second"></div>
+            </div>
+        </section>
+
+        <!-- SECTION MAPS AND CONTACT -->
+        <section id="kontakt">
+            <div class="kontakt-container">
+                <!-- Google Maps -->
+                <div class="maps">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509676!2d144.9630578153184!3d-37.8141079797517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577a9d7d5d8ffb5!2sFlinders%20St%20Station!5e0!3m2!1sen!2sau!4v1601967232481!5m2!1sen!2sau"
+                        allowfullscreen="" aria-hidden="false" tabindex="0">
+                    </iframe>
+                </div>
+                <!-- Form Element -->
+                <div class="form-container">
+                    <form id="contact-form" class="form" role="form" aria-label="Kontaktformular" method="POST">
+                        <!-- Surname input -->
+                        <div>
+                            <label for="surname">Nachname</label>
+                            <input type="text" id="surname" name="surname" placeholder="Max" required
+                                aria-required="true" aria-describedby="surname-help" />
+                            <span id="surname-help" class="help-text" hidden>Bitte geben Sie Ihren Nachnamen ein</span>
+                        </div>
+
+                        <!-- Name input -->
+                        <div>
+                            <label for="name">Vorname</label>
+                            <input type="text" id="name" name="name" placeholder="Mustermann" required
+                                aria-required="true" aria-describedby="name-help" />
+                            <span id="name-help" class="help-text" hidden>Bitte geben Sie Ihren Vornamen ein</span>
+                        </div>
+
+                        <!-- Email input -->
+                        <div>
+                            <label for="email">E-Mail-Adresse</label>
+                            <input type="email" id="email" name="email" placeholder="Max.Mustermann@gmail.com" required
+                                aria-required="true" aria-describedby="email-help" />
+                            <span id="email-help" class="help-text" hidden>Bitte geben Sie eine gültige E-Mail-Adresse
+                                ein</span>
+                        </div>
+
+                        <!-- Telephone input -->
+                        <div>
+                            <label for="telephone">Telefon</label>
+                            <input type="tel" id="telephone" name="telephone" placeholder="0151 999 666 77"
+                                aria-describedby="tel-help" />
+                            <span id="tel-help" class="help-text" hidden>Optional: Ihre Telefonnummer für schnellere
+                                Kontaktaufnahme</span>
+                        </div>
+
+                        <!-- Message input -->
+                        <div class="textarea-label">
+                            <label for="message">Nachricht</label>
+                            <textarea id="message" name="message" rows="5" maxlength="500"
+                                placeholder="Hier ihre Nachricht..." required aria-required="true"
+                                aria-describedby="message-help"></textarea>
+                            <span id="message-help" class="help-text" hidden>Bitte beschreiben Sie Ihr Anliegen</span>
+                        </div>
+
+                        <!-- Checkbox mit verbesserter Zugänglichkeit -->
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="copy-of-message" name="copy" aria-describedby="copy-help" />
+                            <label for="copy-of-message">
+                                Kopie der Nachricht an mich senden
+                            </label>
+                        </div>
+
+                        <!-- Submit button -->
+                        <div>
+                            <button class="btn-submit" type="submit" aria-label="Formular absenden">Absenden</button>
+                        </div>
+                        <!-- <div>
+                            <button class="btn-submit g-recaptcha"
+                                data-sitekey="6LfpSHAqAAAAAPIeK6Zgmxb5IOX6NIzCLrhobl1x" type="submit"
+                                data-callback='onSubmit' data-action='submit' aria-label="Formular absenden">
+                                Absenden
+                            </button>
+                        </div> -->
+                    </form>
+                </div>
+        </section>
+
+    </main>
+
+    <!-- Google Maps -->
+    <!-- <gmp-map center="48.12519836425781,11.588981628417969" zoom="14" map-id="DEMO_MAP_ID" id="location">
+        <gmp-advanced-marker position="48.12519836425781,11.588981628417969" title="My location"></gmp-advanced-marker>
+    </gmp-map> -->
+
+    <footer id="footer" role="contentinfo">
+        <div class="social-icons" aria-label="Social Media Links">
+            <!-- Instagram -->
+            <a href="#" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="1em" height="1em"
+                    fill="currentColor">
+                    <path
+                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                </svg>
+            </a>
+
+            <!-- Facebook -->
+            <a href="#" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="1em" height="1em"
+                    fill="currentColor">
+                    <path
+                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+                </svg>
+            </a>
+
+            <!-- LinkedIn (korrigierte Version) -->
+            <a href="#" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em"
+                    fill="currentColor">
+                    <path
+                        d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z" />
+                </svg>
+            </a>
+        </div>
+
+        <!-- Impressum und Copyright -->
+        <div class="footer-info" aria-label="Rechtliche Informationen">
+            <a href="#" class="impressum">Impressum</a>
+            <span class="copyright">© 2024 Upgrade4me</span>
+        </div>
+    </footer>
+
+    <!-- LOADING JAVASCRIPT -->
+    <script src="./scripts/load_sw.js"></script>
+    <script src="./scripts/nav.js"></script>
+    <script src="./scripts/video.js"></script>
+    <script src="./scripts/team.js"></script>
+    <script src="./scripts/bg_company.js"></script>
+    <script src="./scripts/bg_location.js"></script>
+    <script src="./scripts/gallery.js"></script>
+    <script type="module" src="./scripts/modal.js"></script>
+    <script type="module" src="./scripts/calendar.js"></script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7wPZ1v-OoOay_0ImAlda8S3Tm9GtFmi4&callback=console.debug&libraries=maps,marker&v=beta">
+        </script>
+    <script src="./scripts/accordion.js"></script>
+    <script src="./scripts/schema.js" type="application/ld+json"></script>
+    <script src="./scripts/payment.js"></script>
+    <script src="https://js.stripe.com/v3"></script>
+    <script src="'https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js'"></script>
+    <script src="'https://www.gstatic.com/firebasejs/10.13.1/firebase-functions.js'"></script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        function onSubmit(token) {
+            document.getElementById("contact-form").submit();
+        }
+    </script> -->
+
+    <!-- Cookie Consent Scripts -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+    <script src="./scripts/cookieconsent.js"></script> -->
+</body>
+
+</html>

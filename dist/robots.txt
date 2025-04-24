@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /dev/
+Disallow: /temp/
+Disallow: /test/
+Disallow: /404/
+Disallow: /offline/
+Disallow: /*?*
+Allow: /index.html
+Allow: /assets/
+Allow: /styles/
+
+Sitemap: https://www.upgrade4-me.de/sitemap.xml

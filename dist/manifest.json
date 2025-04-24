@@ -1,0 +1,77 @@
+{
+  "icons": [
+    {
+      "src": "/assets/icons/icon_512x512.1d35d5692eb8692e3eb3cc1a2a063eec.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon_384x384.025682bb9743d4999480442475122bec.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon_192x192.12983005a50e282428f5da807e99329e.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon_152x152.43d7f4c0cf72fd922c22df02ba8319fa.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon_144x144.c1e059ea197648c7ba267d9ec32fe0c2.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon_128x128.9b4227c40b90a30bf86e1bff4054f05a.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon_96x96.651de990dbc38b291840cc2db061c044.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon_72x72.ee24bdcdbc234025f662fafaf97b8008.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "name": "Upgrade4me",
+  "short_name": "Upgrade4me",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "/",
+  "description": "Coaching für persönliche Transformation",
+  "background_color": "#ffffff",
+  "theme_color": "#40499d",
+  "includeInDevelopment": true,
+  "scope": "/",
+  "appleStatusBarStyle": "default",
+  "shortcuts": [
+    {
+      "name": "Termine",
+      "url": "/calendar",
+      "description": "Termine buchen"
+    }
+  ],
+  "categories": [
+    "lifestyle",
+    "health"
+  ],
+  "lang": "de-DE",
+  "dir": "ltr",
+  "generateMaskIcon": true
+}
