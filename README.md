@@ -1,27 +1,16 @@
 # Project Title
 
-### upgrade4me
+Upgrade4me
+
+Live: [@www.upgrade4-me.de](https://upgrade4-me.de)
 
 # Project Description
 
-This Website is designed and produced for digital representation of a brand new StartUp in munich.
-
-## Getting Started
-
-1. Switch to official website: www.upgrade4-me.de (OR)
-2. Do Prerequisites
-
-### Prerequisites / installing
-
-1. copy the project on your local machine
-2. initialize npm on your machine:
-   npm init
-3. bundle productive code in your dist - folder:
-   npm run start
-
-## Deployment
-
-empty
+Development of a digital prototype for a startup in the holistic transformation sector. 
+The project includes the conception and implementation of a responsive website with an integrated booking system for workshops in health, beauty, and fitness.
+The platform targets two distinct audiences: private individuals and corporate clients. 
+Founded as a partnership, the startup team combines expertise from styling, health, and fitness domains.
+The prototype was implemented as a Progressive Web App (PWA) to ensure optimal usability across all devices.
 
 ## TechStack
 
@@ -30,11 +19,16 @@ empty
 - JavaScript
 - Firebase
 - Stripe API
+- EmailJS
 
 ## Contributing
 
-No contributing allowed!
+No contributing allowed! 
+It´s only for showcases.
 
-## Authors
+## Authors and Developer
 
-- **Patrick Schubert** - _Initial work_ - [PurpleBooth](https://github.com/PurpleBooth)
+- **Patrick Schubert**
+
+## Contacts
+- Discord alias patrick.munich
