@@ -86,12 +86,9 @@
         "source": "/api/checkout",
         "function": "createCheckoutSession",
         "region": "europe-west3"
-      },
-      {
-        "source": "**",
-        "destination": "/index.html"
       }
-    ]
+    ],
+    "cleanUrls": true
   },
   "functions": {
     "source": "functions",

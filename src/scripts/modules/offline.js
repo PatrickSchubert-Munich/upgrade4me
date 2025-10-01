@@ -3,13 +3,9 @@ function updateLinksForOffline() {
   const impressumLink = document.querySelector(".footer-impressum");
   const datenschutzLink = document.querySelector(".footer-datenschutz");
 
-  if (!navigator.onLine) {
-    impressumLink.href = "/impressum.html";
-    datenschutzLink.href = "/datenschutz.html";
-  } else {
-    impressumLink.href = "https://itrk.legal/WIA.75.QO0.html?impressum=&imp=1";
-    datenschutzLink.href = "https://itrk.legal/WIA.8U.QO0.html?datenschutz";
-  }
+  // Verwende immer die lokalen HTML-Dateien
+  impressumLink.href = "/impressum.html";
+  datenschutzLink.href = "/datenschutz.html";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
