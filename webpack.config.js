@@ -86,6 +86,7 @@ module.exports = {
       rewrites: [
         { from: /^\/impressum/, to: "/impressum.html" },
         { from: /^\/datenschutz/, to: "/datenschutz.html" },
+        { from: /^\/agb/, to: "/agb.html" },
         { from: /^\/offline/, to: "/offline.html" },
       ],
     },
@@ -419,6 +420,17 @@ module.exports = {
         {
           from: "src/impressum.html",
           to: "impressum.html",
+          transform: async (content) => {
+            if (isDev) return content;
+            return await HtmlMinifierTerser.minify(
+              content.toString(),
+              minifyOptions
+            );
+          },
+        },
+        {
+          from: "src/agb.html",
+          to: "agb.html",
           transform: async (content) => {
             if (isDev) return content;
             return await HtmlMinifierTerser.minify(

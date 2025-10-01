@@ -12,6 +12,7 @@ const CRITICAL_ASSETS = [
   "/offline.html",
   "/datenschutz.html",
   "/impressum.html",
+  "/agb.html",
   "/assets/fonts/Roboto-Regular.woff2",
   "/assets/fonts/Roboto-Medium.woff2",
   "/assets/fonts/Roboto-Bold.woff2",

@@ -17,6 +17,23 @@
         ]
       },
       {
+        "source": "**/*.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          },
+          {
+            "key": "Pragma",
+            "value": "no-cache"
+          },
+          {
+            "key": "Expires",
+            "value": "0"
+          }
+        ]
+      },
+      {
         "source": "/api/**",
         "headers": [
           {
@@ -81,11 +98,28 @@
       }
     ],
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "redirects": [],
     "rewrites": [
       {
         "source": "/api/checkout",
         "function": "createCheckoutSession",
         "region": "europe-west3"
+      },
+      {
+        "source": "/impressum",
+        "destination": "/impressum.html"
+      },
+      {
+        "source": "/datenschutz",
+        "destination": "/datenschutz.html"
+      },
+      {
+        "source": "/agb",
+        "destination": "/agb.html"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
       }
     ],
     "cleanUrls": true
