@@ -2,7 +2,7 @@
 
 // Konstanten und Konfiguration
 const DEBUG = false;
-const CACHE_VERSION = "1.4.3";
+const CACHE_VERSION = "1.4.4";
 const CACHE_NAME = `upgrade4me-cache-v${CACHE_VERSION}`;
 
 // Gruppiere Assets nach Priorität

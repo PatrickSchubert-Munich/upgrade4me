@@ -138,7 +138,8 @@
   margin: 0 auto;
   perspective: 1000px;
   transform: translateZ(0);
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   will-change: transform;
 }
 
@@ -163,7 +164,8 @@
 .flip-card-front,
 .flip-card-back {
   position: relative;
-  width: 100%; /* für Safari */
+  width: 100%;
+  -webkit-backface-visibility: hidden; /* für Safari */
   backface-visibility: hidden;
   transform: rotateX(0deg); /* Hack für Firefox */
   border-radius: 8px;
@@ -697,7 +699,8 @@ textarea:focus {
 #modal-overlay.active {
   will-change: opacity, visibility;
   transform: translateZ(0);
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   perspective: 1000px;
 }
 
@@ -1729,7 +1732,8 @@ a {
   /* Performance Optimierungen/Rendering OHNE 3D */
   contain: layout size;
   opacity: 0.99;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   perspective: 1000px;
 }
 
@@ -1837,7 +1841,8 @@ a {
   z-index: 1000;
   /* Performance Optimierungen */
   transform: translateZ(0);
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   transition: all 0.3s ease;
 }
 
@@ -1976,7 +1981,8 @@ a {
 .text-concept--color-a {
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
   color: var(--text-secondary);
-  text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
   text-underline-offset: 2.5px;
   text-wrap: nowrap;
 }
@@ -2228,7 +2234,8 @@ a {
 
     a {
       color: black;
-      text-decoration-line: underline;
+      -webkit-text-decoration-line: underline;
+              text-decoration-line: underline;
       text-underline-offset: 2.5px;
       text-wrap: nowrap;
     }
@@ -2244,6 +2251,7 @@ a {
 #gallerie {
   position: relative;
   height: auto;
+  min-height: -webkit-min-content;
   min-height: -moz-min-content;
   min-height: min-content;
   width: 100%;
@@ -2256,6 +2264,7 @@ a {
 .wrapper {
   position: relative;
   height: auto;
+  min-height: -webkit-min-content;
   min-height: -moz-min-content;
   min-height: min-content;
   width: 100%;
@@ -2406,6 +2415,7 @@ a {
 }
 
 .gallery-container[data-animated="true"] .gallery-container--rows {
+  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   flex-wrap: nowrap;
@@ -2413,6 +2423,7 @@ a {
 
 @media (prefers-reduced-motion: no-preference) {
   .gallery-container[data-animated="true"] .gallery-container--rows {
+    width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
     animation: scroll var(--gallery-animation-duration--slow) linear infinite;
@@ -2720,7 +2731,8 @@ a {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
     -webkit-overflow-scrolling: touch;
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
   }
 }
 
@@ -2792,7 +2804,8 @@ a {
     background-attachment: scroll;
     /* Optimiere Performance */
     transform: translateZ(0);
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
     /* Verhindere ungewolltes Verhalten */
     overscroll-behavior-y: none;
     /* Zusätzliche Performance-Optimierung */
